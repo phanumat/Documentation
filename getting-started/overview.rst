@@ -13,6 +13,8 @@ With PEA HiVE, developers can:
 - Integrate new devices into the PEA HiVE ecosystem.
 - Publish applications and device integrations to the PEA HiVE catalog.
 
+** Bangkok Post Article **
+
 As Thailand 4.0 progresses unstoppably, PEA is now developing the “PEA HiVE” smart home platform
 
 Under Thailand's Alternative Energy Development Plan (AEDP) 2015, power generation from solar energy is targeted at 6,000 MW in 2036. Of this residential rooftop solar PVs will account for a significant portion.
@@ -55,6 +57,7 @@ PEA HiVE is an open-source, open-architecture IoT platform that works with devic
 PEA HiVE is engineered to work with different communication technologies, including Ethernet (IEEE 802.3), Serial (RS-485), ZigBee (IEEE 802.15.4), and Wi-Fi (IEEE 802.11), and different communication protocols, including MQTT, BACnet, Modbus, Web, ZigBee API, OpenADR, and OCPP.
 
 For more information please contact peahive@gmail.com or visit PEA HiVE Platform Facebook Fan Page at https://www.facebook.com/peahiveplatform
+Ref: `Bangkok Post <https://www.bangkokpost.com/business/news/1378747/as-thailand-4-0-progresses-unstoppably-pea-is-now-developing-the-pea-hive-smart-home-platform/>`__
 
 Source : Warodom Khamphanchai, Ph.D.
 Substation and Transmission System Research Section
@@ -62,6 +65,31 @@ Research Division
 Reseach and Development Department
 Provincial Electricity Authority (PEA)
 www.pea.co.th
+
+----
+
+งานวิจัยและพัฒนาระบบบริหารจัดการการใช้พลังงานอัจฉริยะของการไฟฟ้าส่วนภูมิภาค (PEA HiVE Platform)
+--------------------
+
+- ชื่อผลงาน :  การพัฒนาต้นแบบแพลตฟอร์มระบบบริหารและจัดการพลังงานไฟฟ้าอัจฉริยะการไฟฟ้าส่วนภูมิภาค (PEA HiVE Platform) สำหรับบ้านพักอาศัย
+- ชื่อส่วนราชการ :  การไฟฟ้าส่วนภูมิภาค
+- หน่วยงานที่รับผิดชอบผลงาน : สายงานวางแผนและพัฒนาระบบไฟฟ้า
+- ชื่อผู้ประสานงาน   นายวโรดม  คำแผ่นชัย
+- ตำแหน่ง   วศก.6
+- สำนัก/กอง   กองวิจัย
+- เบอร์โทรศัพท์   6542
+- เบอร์โทรศัพท์มือถือ   0951615011
+- เบอร์โทรสาร   -
+- e – Mail   kwarodom@vt.edu
+
+PEA HiVE was built to be developer-friendly. Some of the key developer features:
+
+- A simple programming framework using the Groovy programming language. Don't know Groovy? No worries. We've written a :ref:`tutorial <groovy-basics>` to get you up to speed.
+- An architecture that allows developers to control hardware with simple software. Turning a switch on is as easy as ``switch.on()``.
+- A web-based IDE for developing PEA HiVE solutions.
+- A Simulator for testing your code, *even if you don't have specific devices you are developing for*.
+- An active and growing `community <https://community.PEA HiVE.com/>`__ of PEA HiVE developers.
+
 
 ----
 
