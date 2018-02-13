@@ -5,7 +5,7 @@
 
 .. _docs_home_page:
 
-SmartThings Developer Documentation
+PEA HiVE Developer Documentation
 ===================================
 
 .. raw:: html
