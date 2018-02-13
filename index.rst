@@ -1,4 +1,4 @@
-.. SmartThings Developer Documentation documentation master file, created by
+.. PEA HiVE Developer Documentation documentation master file, created by
    sphinx-quickstart on Tue Apr  8 16:41:13 2014.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
@@ -15,7 +15,7 @@ PEA HiVE Developer Documentation
             <div class="home-card-col getting-started">
                 <a href="getting-started/overview.html">
                     <h4>Getting Started</h4>
-                    <p>Get started developing with SmartThings.</p>
+                    <p>Get started developing with PEA HiVE.</p>
                 </a>
             </div>
             <div class="home-card-col groovy-basics">
@@ -43,13 +43,13 @@ PEA HiVE Developer Documentation
             <div class="home-card-col guide">
                 <a href="device-type-developers-guide/quick-start.html">
                     <h4>Hub-Connected Devices</h4>
-                    <p>Learn how to integrate a ZigBee or Z-Wave device with SmartThings.</p>
+                    <p>Learn how to integrate a ZigBee or Z-Wave device with PEA HiVE.</p>
                 </a>
             </div>
             <div class="home-card-col guide">
                 <a href="cloud-and-lan-connected-device-types-developers-guide/index.html">
                     <h4>Cloud and LAN-Connected Devices</h4>
-                    <p>Learn how to integrate a Cloud or LAN-connected device with SmartThings.</p>
+                    <p>Learn how to integrate a Cloud or LAN-connected device with PEA HiVE.</p>
                 </a>
             </div>
         </div>
@@ -57,7 +57,7 @@ PEA HiVE Developer Documentation
             <div class="home-card-col reference-docs">
                 <a href="capabilities-reference.html">
                     <h4>Capabilities Reference</h4>
-                    <p>An up-to-date introduction and reference of all supported SmartThings Capabilities.</p>
+                    <p>An up-to-date introduction and reference of all supported PEA HiVE Capabilities.</p>
                 </a>
             </div>
             <div class="home-card-col reference-docs">
@@ -86,7 +86,7 @@ PEA HiVE Developer Documentation
    getting-started/overview
    getting-started/up-and-running
    getting-started/groovy-basics
-   getting-started/groovy-for-smartthings
+   getting-started/groovy-for-PEA HiVE
    getting-started/first-smartapp
    getting-started/getting-help
 

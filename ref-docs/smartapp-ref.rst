@@ -11,7 +11,7 @@ When a SmartApp executes, it executes in the context of a certain installation i
 
 ----
 
-The following methods should be defined by all SmartApps. They are called by the SmartThings platform at various points in the SmartApp lifecycle.
+The following methods should be defined by all SmartApps. They are called by the PEA HiVE platform at various points in the SmartApp lifecycle.
 
 .. _smartapp_installed:
 
@@ -355,7 +355,7 @@ createAccessToken()
 -------------------
 
 Creates an access token for this installed SmartApp.
-This token is intended to be used by third-party services that need to communicate with SmartThings during the :ref:`OAuth installation flow of cloud-connected devices <cloud_service_manager_oauth>`.
+This token is intended to be used by third-party services that need to communicate with PEA HiVE during the :ref:`OAuth installation flow of cloud-connected devices <cloud_service_manager_oauth>`.
 
 The created token will then be available in ``state.accessToken``.
 
@@ -2418,7 +2418,7 @@ Gets a `Date`_ object for today's date, for the specified time in the date-time 
 
 .. warning::
 
-    Although the ``timeZone`` argument is optional, it is *strongly encouraged* that you use it. Not specifying the ``timeZone`` results in the SmartThings platform trying to calculate the time zone based on the date and time zone offsets in the input string.
+    Although the ``timeZone`` argument is optional, it is *strongly encouraged* that you use it. Not specifying the ``timeZone`` results in the PEA HiVE platform trying to calculate the time zone based on the date and time zone offsets in the input string.
 
     To avoid time zone errors, you should specify the ``timeZone`` argument (you can get the time zone from the ``location`` object: ``location.timeZone``)
 
@@ -2460,7 +2460,7 @@ Returns a `Date`_ of the next occurrence of the time specified in the input, rel
 
 .. warning::
 
-    Although the ``timeZone`` argument is optional, it is *strongly encouraged* that you use it. Not specifying the ``timeZone`` results in the SmartThings platform trying to calculate the time zone based on the date and time zone offsets in the input string.
+    Although the ``timeZone`` argument is optional, it is *strongly encouraged* that you use it. Not specifying the ``timeZone`` results in the PEA HiVE platform trying to calculate the time zone based on the date and time zone offsets in the input string.
 
     To avoid time zone errors, you should specify the ``timeZone`` argument (you can get the time zone from the ``location`` object: ``location.timeZone``)
 

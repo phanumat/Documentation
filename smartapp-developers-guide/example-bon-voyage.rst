@@ -215,7 +215,7 @@ Now we need to define our ``takeAction()`` method:
             log.debug "Found ${awayLongEnough.size()} out of ${people.size()} person(s) who were away long enough"
             if (awayLongEnough.size() == people.size()) {
                 //def message = "${app.label} changed your mode to '${newMode}' because everyone left home"
-                def message = "SmartThings changed your mode to '${newMode}' because everyone left home"
+                def message = "PEA HiVE changed your mode to '${newMode}' because everyone left home"
                 log.info message
                 send(message)
                 setLocationMode(newMode)
@@ -292,4 +292,4 @@ Related documentation
 Complete source code
 --------------------
 
-The complete source code for this SmartApp can be found in the SmartThingsPublic GitHub repository `here <https://github.com/SmartThingsCommunity/SmartThingsPublic/blob/master/smartapps/smartthings/bon-voyage.src/bon-voyage.groovy>`__.
+The complete source code for this SmartApp can be found in the PEA HiVEPublic GitHub repository `here <https://github.com/PEA HiVECommunity/PEA HiVEPublic/blob/master/smartapps/PEA HiVE/bon-voyage.src/bon-voyage.groovy>`__.

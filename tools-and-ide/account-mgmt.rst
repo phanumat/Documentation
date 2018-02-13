@@ -1,7 +1,7 @@
 Account Managment
 =================
 
-The SmartThings IDE allows you to view and edit information about your Locations, Hubs, Devices, custom SmartApps and Device Handlers, as well as view a live log for all your SmartThings devices and apps.
+The PEA HiVE IDE allows you to view and edit information about your Locations, Hubs, Devices, custom SmartApps and Device Handlers, as well as view a live log for all your PEA HiVE devices and apps.
 
 ----
 
@@ -63,13 +63,13 @@ You can click on the name to be taken to the editor, where you can view and modi
 Publication requests
 --------------------
 
-*My Publication Requests* will show all your publication requests for submissions to the SmartThings catalog, along with the publication request status.
+*My Publication Requests* will show all your publication requests for submissions to the PEA HiVE catalog, along with the publication request status.
 
 ----
 
 Live logging
 ------------
 
-*Live Logging* will show a live logging view for your SmartThings account.
+*Live Logging* will show a live logging view for your PEA HiVE account.
 Here you will find logs for all your installed SmartApps and Device Handlers.
 You can also filter the logs by a specific SmartApp.

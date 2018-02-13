@@ -12,7 +12,7 @@ Making outbound HTTP calls with HubAction
 
 Depending on the type of device you are using, you will send requests to
 your devices through the Hub via REST or UPnP. You can do this using
-the SmartThings provided ``HubAction`` class.
+the PEA HiVE provided ``HubAction`` class.
 
 ----
 
@@ -27,7 +27,7 @@ request, such as the request method, headers, and path. By itself, ``HubAction``
 
 It is when an instance of a ``HubAction`` is returned from a command method that it becomes useful.
 
-When a command method of your Device Handler returns an instance of a ``HubAction``, the SmartThings platform will use the request information within it to actually perform the request. It will then call the device-handler's ``parse`` method with any response data.
+When a command method of your Device Handler returns an instance of a ``HubAction``, the PEA HiVE platform will use the request information within it to actually perform the request. It will then call the device-handler's ``parse`` method with any response data.
 
 Herein lies an important point - *if your HubAction instance is not returned from your command method, no request will be made.* It will just be an object allocating system memory. Not very useful.
 
@@ -203,7 +203,7 @@ Alternatively, after making the initial connection you can use UPnP.
 UPnP uses `SOAP <http://en.wikipedia.org/wiki/SOAP_%28protocol%29>`__
 (Simple Object Access Protocol) messages to communicate with the device.
 
-SmartThings provides the ``HubSoapAction`` class for this purpose. It is similar to the HubAction class (it actually extends the HubAction class), but it will handle creating the soap envelope for you.
+PEA HiVE provides the ``HubSoapAction`` class for this purpose. It is similar to the HubAction class (it actually extends the HubAction class), but it will handle creating the soap envelope for you.
 
 Here's an example of using ``HubSoapAction``:
 

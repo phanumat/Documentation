@@ -8,7 +8,7 @@ Device Handlers are the virtual representation of a physical device.
 
 A Device Handler defines a `metadata()`_ method that defines the device's definition, UX information, as well as how it should behave in the IDE simulator.
 
-A Device Handler typically also defines a `parse()`_ method that is responsible for transforming raw messages from the device into Events for the SmartThings platform.
+A Device Handler typically also defines a `parse()`_ method that is responsible for transforming raw messages from the device into Events for the PEA HiVE platform.
 
 Device Handlers must also define methods for any supported commands, either through its supported capabilities, or device-specific commands.
 
@@ -49,7 +49,7 @@ The exact implementation of a command method will vary greatly depending upon th
 
     metadata {
         // Automatically generated. Make future change here.
-        definition (name: "CentraLite Switch", namespace: "smartthings",    author: "SmartThings") {
+        definition (name: "CentraLite Switch", namespace: "PEA HiVE",    author: "PEA HiVE") {
             ...
             capability "Switch"
             ...
@@ -80,7 +80,7 @@ Called when messages from a device are received from the Hub. The parse method i
 
 Because the ``parse()`` method is responsible for handling raw device messages, their implementations vary greatly across different Device Handlers.
 
-The ``parse()`` method may return a map defining the :ref:`event_ref` to create and propagate through the SmartThings platform, or a list of Events if multiple Events should be created. It may also return a HubAction or list of HubAction objects in the case of LAN-connected devices.
+The ``parse()`` method may return a map defining the :ref:`event_ref` to create and propagate through the PEA HiVE platform, or a list of Events if multiple Events should be created. It may also return a HubAction or list of HubAction objects in the case of LAN-connected devices.
 
 **Signature:**
     ``Map parse(String description)``
@@ -123,7 +123,7 @@ The ``parse()`` method may return a map defining the :ref:`event_ref` to create 
         log.debug "Parse returned ${result?.descriptionText}"
 
         // returning the Event definition map creates an Event
-        // in the SmartThings platform, and propagates it to
+        // in the PEA HiVE platform, and propagates it to
         // SmartApps subscribed to the device events.
         return result
     }
@@ -197,7 +197,7 @@ A parent may have multiple children, but only one level of children is allowed (
         // This device (power strip) has five outlets
         for (i in 1..5) {
             // can omit namespace (first arg) if it is the same as this device
-            addChildDevice("smartthings", "Zooz Power Strip Outlet", "${device.deviceNetworkId}-ep${i}", null,
+            addChildDevice("PEA HiVE", "Zooz Power Strip Outlet", "${device.deviceNetworkId}-ep${i}", null,
     				[completedSetup: true, label: "${device.displayName} (CH${i})",
     				 isComponent: true, componentName: "ch$i", componentLabel: "Channel $i"])
         }
@@ -397,9 +397,9 @@ The mobile user interface of a composite parent device is built typically by com
 **Example:**
 
 .. code-block:: groovy
-    
+
     metadata {
-        definition (name: "Simulated Refrigerator", namespace: "smartthings/testing", author: "SmartThings") {
+        definition (name: "Simulated Refrigerator", namespace: "PEA HiVE/testing", author: "PEA HiVE") {
             capability "Contact Sensor"
         }
         tiles {
@@ -520,7 +520,7 @@ Called within the `tiles()`_ method to define a tile that allows the user to inp
 createEvent()
 -------------
 
-Creates a Map that represents an :ref:`event_ref` object. Typically used in the `parse()`_ method to define Events for particular attributes. The resulting map is then returned from the ``parse()`` method. The SmartThings platform will then create an Event object and propagate it through the system.
+Creates a Map that represents an :ref:`event_ref` object. Typically used in the `parse()`_ method to define Events for particular attributes. The resulting map is then returned from the ``parse()`` method. The PEA HiVE platform will then create an Event object and propagate it through the system.
 
 **Signature:**
     ``Map createEvent(Map options)``

@@ -38,7 +38,7 @@ To allow the user to select devices that support a given capability, we use the 
     }
 
 The above example will allow the user to select any device that supports the presence sensor capability.
-This could be a mobile phone, or a `SmartSense presence sensor <https://shop.smartthings.com/#!/products/smartsense-presence>`__.
+This could be a mobile phone, or a `SmartSense presence sensor <https://shop.PEA HiVE.com/#!/products/smartsense-presence>`__.
 We don't care about the specific device - we just declare we want a device that supports the presence sensor capability.
 
 You can refer to the :ref:`capabilities_taxonomy` for information on all the supported capabilities.
@@ -72,7 +72,7 @@ Attributes represent the state of a device. A device that supports the "temperat
 
 Attributes have state -  the "temperature" attribute has an associated :ref:`state_ref` object that contains information about the temperature (its value, the date it was recorded, etc.).
 
-Attribute data is stored in the SmartThings Cloud and updated when the device reports its status.
+Attribute data is stored in the PEA HiVE Cloud and updated when the device reports its status.
 
 ----
 
@@ -142,11 +142,11 @@ These can be used interchangeably; they all do the same thing.
 
 .. important::
 
-    The current or latest state for an attribute value is the *most recent value the device has reported to SmartThings.*
+    The current or latest state for an attribute value is the *most recent value the device has reported to PEA HiVE.*
     It is not calculated by polling or otherwise directly communicating with the device.
 
     For example, ``someDevice.currentValue('someAttribute')`` will get the most recently reported value for the specified attribute.
-    If the device has malfunctioned, or the SmartThings Hub has gone offline, it is possible that the value returned is not consistent with the physical status of the device.
+    If the device has malfunctioned, or the PEA HiVE Hub has gone offline, it is possible that the value returned is not consistent with the physical status of the device.
 
 ----
 
@@ -264,7 +264,7 @@ Here's a simple example of getting all switch state values and logging the switc
             switchVal == "on" ? true : false
         }
 
-        log.debug "${onSwitches.size()} out of ${switches.size()} switches are on"    
+        log.debug "${onSwitches.size()} out of ${switches.size()} switches are on"
     }
 
 ----

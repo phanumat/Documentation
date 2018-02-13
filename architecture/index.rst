@@ -3,16 +3,16 @@
 Architecture
 ============
 
-As a starting point in understanding SmartThings approach, it is important to recognize that it is centered on the separation of *intelligence* from devices.
-SmartThings architecture is developed with a view that most of the value will be created in the *space between the devices*.
+As a starting point in understanding PEA HiVE approach, it is important to recognize that it is centered on the separation of *intelligence* from devices.
+PEA HiVE architecture is developed with a view that most of the value will be created in the *space between the devices*.
 Moreover, the devices themselves can be limited to their primitive capabilities (open/close, on/off, heat/cool, brew/don’t brew), while the intelligence layer exists separately as an application layer.
 
 By doing this we allow the intelligence (or application) layer to apply flexibly across a wide range of devices, and make it easier to create applications that interact with and across the physical world.
 In many cases, we also benefit from lower-cost end devices, less maintenance complexity and longer battery life.
 
-The SmartThings platform provides methods such that using these methods in Device Handlers we can abstract away the underlying complexity of devices and protocols, while at the same time coding in only the desired experience into SmartApps.
+The PEA HiVE platform provides methods such that using these methods in Device Handlers we can abstract away the underlying complexity of devices and protocols, while at the same time coding in only the desired experience into SmartApps.
 
-Each device in SmartThings has “capabilities”, which define and standardize available attributes and commands for a device.
+Each device in PEA HiVE has “capabilities”, which define and standardize available attributes and commands for a device.
 This allows you to develop an application for a type of device, regardless of the connection protocol or the manufacturer.
 
 All of the code that developers can write on our platform is written in Groovy, which is a dynamic, object-oriented language built for the Java platform.
@@ -30,28 +30,28 @@ Big picture
 Devices
 ^^^^^^^
 
-Devices are the building blocks of the SmartThings infrastructure.
-They are the connection between the SmartThings system and the physical world.
-There's a huge variety in the devices you can use; some are created by SmartThings, but most are not.
+Devices are the building blocks of the PEA HiVE infrastructure.
+They are the connection between the PEA HiVE system and the physical world.
+There's a huge variety in the devices you can use; some are created by PEA HiVE, but most are not.
 
-The real power of SmartThings is that the platform works with most home automation devices already on the market.
+The real power of PEA HiVE is that the platform works with most home automation devices already on the market.
 We believe in a fully integrated approach, where you aren't tied into a particular technology or protocol.
-SmartThings offers compatibility with standards such as ZigBee, Z-Wave, LAN, and Cloud-to-cloud integrations.
-This allows SmartThings platform to work with hundreds of off the shelf third-party devices.
+PEA HiVE offers compatibility with standards such as ZigBee, Z-Wave, LAN, and Cloud-to-cloud integrations.
+This allows PEA HiVE platform to work with hundreds of off the shelf third-party devices.
 
 Hub
 ^^^
 
-The SmartThings Hub connects directly to your broadband router.
-The Hub provides communication between all connected devices, the SmartThings cloud and the SmartThings mobile application.
-With a SmartThings Hub you:
+The PEA HiVE Hub connects directly to your broadband router.
+The Hub provides communication between all connected devices, the PEA HiVE cloud and the PEA HiVE mobile application.
+With a PEA HiVE Hub you:
 
 -  Simply plug it into your Ethernet router and provide power.
--  Connect any SmartThings or SmartThings-ready device to your SmartThings account.
--  Build your own SmartThings kit by combining with other SmartThings devices.
+-  Connect any PEA HiVE or PEA HiVE-ready device to your PEA HiVE account.
+-  Build your own PEA HiVE kit by combining with other PEA HiVE devices.
 -  Work with a variety of standard ZigBee and Z-Wave devices, such as GE Z-Wave in-wall switches and outlets.
 
-The new Samsung SmartThings Hub also supports the ability to execute certain automations locally on the Hub itself, and ships with four AA batteries.
+The new Samsung PEA HiVE Hub also supports the ability to execute certain automations locally on the Hub itself, and ships with four AA batteries.
 This allows for certain automations to continue, even without AC power.
 It also ships with USB ports and is Bluetooth Low Energy capable.
 While not active at launch, this allows for greater expansion in the future without requiring new hardware.
@@ -59,7 +59,7 @@ While not active at launch, this allows for greater expansion in the future with
 Connectivity management
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-Connectivity Management is the layer that connects your SmartThings Hub, the client devices (mobile phones) to SmartThings servers and to the cloud as a whole.
+Connectivity Management is the layer that connects your PEA HiVE Hub, the client devices (mobile phones) to PEA HiVE servers and to the cloud as a whole.
 The Connectivity Management layer is comprised of:
 
 -  Hub Connectivity that connects your Hub to the cloud.
@@ -70,15 +70,15 @@ These are the highways by which your messages are sent to the internet.
 Device Handler execution
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-The SmartThings system determines what type of device you are using based on Device Handlers.
+The PEA HiVE system determines what type of device you are using based on Device Handlers.
 Once the Device Handler is selected, the incoming messages are parsed by that particular Device Handler.
-The input to the Device Handler is a set of device-specific messages, and the output of the Device Handler is normalized SmartThings Events.
-Note that one message can lead to many SmartThings Events.
+The input to the Device Handler is a set of device-specific messages, and the output of the Device Handler is normalized PEA HiVE Events.
+Note that one message can lead to many PEA HiVE Events.
 
 Subscription management
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-When Events are created in the SmartThings platform, they don't inherently do anything besides publish that they've happened.
+When Events are created in the PEA HiVE platform, they don't inherently do anything besides publish that they've happened.
 Instead of Events triggering change, SmartApps are configured with subscriptions that listen for defined Events.
 The purpose of the subscription management layer is to match up Events that are triggered by the Device Handlers with the SmartApp that is using them.
 
@@ -92,11 +92,11 @@ Any data that needs to persist throughout SmartApp instances must be stored in a
 Web UI and IDE
 ^^^^^^^^^^^^^^
 
-The Web UI sits on top of all of the other technology and allows you to monitor your devices, Hubs, Locations and many other aspects of your SmartThings system.
+The Web UI sits on top of all of the other technology and allows you to monitor your devices, Hubs, Locations and many other aspects of your PEA HiVE system.
 
 You have full control of the configuration, including editing, adding, removing, and even creating SmartApps.
 To create, you write code within the IDE for SmartApps and Device Handlers.
-SmartThings also has an integrated Simulator that allows you to simulate any devices, so it's not required to own the devices you develop for.
+PEA HiVE also has an integrated Simulator that allows you to simulate any devices, so it's not required to own the devices you develop for.
 
 Important concepts
 ------------------
@@ -107,7 +107,7 @@ Asynchronous and eventually consistent programming
 When dealing with the physical graph, i.e., a digital representation of the physical things connected around us, there will always be a delay between when you request something to happen and when it actually happens.
 There is latency in all networks, but it's especially pronounced when dealing with the physical graph.
 
-To deal with this, the SmartThings platform utilizes asynchronous execution.
+To deal with this, the PEA HiVE platform utilizes asynchronous execution.
 This means that anytime you execute a command, it doesn't stop everything else from running.
 This helps everyone's code run the most efficiently.
 
@@ -125,7 +125,7 @@ The SmartApps platform follows eventually consistent programming, meaning that r
 Containers
 ^^^^^^^^^^
 
-Within the SmartThings platform, there are three different “containers” that are important concepts to understand.
+Within the PEA HiVE platform, there are three different “containers” that are important concepts to understand.
 These are: *accounts, Locations,* and *groups.*
 These containers represent both security boundaries and navigation containers that make it easy for users to browse their devices.
 
@@ -138,7 +138,7 @@ Each type of container is described below in more detail.
 Accounts
 ^^^^^^^^
 
-Accounts are the top-level container that represents the SmartThings ‘customer’.
+Accounts are the top-level container that represents the PEA HiVE ‘customer’.
 Accounts contain only Locations and no other types of
 objects.
 
@@ -147,7 +147,7 @@ Locations and users
 
 Locations are meant to represent a geolocation such as “Home” or “Office”.
 Locations can optionally be tagged with a geolocation (latitude and longitude).
-In addition, Locations don’t have to have a SmartThings Hub, but generally do.
+In addition, Locations don’t have to have a PEA HiVE Hub, but generally do.
 Finally, locations contain Groups or Devices.
 
 Groups
@@ -163,7 +163,7 @@ Further, nesting of groups is not currently supported.
 Capability taxonomy
 -------------------
 
-Capabilities represent the common taxonomy that allows SmartThings platform to link SmartApps with Device Handlers.
+Capabilities represent the common taxonomy that allows PEA HiVE platform to link SmartApps with Device Handlers.
 An application interacts with devices based on their capabilities, so once we understand the capabilities that are needed by a SmartApp, and the capabilities that are provided by a device, we can understand which devices (based on the type of device and inherent capabilities) are eligible for use within a specific SmartApp.
 
 The :ref:`capabilities_taxonomy` is evolving and is heavily influenced by existing standards like ZigBee and Z-Wave.
@@ -193,21 +193,21 @@ Custom capabilities
 We do not currently support creating custom capabilities.
 You can, however, create a device-type handler that exposes custom commands or attributes.
 
-SmartThings cloud
+PEA HiVE cloud
 -----------------
 
-The SmartThings platform assumes a "Cloud First” approach.
-This means that in order to use all supported devices and automations, and to ensure that the SmartThings mobile application reflects the correct state of your home, the SmartThings Hub will need to be online and be connected to the SmartThings cloud.
+The PEA HiVE platform assumes a "Cloud First” approach.
+This means that in order to use all supported devices and automations, and to ensure that the PEA HiVE mobile application reflects the correct state of your home, the PEA HiVE Hub will need to be online and be connected to the PEA HiVE cloud.
 
-The second generation Hub, the Samsung SmartThings Hub, allows for some Hub-local capabilities.
-Certain automations can execute even when disconnected from the SmartThings cloud.
-This allows SmartThings to improve performance and insulate the user from intermittent internet outages.
+The second generation Hub, the Samsung PEA HiVE Hub, allows for some Hub-local capabilities.
+Certain automations can execute even when disconnected from the PEA HiVE cloud.
+This allows PEA HiVE to improve performance and insulate the user from intermittent internet outages.
 
-This is accomplished by delivering certain automations to the Samsung SmartThings Hub itself, where it can execute locally.
+This is accomplished by delivering certain automations to the Samsung PEA HiVE Hub itself, where it can execute locally.
 The engine that executes these automations are typically referred to as "AppEngine".
-Events are still sent to the SmartThings cloud - this is necessary to ensure that the SmartThings mobile application reflects the current state of the home, as well as to send any notifications or perform other cloud-based services.
+Events are still sent to the PEA HiVE cloud - this is necessary to ensure that the PEA HiVE mobile application reflects the current state of the home, as well as to send any notifications or perform other cloud-based services.
 
-The specific automations that execute locally are expanding and currently managed by the SmartThings internal team.
+The specific automations that execute locally are expanding and currently managed by the PEA HiVE internal team.
 The ability for developers to execute their own SmartApps or Device Handlers locally is planned.
 
 That said, there are a number of important scenarios where the cloud is simply required:
@@ -217,7 +217,7 @@ That said, there are a number of important scenarios where the cloud is simply r
 Many devices are now already connected devices, via Wi-Fi/IP, and connect directly to the cloud without the need for a gateway device (hub).
 
 The most likely use case for such devices involves adding intelligence to those devices through SmartApps.
-These devices may not be connected to a SmartThings Hub, and instead are directly connected to the vendor cloud or the SmartThings Cloud.
+These devices may not be connected to a PEA HiVE Hub, and instead are directly connected to the vendor cloud or the PEA HiVE Cloud.
 
 Put simply, if there is no Hub, then the SmartApps layer must run in the cloud!
 
@@ -228,13 +228,13 @@ In this case, the SmartApp needs to run in the cloud.
 
 **Scenario: There may be multiple Hubs**
 
-While the mesh network standards for ZigBee and Z-Wave generally eliminate the need for multiple SmartThings Hubs, we didn’t want to exclude this as a valid deployment configuration for large homes or even business applications of our technology.
+While the mesh network standards for ZigBee and Z-Wave generally eliminate the need for multiple PEA HiVE Hubs, we didn’t want to exclude this as a valid deployment configuration for large homes or even business applications of our technology.
 In the multi-Hub case, SmartApps that use multiple devices that are split across hubs will run in the cloud in order to simplify the complexity of application deployment.
 
 **Scenario: External service integration**
 
 SmartApps may call external web services.
-Calling them from SmartThings cloud reduces risk as it allows SmartThings to easily monitor for errors and ensure the security and privacy of the users.
+Calling them from PEA HiVE cloud reduces risk as it allows PEA HiVE to easily monitor for errors and ensure the security and privacy of the users.
 
 In some cases, an external web service might even use IP white-listing such that they simply can’t be called from the Hub running at a user’s home or place of business.
 
@@ -242,7 +242,7 @@ Accordingly, SmartApps that use web services will run in the cloud also.
 
 .. important::
 
-   Note that because of the abstraction layer, SmartApp developers never have to understand where or how devices connect to the SmartThings platform.
+   Note that because of the abstraction layer, SmartApp developers never have to understand where or how devices connect to the PEA HiVE platform.
    All of that is hidden from the developer so that whether a device (such as a Garage Door opener) is Hub-Connected or Cloud-Connected, all they need to understand is:
 
    .. code-block:: groovy
@@ -254,14 +254,14 @@ Accordingly, SmartApps that use web services will run in the cloud also.
 Hubs and Locations
 ------------------
 
-To efficiently manage performance, the SmartThings platform scales its cloud server architecture horizontally with *sharding*.
+To efficiently manage performance, the PEA HiVE platform scales its cloud server architecture horizontally with *sharding*.
 Sharding helps reduce the latency between the Hub and the cloud, and handles increasing capacity.
-As a developer you must note the impact of sharding on how you work with the SmartThings IDE.
+As a developer you must note the impact of sharding on how you work with the PEA HiVE IDE.
 
-When you first install SmartThings app on your mobile phone, create your user account and claim your Hub, the SmartThings platform automatically assigns your Hub to the Location and connects your Location/Hub to a particular shard.
+When you first install PEA HiVE app on your mobile phone, create your user account and claim your Hub, the PEA HiVE platform automatically assigns your Hub to the Location and connects your Location/Hub to a particular shard.
 Before starting your development, you must note that:
 
-- Your Location/Hub is connected to a *specific* SmartThings shard, based on the geographical location of the Hub, and,
+- Your Location/Hub is connected to a *specific* PEA HiVE shard, based on the geographical location of the Hub, and,
 - You must ensure that you are logged into the URL of this specific shard on IDE. Since the Location is always connected to the correct shard URL, you can do this by clicking on your Location from "My Locations" page after you log in.
 
 .. note::
@@ -274,7 +274,7 @@ Consequences of sharding
 In practice, some consequences of sharding are:
 
 - A global layer, with a few specific services, spans across all shards while all other services are owned by the specific shard itself (which, as emphasized above, is Location-dependent). A few global layer services are: user account creation, authorization, OAuth authentication, mappings of Location-to-shard, users-to-Locations and Hub-to-Locations. All data that is down from the Location level are managed by the specific shard.
-- A shard does not share information with another shard. For example, a common login across the shards does not exist yet. You will have to log in to each shard, although the userid and password will be the same (see the note above). At the same time, note that SmartThings mobile app users do not have to log in again because mobile client OAuth tokens are shared across the shards.
+- A shard does not share information with another shard. For example, a common login across the shards does not exist yet. You will have to log in to each shard, although the userid and password will be the same (see the note above). At the same time, note that PEA HiVE mobile app users do not have to log in again because mobile client OAuth tokens are shared across the shards.
 - SmartApps and Device Handlers are now published in a specific shard and not for your entire account. For example, if you have a Hub in North America and another Hub in Europe, you will need to publish your SmartApp twice, one in each Location, i.e., shard.
 - Note that since a Hub is assigned to a Location, if you delete a Location, the Hub becomes unclaimed. Conversely, it is possible for a Location to exist without a claimed Hub at that Location.
 

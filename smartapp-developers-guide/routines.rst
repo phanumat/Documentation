@@ -16,7 +16,7 @@ Routines
 Overview
 --------
 
-Routines allow for certain things to happen whenever it executes. SmartThings comes with a few Routines already installed:
+Routines allow for certain things to happen whenever it executes. PEA HiVE comes with a few Routines already installed:
 
 - Good Morning! - You or the house is waking up
 - Good Night! - You or the house is going to sleep
@@ -25,7 +25,7 @@ Routines allow for certain things to happen whenever it executes. SmartThings co
 
 Each Routine can be configured to do certain things. For example, when "I'm Back!" executes, you can set the Mode to "Home", unlock doors, adjust the thermostat, etc.
 
-Routines exist for each Location in a SmartThings account.
+Routines exist for each Location in a PEA HiVE account.
 
 ----
 

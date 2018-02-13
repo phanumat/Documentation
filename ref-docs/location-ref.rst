@@ -3,7 +3,7 @@
 Location
 ========
 
-A Location represents a user's geo-location, such as "Home" or "office". Locations do not have to have a SmartThings Hub, but generally do.
+A Location represents a user's geo-location, such as "Home" or "office". Locations do not have to have a PEA HiVE Hub, but generally do.
 
 All SmartApps and Device Handlers are injected with a ``location`` property that is the Location into which the SmartApp is installed.
 

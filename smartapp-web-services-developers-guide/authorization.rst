@@ -23,20 +23,20 @@ As part of the authorization flow, the SmartApp will be installed to the user's 
 
 .. note::
 
-    Regardless of the server the SmartApp is actually published to, ``https://graph.api.smartthings.com`` should be used to obtain the authorization code, access token, and endpoints.
+    Regardless of the server the SmartApp is actually published to, ``https://graph.api.PEA HiVE.com`` should be used to obtain the authorization code, access token, and endpoints.
 
 ----
 
 Get authorization code
 ----------------------
 
-Authorization URL: ``https://graph.api.smartthings.com/oauth/authorize``
+Authorization URL: ``https://graph.api.PEA HiVE.com/oauth/authorize``
 
-To obtain an authorization code, make a ``GET`` request to ``https://graph.api.smartthings.com/oauth/authorize``:
+To obtain an authorization code, make a ``GET`` request to ``https://graph.api.PEA HiVE.com/oauth/authorize``:
 
 .. code-block:: bash
 
-    GET https://graph.api.smartthings.com/oauth/authorize?
+    GET https://graph.api.PEA HiVE.com/oauth/authorize?
             response_type=code&
             client_id=YOUR-SMARTAPP-CLIENT-ID&
             scope=app&
@@ -54,7 +54,7 @@ scope          This should always be "app" for this authorization flow.
 redirect_uri   The URI of your server that will receive the authorization code. This URI must match one of the redirect URIs specified in the SmartApp settings, otherwise validation will fail.
 ============== ===========
 
-This will require the user to log in with their SmartThings account credentials, choose a Location, and select what devices may be accessed by the third party.
+This will require the user to log in with their PEA HiVE account credentials, choose a Location, and select what devices may be accessed by the third party.
 
 The authorization code expires 24 hours after issue.
 
@@ -63,14 +63,14 @@ The authorization code expires 24 hours after issue.
 Get access token
 ----------------
 
-Token URL: ``https://graph.api.smartthings.com/oauth/token``
+Token URL: ``https://graph.api.PEA HiVE.com/oauth/token``
 
 Use the code you received to obtain the access token:
 
 .. code::
 
-    POST https://graph.api.smartthings.com/oauth/token HTTP/1.1
-    Host: graph.api.smartthings.com
+    POST https://graph.api.PEA HiVE.com/oauth/token HTTP/1.1
+    Host: graph.api.PEA HiVE.com
     Content-Type: application/x-www-form-urlencoded
 
     grant_type=authorization_code&code=YOUR_CODE&client_id=YOUR_CLIENT_ID&client_secret=YOUR_CLIENT_SECRET&redirect_uri=YOUR_REDIRECT_URI
@@ -108,12 +108,12 @@ Once you have the token, it must be stored securely in the application.
 Get SmartApp endpoints
 ----------------------
 
-You can use the token to request the callable endpoints of the SmartApp, by making a ``GET`` request to ``https://graph.api.smartthings.com/api/smartapps/endpoints``.
+You can use the token to request the callable endpoints of the SmartApp, by making a ``GET`` request to ``https://graph.api.PEA HiVE.com/api/smartapps/endpoints``.
 The access token should be supplied via a ``Authorization: Bearer`` header:
 
 .. code-block:: bash
 
-    GET -H "Authorization: Bearer ACCESS-TOKEN" "https://graph.api.smartthings.com/api/smartapps/endpoints"
+    GET -H "Authorization: Bearer ACCESS-TOKEN" "https://graph.api.PEA HiVE.com/api/smartapps/endpoints"
 
 A successful response will return a list of all installed SmartApps for the ``clientID`` associated with the given access token.
 
@@ -142,7 +142,7 @@ A successful response will return a list of all installed SmartApps for the ``cl
     SmartApps may be installed into any number of servers depending upon the location of the end-user.
     You should always use the ``uri`` and ``base_url`` to find the location this SmartApp can be reached at.
 
-    Do not assume that the SmartApp will be installed on ``https://graph.api.smartthings.com``.
+    Do not assume that the SmartApp will be installed on ``https://graph.api.PEA HiVE.com``.
 
 ----
 
@@ -167,8 +167,8 @@ For example, assuming a ``mappings`` definition like this:
         // ...
     }
 
-And a URI of ``https://graph.api.smartthings.com/api/smartapps/installations/12345``, you can make a request to the ``/switches`` endpoint like this:
+And a URI of ``https://graph.api.PEA HiVE.com/api/smartapps/installations/12345``, you can make a request to the ``/switches`` endpoint like this:
 
 .. code-block:: bash
 
-    curl -H "Authorization: Bearer ACCESS-TOKEN" -X GET "https://graph.api.smartthings.com/api/smartapps/installations/12345/switches"
+    curl -H "Authorization: Bearer ACCESS-TOKEN" -X GET "https://graph.api.PEA HiVE.com/api/smartapps/installations/12345/switches"

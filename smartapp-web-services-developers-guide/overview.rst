@@ -3,7 +3,7 @@
 Web Services SmartApps Overview
 ===============================
 
-*Integrating with SmartThings using SmartApps Web Services*
+*Integrating with PEA HiVE using SmartApps Web Services*
 
 In this guide, you will learn:
 
@@ -43,11 +43,11 @@ How it works
 
 Our overall approach to API access requires the end­ user to authenticate and authorize the API access in two steps:
 
-#. The installation of a SmartThings Web Services “SmartApp” into the user’s SmartThings Account/Location, along with specific device preferences that specify the devices to which the external system is being granted access.
+#. The installation of a PEA HiVE Web Services “SmartApp” into the user’s PEA HiVE Account/Location, along with specific device preferences that specify the devices to which the external system is being granted access.
 
 #. The typical OAuth login flow grants the external system the OAuth access token.
 
-It is important to understand that it is the SmartApp itself that exposes the API endpoints that are then used by the external system to integrate with SmartThings.
+It is important to understand that it is the SmartApp itself that exposes the API endpoints that are then used by the external system to integrate with PEA HiVE.
 
 This approach is designed to ensure that an external system must have explicit access granted to the devices, before it can control those devices.
 
@@ -60,9 +60,9 @@ Installation|
 The diagram above outlines the following standard steps in
 the API Connection and Usage process:
 
-#. A user of the external system takes some action that initiates a "Connect to SmartThings" flow. An example of this is an `IFTTT <http://www.ifttt.com>`__ user adding the SmartThings "channel".
+#. A user of the external system takes some action that initiates a "Connect to PEA HiVE" flow. An example of this is an `IFTTT <http://www.ifttt.com>`__ user adding the PEA HiVE "channel".
 
-#. The external service will typically redirect to the SmartThings login page. The HTTP request to this page includes the required OAuth client ID (more details below), allowing our login page to recognize this as a login request using OAuth.
+#. The external service will typically redirect to the PEA HiVE login page. The HTTP request to this page includes the required OAuth client ID (more details below), allowing our login page to recognize this as a login request using OAuth.
 
 #. The login page is displayed, and if the login is successful, a subsequent page is displayed that allows the now-authenticated user to install and configure the Web Services SmartApp that is associated with the client ID. When this step is complete, an authorization code is returned to the browser.
 
@@ -82,18 +82,18 @@ Before discussing the specific steps to building a Web Services SmartApp, you sh
 Initiate connection from external system
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The first step is to initiate the connection with the SmartThings cloud from the external web application.
+The first step is to initiate the connection with the PEA HiVE cloud from the external web application.
 This is different for each web application, but is just a URL.
 
 Authentication and authorization
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The typical OAuth journey is the OAuth2 authorization code flow, initiated from the website of the external system, whereby the user is redirected to the SmartThings website.
-This is where they enter their SmartThings credentials, as shown below:
+The typical OAuth journey is the OAuth2 authorization code flow, initiated from the website of the external system, whereby the user is redirected to the PEA HiVE website.
+This is where they enter their PEA HiVE credentials, as shown below:
 
 .. figure:: ../img/smartapps/web-services/oauth-login.png
 
-Once authenticated with SmartThings, they will be prompted to specifically authorize access by the application.
+Once authenticated with PEA HiVE, they will be prompted to specifically authorize access by the application.
 
 Application configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -113,7 +113,7 @@ below:
 
 .. figure:: ../img/smartapps/web-services/preferences.png
 
-Finally, the user clicks on *Authorize* to complete both the authorization of the application and the installation of the SmartApp and the connection between the external system and the SmartThings Cloud is now complete.
+Finally, the user clicks on *Authorize* to complete both the authorization of the application and the installation of the SmartApp and the connection between the external system and the PEA HiVE Cloud is now complete.
 
 Once the user authorizes access, the external system is provided with the OAuth authorization code, which is in turn used to request and receive an OAuth access token.
 Once the external system has the token, it can access the web services provided by the SmartApp.

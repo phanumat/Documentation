@@ -59,7 +59,7 @@ In the device-type handler:
 
     def parseEventData(Map results){
         results.each { name, value ->
-            //Parse events and optionally create SmartThings events
+            //Parse events and optionally create PEA HiVE events
         }
     }
 

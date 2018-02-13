@@ -3,39 +3,39 @@
 Getting Help
 ============
 
-In addition to this documentation, there are other ways to learn and get help developing for SmartThings, discussed below.
+In addition to this documentation, there are other ways to learn and get help developing for PEA HiVE, discussed below.
 
 ----
 
 Developer documentation
 -----------------------
 
-Use this documentation to learn about SmartThings development, as well as serve as a reference. The documentation is searchable, and can be viewed and downloaded in a variety of formats including PDF and EPUB (click on "Read the Docs" on the bottom left of the page to see the download options).
+Use this documentation to learn about PEA HiVE development, as well as serve as a reference. The documentation is searchable, and can be viewed and downloaded in a variety of formats including PDF and EPUB (click on "Read the Docs" on the bottom left of the page to see the download options).
 
-This documentation is open source and available in GitHub `here <https://github.com/SmartThingsCommunity/Documentation>`__.
+This documentation is open source and available in GitHub `here <https://github.com/PEA HiVECommunity/Documentation>`__.
 
 ----
 
 Community
 ---------
 
-One of the best things about SmartThings is the amazing `community <https://community.smartthings.com/>`__ of users, makers, and developers. Make sure to register for an account and introduce yourself. It's a great place to learn, help others, and make friends.
+One of the best things about PEA HiVE is the amazing `community <https://community.PEA HiVE.com/>`__ of users, makers, and developers. Make sure to register for an account and introduce yourself. It's a great place to learn, help others, and make friends.
 
 If you can't find an answer for your question in the documentation, the community is a great resource as well. You can search for your question in case it has already been addressed, or post a new question.
 
-Many of the SmartThings staff frequents these forums as well. We'll chime in and try to be helpful.
+Many of the PEA HiVE staff frequents these forums as well. We'll chime in and try to be helpful.
 
 ----
 
 .. _developer_support_form:
 
-SmartThings developer support
+PEA HiVE developer support
 -----------------------------
 
-While our `community <https://community.smartthings.com/>`__ is amazing and there are tons of awesome people there to support you, you may sometimes have more in-depth questions that our communtiy can't answer.
+While our `community <https://community.PEA HiVE.com/>`__ is amazing and there are tons of awesome people there to support you, you may sometimes have more in-depth questions that our communtiy can't answer.
 When that happens, we're here to help.
 
-`This form <https://support.smartthings.com/hc/en-us/requests/new?ticket_form_id=110843>`__ is a direct line to our developer advocates in the rare occasion our community can't help with your question.
+`This form <https://support.PEA HiVE.com/hc/en-us/requests/new?ticket_form_id=110843>`__ is a direct line to our developer advocates in the rare occasion our community can't help with your question.
 Once you submit a ticket you should expect to get a response in 48 hours.
 
 .. note::

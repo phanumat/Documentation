@@ -8,7 +8,7 @@ Device Handlers may specify simple preferences to allow the user to configure ce
 Overview
 --------
 
-When a user adds a device to SmartThings, they are given the option to name their device and select a room.
+When a user adds a device to PEA HiVE, they are given the option to name their device and select a room.
 If there are additional configuration options that you wish to expose to the user, you can specify them using ``preferences``.
 They will appear on the same page as the device name preference.
 
@@ -52,7 +52,7 @@ Device Handler preferences are a simple list of inputs:
 Display on setup
 ----------------
 
-Use ``displayDuringSetup: true`` to force the preference input to be displayed when the device is being added to SmartThings:
+Use ``displayDuringSetup: true`` to force the preference input to be displayed when the device is being added to PEA HiVE:
 
 .. code-block:: groovy
 

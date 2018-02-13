@@ -1,1 +1,1 @@
-Please see the [contributing guide](http://docs.smartthings.com/en/latest/contributing/style-guide.html "Writing the Docs") for formatting and syntax help when submitting changes to the documentation repository.
+Please see the [contributing guide](http://docs.PEA HiVE.com/en/latest/contributing/style-guide.html "Writing the Docs") for formatting and syntax help when submitting changes to the documentation repository.

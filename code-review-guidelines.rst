@@ -5,7 +5,7 @@ Code Review Guidelines and Best Practices
 Before submitting your SmartApp or Device Handler, you should ensure that your code adheres to the guidelines documented here.
 Any code that does not adhere to these guidelines may be rejected.
 
-This document also serves as a collection of best practices for SmartThings development.
+This document also serves as a collection of best practices for PEA HiVE development.
 
 ----
 
@@ -220,7 +220,7 @@ Handle null values
 
 .. important::
 
-    NullPointerExceptions are one of the most frequently occurring exceptions on the SmartThings platform - take care to avoid them!
+    NullPointerExceptions are one of the most frequently occurring exceptions on the PEA HiVE platform - take care to avoid them!
 
     This is *very* common in LAN and SSDP interactions, so always double check that code.
 
@@ -392,7 +392,7 @@ In groovy you can execute functions based on a string, like so:
 
     object."${mystring}"()
 
-Which can be very handy, but when ``${mystring}`` comes from a HTTP request, outside the SmartThings platform, or from another SmartApp or Device Handler, we need to validate the input.
+Which can be very handy, but when ``${mystring}`` comes from a HTTP request, outside the PEA HiVE platform, or from another SmartApp or Device Handler, we need to validate the input.
 
 The preferred method of validation is to use a ``switch()`` statement on the input before doing anything with it:
 

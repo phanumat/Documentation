@@ -4,8 +4,8 @@
 Capturing and Displaying Camera Pictures
 ========================================
 
-Cameras connected to SmartThings can use the :ref:`imageCapture` Capability, along with the Carousel Tile, to capture and view images.
-SmartThings-connected cameras are either LAN- or Cloud-Connected; this document outlines the steps to capture and display images for both.
+Cameras connected to PEA HiVE can use the :ref:`imageCapture` Capability, along with the Carousel Tile, to capture and view images.
+PEA HiVE-connected cameras are either LAN- or Cloud-Connected; this document outlines the steps to capture and display images for both.
 
 ----
 
@@ -256,7 +256,7 @@ Image storage duration
 
 Images stored via a ``HubAction`` are stored for 24 hours, after which it is deleted (this is why we use ``storeTemporaryImage()`` to move images captured by a ``HubAction``).
 
-Images stored via ``storeImage()`` or ``storeTemporaryImage()`` are available to clients for seven days, and stored by SmartThings for 365 days, after which it is deleted.
+Images stored via ``storeImage()`` or ``storeTemporaryImage()`` are available to clients for seven days, and stored by PEA HiVE for 365 days, after which it is deleted.
 
 ----
 

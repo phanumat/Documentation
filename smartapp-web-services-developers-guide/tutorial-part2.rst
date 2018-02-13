@@ -5,7 +5,7 @@ Web Services SmartApp Tutorial--Authorization Flow
 
 In `Part 1 <./tutorial-part1.html>`__ of this tutorial, you learned how to create a simple Web Services SmartApp, and install it in the IDE simulator, and make web requests to it.
 
-In Part 2, we'll build a simple web application that will integrate with SmartThings and the WebServices SmartApp we created in Part 1.
+In Part 2, we'll build a simple web application that will integrate with PEA HiVE and the WebServices SmartApp we created in Part 1.
 
 ----
 
@@ -18,7 +18,7 @@ In Part 2 of this tutorial, you will learn:
 - How to discover the endpoints of a Web Services SmartApp.
 - How to make calls to the Web Services SmartApp.
 
-The source code for this tutorial is available `here <https://github.com/SmartThingsCommunity/Code/tree/master/smartapps/tutorials/web-services-smartapps>`__.
+The source code for this tutorial is available `here <https://github.com/PEA HiVECommunity/Code/tree/master/smartapps/tutorials/web-services-smartapps>`__.
 
 .. include:: ../common/oauth-install-restriction.txt
 
@@ -29,7 +29,7 @@ It's not strictly necessary, however, as our application will simply make web re
 
 .. note::
 
-  If Node is more your speed, check out the awesome SmartThings OAuth Node app written by community member John S (@schettj) `here <https://github.com/schettj/SmartThings>`__. It shows how you can get an access token using the OAuth flow for a WebServices SmartApp using Node.
+  If Node is more your speed, check out the awesome PEA HiVE OAuth Node app written by community member John S (@schettj) `here <https://github.com/schettj/PEA HiVE>`__. It shows how you can get an access token using the OAuth flow for a WebServices SmartApp using Node.
 
 ----
 
@@ -73,14 +73,14 @@ In your favorite text editor*, create a new file called ``server.rb`` and paste 
     use Rack::Session::Pool, :cookie_only => false
 
     # This is the URI that will be called with our access
-    # code after we authenticate with our SmartThings account
+    # code after we authenticate with our PEA HiVE account
     redirect_uri = 'http://localhost:4567/oauth/callback'
 
     # This is the URI we will use to get the endpoints once we've received our token
-    endpoints_uri = 'https://graph.api.smartthings.com/api/smartapps/endpoints'
+    endpoints_uri = 'https://graph.api.PEA HiVE.com/api/smartapps/endpoints'
 
     options = {
-      site: 'https://graph.api.smartthings.com',
+      site: 'https://graph.api.PEA HiVE.com',
       authorize_url: '/oauth/authorize',
       token_url: '/oauth/token'
     }
@@ -95,7 +95,7 @@ In your favorite text editor*, create a new file called ``server.rb`` and paste 
 
     # handle requests to the application root
     get '/' do
-      %(<a href="/authorize">Connect with SmartThings</a>)
+      %(<a href="/authorize">Connect with PEA HiVE</a>)
     end
 
     # handle requests to /authorize URL
@@ -104,7 +104,7 @@ In your favorite text editor*, create a new file called ``server.rb`` and paste 
     end
 
     # hanlde requests to /oauth/callback URL. We
-    # will tell SmartThings to call this URL with our
+    # will tell PEA HiVE to call this URL with our
     # authorization code once we've authenticated.
     get '/oauth/callback' do
         'Not Implemented!'
@@ -142,11 +142,11 @@ Now, run the app on your local machine::
     ruby server.rb
 
 Visit `http://localhost:4567 <http://localhost:4567>`__.
-You should see a page with a link to "Connect with SmartThings".
+You should see a page with a link to "Connect with PEA HiVE".
 
 We're using the `OAuth2 module <https://github.com/intridea/oauth2>`__ to handle the OAuth2 flow.
 We create a new ``client`` object, using the ``client_id`` and ``client_secret``.
-We also configure it with the ``options`` data structure that defines the information about the SmartThings OAuth endpoint.
+We also configure it with the ``options`` data structure that defines the information about the PEA HiVE OAuth endpoint.
 
 We've handled the root URL to simply display a link that points to the ``/authorize`` URL of our server. We'll fill that in next.
 
@@ -155,9 +155,9 @@ We've handled the root URL to simply display a link that points to the ``/author
 Get an authorization code
 -------------------------
 
-When the user clicks on the "Connect with SmartThings" link, we need to get our OAuth authorization code.
+When the user clicks on the "Connect with PEA HiVE" link, we need to get our OAuth authorization code.
 
-To do this, the user will need to authenticate with SmartThings, and authorize the devices this application can work with.
+To do this, the user will need to authenticate with PEA HiVE, and authorize the devices this application can work with.
 Once that has been done, the user will be directed back to a specified ``redirect_uri``, with the OAuth authorization code.
 When we created the SmartApp in the first part of this tutorial, we set the redirect URI to ``http://localhost:4567/oauth/callback``.
 It is important that the redirect URI in the SmartApp and the ``redirect_uri`` field in this Sinatra app match, as validation will occur with the authorization code request that will make sure these two URIs match.
@@ -166,7 +166,7 @@ This will be used (along with the ``client_id`` and ``client_secret``), to get t
 .. important::
 
     When you self-publish a SmartApp, it is published and available in the Location that you published it.
-    Since SmartThings is moving into the global space, the Location that you published your SmartApp corresponds to a specific server.
+    Since PEA HiVE is moving into the global space, the Location that you published your SmartApp corresponds to a specific server.
     This means your self-published SmartApp is only available on that server.
 
 
@@ -176,7 +176,7 @@ Replace the ``/authorize`` route with the following:
 
     get '/authorize' do
       # Use the OAuth2 module to get the authorize URL.
-      # After we authenticate with SmartThings, we will be redirected to the
+      # After we authenticate with PEA HiVE, we will be redirected to the
       # redirect_uri, including our access code used to get the token
       url = client.auth_code.authorize_url(redirect_uri: redirect_uri, scope: 'app')
       redirect url
@@ -184,9 +184,9 @@ Replace the ``/authorize`` route with the following:
 
 Kill the server if it's running (CTRL+C), and start it up again using ``ruby server.rb``.
 
-Visit `http://localhost:4567 <http://localhost:4567>`__ again, and click the "Connect with SmartThings" link.
+Visit `http://localhost:4567 <http://localhost:4567>`__ again, and click the "Connect with PEA HiVE" link.
 
-This should prompt you to authenticate with your SmartThings account (if you are not already logged in), and bring you to a page where you must authorize this application.
+This should prompt you to authenticate with your PEA HiVE account (if you are not already logged in), and bring you to a page where you must authorize this application.
 It should look something like this:
 
 .. figure:: ../img/smartapps/web-services/preferences.png
@@ -200,7 +200,7 @@ You'll notice that we haven't implemented handling this URL yet, so we see "Not 
 Get an access token
 -------------------
 
-When SmartThings redirects back to our application after authorizing, it passes a ``code`` parameter on the URL.
+When PEA HiVE redirects back to our application after authorizing, it passes a ``code`` parameter on the URL.
 This is the code that we will use to get the API token we need to make requests to our Web Servcies SmartApp.
 
 We'll store the access token in the session.
@@ -289,7 +289,7 @@ Replace the ``/getswitch`` route with the following:
       '<h3>JSON Response</h3><br/>' + JSON.pretty_generate(json) + '<h3>Endpoint</h3><br/>' + uri
     end
 
-The above code simply makes a GET request to the SmartThings API endpoints service at ``https://graph.api.smartthings.com/api/smartapps/endpoints``, setting the ``"Authorization"`` HTTP header with the API token.
+The above code simply makes a GET request to the PEA HiVE API endpoints service at ``https://graph.api.PEA HiVE.com/api/smartapps/endpoints``, setting the ``"Authorization"`` HTTP header with the API token.
 
 The response is JSON that contains (among other things), the endpoint of our SmartApp. The JSON that is returned contains a key called  `uri` that we will use to build our endpoint URLs.
 There are other URL keys in the JSON, but the `uri` key is specific to the server that your SmartApp is on.
@@ -342,6 +342,6 @@ You should see status of your configured switches displayed!
 Summary
 -------
 
-In the second part of this tutorial, we learned how an external application can work with SmartThings by getting an access token, discover endpoints, and make API calls to a WebServices SmartApp.
+In the second part of this tutorial, we learned how an external application can work with PEA HiVE by getting an access token, discover endpoints, and make API calls to a WebServices SmartApp.
 
 You are encouraged to explore further with this sample, including making different API calls to turn the configured switch on or off.

@@ -3,11 +3,11 @@ Arduino ThingShield
 
 .. warning::
 
-    The SmartThings Arduino ThingShield has been discontinued, and is no longer supported.
+    The PEA HiVE Arduino ThingShield has been discontinued, and is no longer supported.
 
-    All code and libraries discussed in this document are no longer supported by SmartThings, and should be used on a as-is basis.
+    All code and libraries discussed in this document are no longer supported by PEA HiVE, and should be used on a as-is basis.
 
-Using the SmartThings Arduino Shield (ThingShield), you can add SmartThings capability to any Arduino compatible board with the R3 pinout, including the Uno, Mega, Duemilanove, and Leonardo.
+Using the PEA HiVE Arduino Shield (ThingShield), you can add PEA HiVE capability to any Arduino compatible board with the R3 pinout, including the Uno, Mega, Duemilanove, and Leonardo.
 
 Specs:
 
@@ -18,30 +18,30 @@ Specs:
 Installing the library
 ----------------------
 
-To install, copy the entire SmartThings directory into the ‘libraries’ directory in your sketchbook. Your sketchbook location is set in the Arduino IDE preferences, by default, the location will be:
+To install, copy the entire PEA HiVE directory into the ‘libraries’ directory in your sketchbook. Your sketchbook location is set in the Arduino IDE preferences, by default, the location will be:
 
 Windows:
-‘My Documents\Arduino\libraries\SmartThings’
+‘My Documents\Arduino\libraries\PEA HiVE’
 
 OSX:
-‘~/Documents/Arduino/libraries/SmartThings’
+‘~/Documents/Arduino/libraries/PEA HiVE’
 
-You can download the `SmartThings Arduino Library here <http://cl.ly/ZMHh>`__.
+You can download the `PEA HiVE Arduino Library here <http://cl.ly/ZMHh>`__.
 
 Pairing the shield
 ------------------
 
-To join the shield to your SmartThings Hub, go to “Add SmartThings” mode in the
-SmartThings app by hitting the “+” icon in the desired location, and then press the Switch button on the shield. You should see the shield appear in the app.
+To join the shield to your PEA HiVE Hub, go to “Add PEA HiVE” mode in the
+PEA HiVE app by hitting the “+” icon in the desired location, and then press the Switch button on the shield. You should see the shield appear in the app.
 
-To unpair the shield, press and hold the Switch button for 6 seconds and release. The shield will now be unpaired from your SmartThings Hub. Make sure to delete from your account if you plan to re-pair it!
+To unpair the shield, press and hold the Switch button for 6 seconds and release. The shield will now be unpaired from your PEA HiVE Hub. Make sure to delete from your account if you plan to re-pair it!
 
 Changing the Device Handler
 ---------------------------
 
-By changing the Device Handler in the SmartThings cloud you can change how to interact with your Arduino + ThingShield. When a shield first pairs, it has no functionality and only serves to help identify the device in the mobile app. We have some pre-built Device Handlers that you can use for most functionality. One pre-built Arduino Device Handler is the “On/Off Shield (example)”
+By changing the Device Handler in the PEA HiVE cloud you can change how to interact with your Arduino + ThingShield. When a shield first pairs, it has no functionality and only serves to help identify the device in the mobile app. We have some pre-built Device Handlers that you can use for most functionality. One pre-built Arduino Device Handler is the “On/Off Shield (example)”
 
-To change your Device Handler, log into `http://graph.api.smartthings.com/` and click on “Devices” Navigate to and click on the Arduino ThingShield then click on “Edit” on the bottom left of the page.
+To change your Device Handler, log into `http://graph.api.PEA HiVE.com/` and click on “Devices” Navigate to and click on the Arduino ThingShield then click on “Edit” on the bottom left of the page.
 
 Select the "Type" drop down menu.
 

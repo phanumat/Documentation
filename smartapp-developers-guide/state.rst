@@ -120,9 +120,9 @@ All SmartApps and Device Handlers have available to them a ``state`` object (it 
 
 The general flow for SmartApp state is as follows:
 
-#. When a SmartApp or Device Handler is scheduled for execution, the ``state`` object is populated with the values from the database. The SmartThings platform also makes a copy of the contents of ``state`` prior to execution, for later comparison.
+#. When a SmartApp or Device Handler is scheduled for execution, the ``state`` object is populated with the values from the database. The PEA HiVE platform also makes a copy of the contents of ``state`` prior to execution, for later comparison.
 #. SmartApp or Device Handler execution begins, and can add, read, or modify the contents in the ``state`` object just as with any other map.
-#. Execution ends. The SmartThings platform compares the ``state`` object at execution ends with the contents of ``state`` before execution began. If there are any changes (additions, removals, updates), those entries are written to the database.
+#. Execution ends. The PEA HiVE platform compares the ``state`` object at execution ends with the contents of ``state`` before execution began. If there are any changes (additions, removals, updates), those entries are written to the database.
 
 This is summarized in the following diagram:
 
@@ -208,7 +208,7 @@ You may need to use Atomic State if code that updates a value in State may execu
 What can be stored in State and Atomic State
 --------------------------------------------
 
-``state`` and ``atomicState`` values are stored as a JSON string by SmartThings.
+``state`` and ``atomicState`` values are stored as a JSON string by PEA HiVE.
 
 Supported types
 ^^^^^^^^^^^^^^^
@@ -260,7 +260,7 @@ Here is an example illustrating this:
 Other object types
 ^^^^^^^^^^^^^^^^^^
 
-SmartThings objects (like :ref:`event_ref`, :ref:`device_ref`, etc.) cannot be stored in State or Atomic State.
+PEA HiVE objects (like :ref:`event_ref`, :ref:`device_ref`, etc.) cannot be stored in State or Atomic State.
 If you attempt to store these objects, it will silently fail without any messages in Live Logging.
 
 If you need to store such information on State, get the specific data you need from the object and assign it to state, like so:

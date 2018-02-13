@@ -5,7 +5,7 @@ Anatomy and Life Cycle of a SmartApp
 
 SmartApps are applications that allow users to tap into the capabilities of
 their devices to automate their lives.
-Most SmartApps are installed by the user via the SmartThings mobile client application. In addition, a few pre-installed SmartApps are readily available in the SmartThings system out-of-the-box.
+Most SmartApps are installed by the user via the PEA HiVE mobile client application. In addition, a few pre-installed SmartApps are readily available in the PEA HiVE system out-of-the-box.
 
 ----
 
@@ -32,7 +32,7 @@ door and having the lights turn on automatically.
 Solution Module SmartApps
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-These apps exist within the dashboard of the SmartThings app interface,
+These apps exist within the dashboard of the PEA HiVE app interface,
 and are containers for other SmartApps.
 The idea behind Solution Module
 SmartApps is to combine SmartApps that, in the real world, intuitively
@@ -180,16 +180,16 @@ SmartApp sandboxing
 
 SmartApps are developed in a sandboxed environment.
 The sandbox is a way to limit developers to a specific subset of the Groovy language for performance and security.
-We have :ref:`documented <groovy-for-smartthings>` the main ways this should affect you.
+We have :ref:`documented <groovy-for-PEA HiVE>` the main ways this should affect you.
 
 ----
 
 Execution location
 ------------------
 
-With the original SmartThings Hub, all SmartApps execute in the SmartThings cloud.
-With the new Samsung SmartThings Hub, certain SmartApps may run locally on hub or in the SmartThings cloud.
-Execution location varies depending on a variety of factors, and is managed by the SmartThings internal team.
+With the original PEA HiVE Hub, all SmartApps execute in the PEA HiVE cloud.
+With the new Samsung PEA HiVE Hub, certain SmartApps may run locally on hub or in the PEA HiVE cloud.
+Execution location varies depending on a variety of factors, and is managed by the PEA HiVE internal team.
 
-As a SmartThings developer, you should write your SmartApps to satisfy their specific use cases, regardless of where the app executes.
+As a PEA HiVE developer, you should write your SmartApps to satisfy their specific use cases, regardless of where the app executes.
 There is currently no way to specify or force a certain execution location.

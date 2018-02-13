@@ -7,7 +7,7 @@ Writing Your First SmartApp
     :class: strike
 
 This tutorial will guide you through writing your first SmartApp.
-Once you've read through the :ref:`groovy-for-smartthings`, this should be your next stop.
+Once you've read through the :ref:`groovy-for-PEA HiVE`, this should be your next stop.
 
 ----
 
@@ -26,7 +26,7 @@ At the end of this tutorial, you will know:
 - How to publish your SmartApp and install it on your mobile phone.
 - :strike:`How to achieve world domination, without even trying.`
 
-The SmartApp we will create will be relatively simple, but it will teach you a few core concepts of SmartThings, and get you familiar with the development process.
+The SmartApp we will create will be relatively simple, but it will teach you a few core concepts of PEA HiVE, and get you familiar with the development process.
 
 The purpose of the SmartApp we'll write is to turn a switch on when motion is detected, and turn it off when motion stops.
 
@@ -38,20 +38,20 @@ Prerequisites
 -------------
 
 Before completing this tutorial, you should have read the :ref:`get-started-overview`, and registered for an account as discussed in the :ref:`quick-start` page.
-It is recommended that you become at least familiar with the basic Groovy concepts discussed in the :ref:`groovy-basics` and :ref:`groovy-for-smartthings` tutorials.
+It is recommended that you become at least familiar with the basic Groovy concepts discussed in the :ref:`groovy-basics` and :ref:`groovy-for-PEA HiVE` tutorials.
 
-Start by logging into IDE at at https://graph.api.smartthings.com.
+Start by logging into IDE at at https://graph.api.PEA HiVE.com.
 Next, navigate to *My Locations* page to see the Locations you created.
 
 .. image:: ../img/getting-started/first-smartapp/my-locations.png
    :width: 70%
 
 Normally you will see just one Location where you installed your Hub.
-Click on the Location name appearing in the far left column (i.e., the *Name* column). You may need to log in again with your SmartThings userid and password.
+Click on the Location name appearing in the far left column (i.e., the *Name* column). You may need to log in again with your PEA HiVE userid and password.
 
 .. warning::
 
-    Note that even though the IDE is located at https://graph.api.smartthings.com, it may not always be the correct URL for your SmartApp deployment.
+    Note that even though the IDE is located at https://graph.api.PEA HiVE.com, it may not always be the correct URL for your SmartApp deployment.
     By explicitly selecting the Location name you will ensure that your SmartApp will be published properly.
 
 The SmartApp will utilize a motion sensor and a smart switch.
@@ -98,11 +98,11 @@ Author
 
 Description
     This describes the intent and functionality of your SmartApp.
-    This description appears in the SmartApp Marketplace section of SmartThings mobile application, and hence a clear and concise description is recommended.
+    This description appears in the SmartApp Marketplace section of PEA HiVE mobile application, and hence a clear and concise description is recommended.
 
 Category
     SmartApps are categorized based on functionality.
-    This is used by SmartThings mobile application.
+    This is used by PEA HiVE mobile application.
     SmartApps can be published either for Marketplace or for your own use.
     When publishing SmartApps for your own use (which is what we will be doing), all SmartApps will appear in *My Apps* category.
 
@@ -123,10 +123,10 @@ Above the code window, there are five buttons:
 .. image:: ../img/getting-started/first-smartapp/editor-buttons.png
 
 Save
-    This button saves your SmartApp in the SmartThings cloud.
+    This button saves your SmartApp in the PEA HiVE cloud.
 
 Publish
-    This allows you to publish your SmartApp for yourself, so you may install it in your SmartThings mobile app, as well as to submit it to the SmartThings team for publication into the SmartThings catalog.
+    This allows you to publish your SmartApp for yourself, so you may install it in your PEA HiVE mobile app, as well as to submit it to the PEA HiVE team for publication into the PEA HiVE catalog.
 
 IDE Settings
     Here you can make changes to personalize the editor to your liking.
@@ -165,7 +165,7 @@ The first thing to know is that there are a few different types of SmartApps.
 
 Some SmartApps, called *Service Manager SmartApps*, manage the connection of a Cloud-connected or LAN-connected device.
 
-*Solution Module SmartApps* provide a dashboard-like user interface in the SmartThings mobile application [1]_.
+*Solution Module SmartApps* provide a dashboard-like user interface in the PEA HiVE mobile application [1]_.
 
 The most common type of a SmartApp is one that monitors the user's devices for certain changes (or simply execute on a defined schedule), and then take certain action ("Turn a light on when motion is detected").
 These SmartApps are called *Event-Handler SmartApps*.
@@ -177,7 +177,7 @@ Regardless of what type of SmartApp you are writing, there are a few core princi
 - SmartApps are not continuously running. They are executed in response to various Events or schedules.
 - SmartApps are installed into a user's Location, and a user may install multiple instances of a SmartApp into the same Location.
 - With the exception of Solution Module SmartApps, SmartApps do not have any user interface, except for the preferences page that allows the user to configure the SmartApp (more on this in a bit).
-- The code that defines a SmartApp does not run on the user's mobile phone. SmartApps may execute in the SmartThings cloud, or on the Hub. The mobile application uses some information from the SmartApp to drive the experience in the app.
+- The code that defines a SmartApp does not run on the user's mobile phone. SmartApps may execute in the PEA HiVE cloud, or on the Hub. The mobile application uses some information from the SmartApp to drive the experience in the app.
 
 In your editor, you can see that there is some code already written for you.
 This defines the basic structure and skeleton for your SmartApp.
@@ -262,7 +262,7 @@ We'll see this in action shortly.
 
 The second argument is the type of device our SmartApp will work with.
 ``"capability.switch"`` states that our SmartApp is requesting the user to pick from *any* device that supports the Switch *capability*.
-The concept of capabilities is core to SmartThings, and requires a bit more explanation.
+The concept of capabilities is core to PEA HiVE, and requires a bit more explanation.
 
 First, consider that the catalog of connected devices is growing at a rapid pace.
 New devices arrive on the market almost daily.
@@ -270,9 +270,9 @@ Many of these devices do similar things, and some do multiple things.
 
 Capabilities
 ^^^^^^^^^^^^
-SmartThings abstracts devices into their *capabilities* - that is, what the device is capable of.
+PEA HiVE abstracts devices into their *capabilities* - that is, what the device is capable of.
 This allows us to build SmartApps that can work with *any* device that supports a given capability.
-In this way, we can build robust SmartApps that will work with any device integrated with SmartThings that supports a given capability.
+In this way, we can build robust SmartApps that will work with any device integrated with PEA HiVE that supports a given capability.
 
 Capabilities are broken down into *commands* and *attributes*.
 *Commands* can be issued to a device, and *attributes* are what the device reports on.
@@ -290,7 +290,7 @@ Every capability defines its commands and attributes, and devices that support a
 
 With capabilities, we can be assured that even if a new device supporting the Switch capability is added after we've written and published our SmartApp, there's no need to update any code!
 
-Capabilities are created and maintained by SmartThings.
+Capabilities are created and maintained by PEA HiVE.
 You can view the reference documentation for capabilities in the  :ref:`capabilities_taxonomy`.
 
 The last thing to note in our ``input`` method call is the ``required: true`` argument.
@@ -298,11 +298,11 @@ This specifies that the user must select a device in order to install the SmartA
 
 .. important::
 
-    By requiring users to select which devices the SmartApp will work with, SmartThings is providing a basic security feature - SmartThings can only control those devices which a user explicitly chooses.
+    By requiring users to select which devices the SmartApp will work with, PEA HiVE is providing a basic security feature - PEA HiVE can only control those devices which a user explicitly chooses.
     SmartApps cannot control devices which the user did not select, and this is by design.
 
-To summarize, when the user selects and installs the SmartApp from within SmartThings mobile app, they will be prompted to select a device that supports the switch capability.
-The SmartThings mobile app will provide them with a list of devices for this user's Location that support the switch capability.
+To summarize, when the user selects and installs the SmartApp from within PEA HiVE mobile app, they will be prompted to select a device that supports the switch capability.
+The PEA HiVE mobile app will provide them with a list of devices for this user's Location that support the switch capability.
 The device chosen will then be identified within the SmartApp as ``theswitch``.
 
 We covered a lot of information for such a small amount of code because it's important that you understand the importance of ``preferences`` and capabilities.
@@ -344,7 +344,7 @@ In your editor, below the ``preferences``, you'll see some methods already defin
     // TODO: implement event handlers
 
 Every SmartApp must define methods named :ref:`smartapp_installed` and :ref:`smartapp_updated`.
-When a user installs a SmartApp by clicking on the *Install* button in the SmartThings mobile application (after filling out any required preferences inputs), the ``installed()`` method we define in our SmartApp will be called.
+When a user installs a SmartApp by clicking on the *Install* button in the PEA HiVE mobile application (after filling out any required preferences inputs), the ``installed()`` method we define in our SmartApp will be called.
 This is where SmartApps can subscribe to any device changes we are interested in, as well as set up any scheduled tasks we want our SmartApp to perform.
 
 Similarly, the ``updated()`` method is called when a user updates their installation of the SmartApp by changing any of the preferences inputs.
@@ -353,7 +353,7 @@ So, they open the SmartApp settings, select a different switch, and then update 
 At this point, the ``updated()`` method is called.
 
 In our ``updated()`` method, notice that the first thing we do (aside from some logging, which is discussed shortly), is to call a method called :ref:`smartapp_unsubscribe`.
-This method is provided by the SmartThings platform, and simply removes any existing subscriptions this SmartApp has created.
+This method is provided by the PEA HiVE platform, and simply removes any existing subscriptions this SmartApp has created.
 This is important, since the user has just changed their preferences for this SmartApp.
 If we didn't do this, we might still be subscribed to Events for devices that the user has removed from the SmartApp.
 
@@ -361,7 +361,7 @@ Also, note that both ``installed()`` and ``updated()`` call a method named ``ini
 Since both ``installed()`` and ``updated()`` typically both create subscriptions or schedules, we can reduce code duplication by using a helper method.
 
 We also use the built-in logger (``log``) to log information.
-SmartThings does not currently have a debugger within the IDE, so use the ``log()`` method to log information that might be useful for debugging.
+PEA HiVE does not currently have a debugger within the IDE, so use the ``log()`` method to log information that might be useful for debugging.
 The logs are available by clicking *Live Logging* at the top of the IDE.
 
 Finally, note that we reference a variable named ``settings`` in our log statement.
@@ -446,7 +446,7 @@ Click *Simulator* and you will see a Location section on the right-hand side:
 .. image:: ../img/getting-started/first-smartapp/ide-location.png
    :width: 35%
 
-SmartApps are installed to a Location in your SmartThings account.
+SmartApps are installed to a Location in your PEA HiVE account.
 By clicking the *Set Location* button, you are telling the Simulator that you want to install this SmartApp into the chosen Location.
 
 After you have selected the Location, you will see the *Preferences* section appear:
@@ -457,7 +457,7 @@ After you have selected the Location, you will see the *Preferences* section app
 This is where you can choose devices that the SmartApp will use.
 Here we see that it asks for a motion sensor to monitor, and a switch.
 These two inputs directly correspond to what we have in the ``preferences`` section in our SmartApp.
-SmartThings will provide a "Virtual Device" when it can.
+PEA HiVE will provide a "Virtual Device" when it can.
 When you do not have a physical device to choose from this is a very useful option.
 By default the virtual devices will be selected.
 Click the *Install* button, and the SmartApp will be installed into the Location you selected above.
@@ -483,7 +483,7 @@ You should see the switch should go on:
    The behavior of the Simulator is known to have inconsistencies.
    If you are unable to see the correct device status, or unable to actuate the device, you may just be experiencing issues with the Simulator.
 
-   In that case, just skip ahead to the next section to install the SmartApp via the SmartThings mobile app.
+   In that case, just skip ahead to the next section to install the SmartApp via the PEA HiVE mobile app.
 
 ----
 
@@ -493,7 +493,7 @@ Publishing and installing
 -------------------------
 
 We can now see our first SmartApp in action in the Simulator.
-The next question is how can we use this SmartApp on our mobile devices in the SmartThings app?
+The next question is how can we use this SmartApp on our mobile devices in the PEA HiVE app?
 To accomplish this, we need to publish the SmartApp.
 
 .. image:: ../img/getting-started/first-smartapp/publish.png
@@ -501,7 +501,7 @@ To accomplish this, we need to publish the SmartApp.
 
 When you press the *Publish* button, a *For Me* option will appear.
 Select it.
-This means that the SmartApp will only be published for your account and not be visible for everyone in the SmartThings community.
+This means that the SmartApp will only be published for your account and not be visible for everyone in the PEA HiVE community.
 
 .. note::
 
@@ -808,12 +808,12 @@ Device Handlers are software much the same way SmartApps are.
 They define what actually happens when you call ``switch.on()``.
 Let's look at an example to further understand this.
 
-When you connect a new device to your SmartThings Hub, a Device Handler is picked for it based on the signature the device delivered to the Hub as part of its pairing communication.
+When you connect a new device to your PEA HiVE Hub, a Device Handler is picked for it based on the signature the device delivered to the Hub as part of its pairing communication.
 The Device Handler will have methods defined in it that support that device.
 So in our case, the Device Handler for the specific switch being used will have both ``on()`` and ``off()`` methods defined.
 The actual implementation of these methods vary depending upon the underlying device protocols, but are typically low-level protocol-specific commands to send to the device (like Z-Wave or ZigBee).
 
-So, when ``switch.on()`` is executed from your SmartApp, the SmartThings platform will look up the Device Handler associated with the device and call its ``on()`` method, which will in turn send the protocol and device-specific command through the Hub to the device.
+So, when ``switch.on()`` is executed from your SmartApp, the PEA HiVE platform will look up the Device Handler associated with the device and call its ``on()`` method, which will in turn send the protocol and device-specific command through the Hub to the device.
 Device Handlers are discussed in the :ref:`device_type_dev_guide` guide.
 
 ----
@@ -835,7 +835,7 @@ In this tutorial, you learned how to write a SmartApp. To do this, we:
 Next steps
 ----------
 
-Now that you've written your first SmartApp and have a basic understanding of the SmartThings developer tools, language, and workflow, here are some further topics for you to pursue.
+Now that you've written your first SmartApp and have a basic understanding of the PEA HiVE developer tools, language, and workflow, here are some further topics for you to pursue.
 
 More about SmartApps
 ^^^^^^^^^^^^^^^^^^^^
@@ -850,7 +850,7 @@ You can read about them in the :ref:`smartapp_web_services_guide` guide.
 Fork it!
 ^^^^^^^^
 
-SmartThings SmartApps and Device Handlers are now hosted in GitHub.
+PEA HiVE SmartApps and Device Handlers are now hosted in GitHub.
 Further, the IDE can integrate with GitHub, to provide a seamless developer experience.
 Learn more about it in the :ref:`github_integration` chapter of the :ref:`tools_ide` guide. Happy forking!
 

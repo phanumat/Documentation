@@ -3,13 +3,13 @@
 Event
 =====
 
-Events are core to the SmartThings platform. They allow SmartApps to respond to changes in the physical environment, and build automations around them.
+Events are core to the PEA HiVE platform. They allow SmartApps to respond to changes in the physical environment, and build automations around them.
 
-Event instances are not created directly by SmartApp or Device Handlers. They are created internally by the SmartThings platform, and passed to SmartApp event handlers that have subscribed to those events.
+Event instances are not created directly by SmartApp or Device Handlers. They are created internally by the PEA HiVE platform, and passed to SmartApp event handlers that have subscribed to those events.
 
 .. note::
 
-    In a SmartApp or Device Handler, the method ``createEvent()`` exists to create a Map that defines properties of an Event. Only by returning the resulting map from a Device Handler's ``parse()`` method is an actual Event instance created and propagated through the SmartThings system.
+    In a SmartApp or Device Handler, the method ``createEvent()`` exists to create a Map that defines properties of an Event. Only by returning the resulting map from a Device Handler's ``parse()`` method is an actual Event instance created and propagated through the PEA HiVE system.
 
 The reference documentation here lists all methods available on an Event object instance.
 

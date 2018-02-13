@@ -51,7 +51,7 @@ Web services rate limit headers
 -------------------------------
 
 SmartApps and Device Handlers that expose RESTful APIs are subject to the same rate limits as documented above.
-The SmartThings platform will set three HTTP headers on the response for every inbound API call, so that a client may understand the current rate limit status.
+The PEA HiVE platform will set three HTTP headers on the response for every inbound API call, so that a client may understand the current rate limit status.
 
 ======================= ===========
 Header                  Description
@@ -111,7 +111,7 @@ If initiated from within the mobile app, an error will be seen in the mobile app
 Avoiding rate limits
 --------------------
 
-While SmartThings rate limits are quite high compared to other service platforms, the event-driven nature of SmartThings can result in SmartApps or Device Handlers that may (unintentionally) reach this limit.
+While PEA HiVE rate limits are quite high compared to other service platforms, the event-driven nature of PEA HiVE can result in SmartApps or Device Handlers that may (unintentionally) reach this limit.
 It is important to reason carefully about your code, think of worst-case scenarios, and monitor Live Logging when testing to reduce the liklihood of being rate limited.
 
 Here are some common pitfalls to watch out for:

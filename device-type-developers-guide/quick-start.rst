@@ -3,8 +3,8 @@
 Quick Start
 ===========
 
-A Device Handler is a representation of a physical device in the SmartThings platform.
-It is responsible for communicating between the actual device and the SmartThings platform.
+A Device Handler is a representation of a physical device in the PEA HiVE platform.
+It is responsible for communicating between the actual device and the PEA HiVE platform.
 
 Alternately, a Device Handler can also be associated with a Virtual Device when a physical device is not yet available.
 This section will walk you through creating your first custom Device Handler and testing it with a Virtual Device.
@@ -14,7 +14,7 @@ This section will walk you through creating your first custom Device Handler and
     Before you proceed, ensure that you are on the correct Location on IDE.
     Follow the prerequisites described in :ref:`ide_requirements`.
 
-    If you are new to SmartThings development, consider starting with the :ref:`Getting Started <get-started-overview>` material.
+    If you are new to PEA HiVE development, consider starting with the :ref:`Getting Started <get-started-overview>` material.
 
 ----
 
@@ -109,7 +109,7 @@ Group
 
 Click *Create.*
 
-You will see *virtual-dimmer-switch* device appear instantly in your SmartThings mobile app, in the *Things* screen of the "My Home" view.
+You will see *virtual-dimmer-switch* device appear instantly in your PEA HiVE mobile app, in the *Things* screen of the "My Home" view.
 
 .. figure:: ../img/device-types/virtual-device-ios.png
 
@@ -121,7 +121,7 @@ Test your Device Handler with Virtual Device
 --------------------------------------------
 
 With the Virtual Dimmer you just created you can test your Device Handler.
-From your SmartThings mobile app, tap on the *OFF* tile of **virtual-dimmer-switch** to turn it *ON*.
+From your PEA HiVE mobile app, tap on the *OFF* tile of **virtual-dimmer-switch** to turn it *ON*.
 
 .. figure:: ../img/device-types/virtual-dimmer-on.png
 

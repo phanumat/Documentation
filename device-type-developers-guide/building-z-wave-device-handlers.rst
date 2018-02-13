@@ -4,7 +4,7 @@ Building Z-Wave Device Handlers
 ===============================
 
 The Z-Wave public specification is available `here <http://z-wave.sigmadesigns.com/design-z-wave/z-wave-public-specification/>`__.
-SmartThings provides custom Z-Wave command objects that represent the standard commands and messages that Z-Wave devices use to send and request information.
+PEA HiVE provides custom Z-Wave command objects that represent the standard commands and messages that Z-Wave devices use to send and request information.
 
 ----
 
@@ -14,7 +14,7 @@ Parsing Events
 When Events from Z-Wave devices are passed into your Device Handler's parse method, they are in an encoded string format.
 The first thing your parse method should do is call ``zwave.parse`` on the description string to convert it to a Z-Wave command object.
 The object's class is one of the subclasses of ``physicalgraph.zwave.Command`` that can be found in the `Z-Wave Command
-Reference <https://graph.api.smartthings.com/ide/doc/zwave-utils.html>`__.
+Reference <https://graph.api.PEA HiVE.com/ide/doc/zwave-utils.html>`__.
 If the description string does not represent a valid Z-Wave command, ``zwave.parse`` will return ``null``.
 
 .. code-block:: groovy
@@ -70,7 +70,7 @@ commands you intend to handle:
 Remember that when you use ``createEvent()`` to build an Event, the resulting map must be returned from ``parse()`` for the Event to be sent.
 For information about ``createEvent``, see the `Creating Events <parse.html#creating-events>`__ section.
 
-As the `Z-Wave Command Reference <https://graph.api.smartthings.com/ide/doc/zwave-utils.html>`__ shows, many Z-Wave command classes have multiple versions.
+As the `Z-Wave Command Reference <https://graph.api.PEA HiVE.com/ide/doc/zwave-utils.html>`__ shows, many Z-Wave command classes have multiple versions.
 By default, ``zwave.parse()`` will parse a command using the highest version of the command class.
 If the device is sending an earlier version of the command, some fields may be missing, or the command may fail to parse and return ``null``.
 To fix this, you can pass in a map as the second argument to ``zwave.parse()`` to tell it which version of each command class to use:

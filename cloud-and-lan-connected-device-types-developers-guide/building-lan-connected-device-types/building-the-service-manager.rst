@@ -50,7 +50,7 @@ Next, you need to send an appropriate discovery command for the desired search t
         sendHubCommand(new physicalgraph.device.HubAction("lan discovery urn:schemas-upnp-org:device:ZonePlayer:1", physicalgraph.device.Protocol.LAN))
     }
 
-.. note:: HubAction is a class supplied by the SmartThings platform
+.. note:: HubAction is a class supplied by the PEA HiVE platform
 
     The class ``physicalgraph.device.HubAction`` encapsulates request information
     for communicating with the device.
@@ -120,7 +120,7 @@ Verification
 
 Once we've recorded the presence of a device on the LAN with the desired SSDP search target, the next step is to verify the
 availability of the device by fetching some more information about it. In UPnP, this is called the **device description**.
-In the search response, there is a LOCATION header which shows the Location of the device description on the LAN. SmartThings
+In the search response, there is a LOCATION header which shows the Location of the device description on the LAN. PEA HiVE
 splits this into **networkAddress**, **deviceAddress**, and **ssdpPath** in the Event, which at this point should exist in app state.
 This can be pulled out of state and put into a HubAction. Note that the HubAction has a **callback**, which means that
 when an HTTP response is issued from the device to the Hub, it will fire the **deviceDescriptionHandler** method.
@@ -146,10 +146,10 @@ when an HTTP response is issued from the device to the Hub, it will fire the **d
         }
     }
 
-.. note:: HubResponse is a class supplied by the SmartThings platform. Here are some pieces of data that are included:
+.. note:: HubResponse is a class supplied by the PEA HiVE platform. Here are some pieces of data that are included:
 
     * **description** - The raw message received by the device connectivity layer
-    * **hubId** - The UUID of the SmartThings Hub that received the response
+    * **hubId** - The UUID of the PEA HiVE Hub that received the response
     * **status** - HTTP status code of the response
     * **headers** - Map of the HTTP headers of the response
     * **body** - String of the HTTP response body
@@ -180,7 +180,7 @@ Now that the device has been verified, we need to add it as a child device.
 
             if (!d) {
                 log.debug "Creating Generic UPnP Device with dni: ${selectedDevice.value.mac}"
-                addChildDevice("smartthings", "Generic UPnP Device", selectedDevice.value.mac, selectedDevice?.value.hub, [
+                addChildDevice("PEA HiVE", "Generic UPnP Device", selectedDevice.value.mac, selectedDevice?.value.hub, [
                     "label": selectedDevice?.value?.name ?: "Generic UPnP Device",
                     "data": [
                         "mac": selectedDevice.value.mac,

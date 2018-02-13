@@ -40,7 +40,7 @@ HubAction can also be used in a SmartApp or in a Device Handler to communicate w
 	path 		 Allowed values are any string of the form ``"/somepath"``. Default value is ``"/"``.
 	method 		 Allowed values are ``"POST"``, ``"GET"``, ``"PUT"`` and ``"PATCH"``. Default value is ``"POST"``.
 	protocol 	 Allowed values are ``Protocol.LAN``. Default value is also ``Protocol.LAN``.
-	headers 	 A map of HTTP headers. The ``HOST`` should be the ``"IP":"port"`` string of the device. Default values are ``['Accept': '*/*', 'User-Agent': 'Linux UPnP/1.0 SmartThings',]``. If ``'Content-Type'`` is not included, then it is set to ``'application/json'`` if ``params:body`` is a ``Map``; otherwise ``'Content-Type'`` is set to ``'text/xml; charset="utf-8"'``.
+	headers 	 A map of HTTP headers. The ``HOST`` should be the ``"IP":"port"`` string of the device. Default values are ``['Accept': '*/*', 'User-Agent': 'Linux UPnP/1.0 PEA HiVE',]``. If ``'Content-Type'`` is not included, then it is set to ``'application/json'`` if ``params:body`` is a ``Map``; otherwise ``'Content-Type'`` is set to ``'text/xml; charset="utf-8"'``.
 	query 		 A map of URL query parameters.
 	body 		 Request body.
 	============ ===========
@@ -61,7 +61,7 @@ Send a device discovery command string to look for Samsung SmartCam device in yo
 
 	See :ref:`building_servicemanager` for more information.
 
-	Also note that, in the above example, while ``"urn:schemas-upnp-org:device:WANDevice:1"`` portion of the request string represents the notation defined by UPnP standard for device types, the terms ``"lan"`` and ``"discovery"`` are SmartThings-specific terms.
+	Also note that, in the above example, while ``"urn:schemas-upnp-org:device:WANDevice:1"`` portion of the request string represents the notation defined by UPnP standard for device types, the terms ``"lan"`` and ``"discovery"`` are PEA HiVE-specific terms.
 
 After the device is discovered, additional device information, such as device IP, MAC, port id, is available.
 Now it is possible to interact with the device using this additional information.

@@ -130,7 +130,7 @@ Pass in the Location property automatically injected into every SmartApp as the 
     subscribe(location, "sunsetTime", sunsetTimeHandler)
     subscribe(location, "sunriseTime", sunriseTimeHandler)
 
-Refer to the `Sunset and Sunrise <http://docs.smartthings.com/en/latest/smartapp-developers-guide/sunset-and-sunrise.html>`__ section for more information about sunrise and sunset.
+Refer to the `Sunset and Sunrise <http://docs.PEA HiVE.com/en/latest/smartapp-developers-guide/sunset-and-sunrise.html>`__ section for more information about sunrise and sunset.
 
 ----
 

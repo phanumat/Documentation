@@ -15,7 +15,7 @@ Currently you define the expected fingerprint for a device in the Device Handler
 
     metadata {
         // Automatically generated. Make future change here.
-        definition (name: "SmartPower Outlet", namespace: "smartthings", author: "SmartThings") {
+        definition (name: "SmartPower Outlet", namespace: "PEA HiVE", author: "PEA HiVE") {
             capability "Actuator"
             capability "Switch"
             capability "Power Meter"
@@ -171,7 +171,7 @@ Read the current attribute value of the specified Cluster.
 
             zigbee.readAttribute(0x0008, 0x0000)
 
-    - Read a manufacturer specific attribute on the SmartThings multi-sensor
+    - Read a manufacturer specific attribute on the PEA HiVE multi-sensor
         .. code-block:: groovy
 
             zigbee.readAttribute(0xFC02, 0x0010, [mfgCode: 0x110A])
@@ -202,7 +202,7 @@ Write the attribute value of the specified Cluster.
 
             zigbee.writeAttribute(0x0008, 0x0010, 0x21, 0x12AB)
 
-    - Write a manufacturer specific attribute on the SmartThings multi-sensor
+    - Write a manufacturer specific attribute on the PEA HiVE multi-sensor
         .. code-block:: groovy
 
             zigbee.writeAttribute(0xFC02, 0x0000, 0x20, 1, [mfgCode: 0x110A])
@@ -244,7 +244,7 @@ Configure a ZigBee device's reporting properties. Refer to the *Configure Report
 
             zigbee.configureReporting(0x0008, 0x0000, 0x20, 1, 3600, 0x01)
 
-    - Configure a manufacturer specific report on the SmartThings multi-sensor
+    - Configure a manufacturer specific report on the PEA HiVE multi-sensor
         .. code-block:: groovy
 
             zigbee.configureReporting(0xFC02, 0x0010, 0x18, 10, 3600, 0x01, [mfgCode: 0x110A])

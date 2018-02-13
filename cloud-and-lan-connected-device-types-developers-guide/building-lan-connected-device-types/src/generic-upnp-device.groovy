@@ -1,7 +1,7 @@
 /**
  *  Generic UPnP Device
  *
- *  Copyright 2016 SmartThings
+ *  Copyright 2016 PEA HiVE
  *
  *  Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
  *  in compliance with the License. You may obtain a copy of the License at:
@@ -14,7 +14,7 @@
  *
  */
 metadata {
-	definition (name: "Generic UPnP Device", namespace: "smartthings", author: "SmartThings") {
+	definition (name: "Generic UPnP Device", namespace: "PEA HiVE", author: "PEA HiVE") {
 	}
 
 	simulator {

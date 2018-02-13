@@ -4,7 +4,7 @@
 Modes
 =====
 
-SmartThings allows users to specify that SmartApps only execute when in certain *modes*.
+PEA HiVE allows users to specify that SmartApps only execute when in certain *modes*.
 
 ----
 
@@ -16,7 +16,7 @@ Modes can be thought of as behavior filters for the smart home. Users can change
 - When in "Home" mode, motion should turn on a light.
 - When in "Away" mode, motion should send a text message and turn on an alarm.
 
-SmartThings comes with a few pre-configured modes, such as "Home", "Away", and "Night".
+PEA HiVE comes with a few pre-configured modes, such as "Home", "Away", and "Night".
 Users can also create their own modes for each Location.
 
 ----

@@ -35,7 +35,7 @@ Changes to the :ref:`thermostat` Capability:
 - ``supportedThermostatFanModes`` attribute added.
 - ``supportedThermostatModes`` attribute added.
 
-`GitHub Release Tag <https://github.com/SmartThingsCommunity/Documentation/releases/tag/07-July-2017>`__
+`GitHub Release Tag <https://github.com/PEA HiVECommunity/Documentation/releases/tag/07-July-2017>`__
 
 ----
 
@@ -44,7 +44,7 @@ June 08 2017
 
 - :ref:`HubAction reference documentation <hubaction_ref>` updated to clarify that ``HOST`` parameter is part of the headers map.
 
-`GitHub Release Tag <https://github.com/SmartThingsCommunity/Documentation/releases/tag/08-June-2017>`__
+`GitHub Release Tag <https://github.com/PEA HiVECommunity/Documentation/releases/tag/08-June-2017>`__
 
 ----
 
@@ -61,7 +61,7 @@ May 04 2017
     - Optional ``thermostatSetpointMin`` and ``thermostatSetpointMax`` attributes added to the :ref:`thermostatSetpoint` Capability.
     - Optional ``coolingSetpointMin``, ``coolingSetpointMax``, ``heatingSetpointMin``, ``heatingSetpointMax``, ``thermostatSetpointMin``, and ``thermostatSetpointMax`` attributes added to the :ref:`thermostat` Capability.
 
-`GitHub Release Tag <https://github.com/SmartThingsCommunity/Documentation/releases/tag/04-May-2017>`__
+`GitHub Release Tag <https://github.com/PEA HiVECommunity/Documentation/releases/tag/04-May-2017>`__
 
 ----
 
@@ -71,7 +71,7 @@ April 20 2017
 - :ref:`Image capturing and viewing documentation <working_with_camera_photos>` is here! Learn how to store, retrieve, and display images from a LAN- or Cloud-connected camera device.
 - Updated :ref:`Rate Limiting documenation <rate_limits>` with new child SmartApp and Device Handler limits, as well as clarify existing rate limits.
 
-`GitHub Release Tag <https://github.com/SmartThingsCommunity/Documentation/releases/tag/20-April-2017>`__
+`GitHub Release Tag <https://github.com/PEA HiVECommunity/Documentation/releases/tag/20-April-2017>`__
 
 ----
 
@@ -79,10 +79,10 @@ March 22 2017
 -------------
 
 - Composite Devices are here! Composite Devices allow developers to better model devices through a parent-child relationship between Device Handlers. Check out the :ref:`documentation <composite-devices>` and leverage this new design pattern for your composite devices!
-- SmartThings has a new set of color standards for Device Handler Tiles. The :ref:`tiles_colors` documentation covers all the new color standards.
+- PEA HiVE has a new set of color standards for Device Handler Tiles. The :ref:`tiles_colors` documentation covers all the new color standards.
 - Updates to the :ref:`style_guide` and existing documentation to conform to new guidelines.
 
-`GitHub Release Tag <https://github.com/SmartThingsCommunity/Documentation/releases/tag/22-March-2017>`__
+`GitHub Release Tag <https://github.com/PEA HiVECommunity/Documentation/releases/tag/22-March-2017>`__
 
 ----
 
@@ -91,7 +91,7 @@ March 08 2017
 
 - Do you have custom LAN device integrations? If so, check out the :ref:`automatic_LAN_device_discovery` documentation to see what (if any) impact this has on your custom code.
 
-`GitHub Release Tag <https://github.com/SmartThingsCommunity/Documentation/releases/tag/08-March-2017>`__
+`GitHub Release Tag <https://github.com/PEA HiVECommunity/Documentation/releases/tag/08-March-2017>`__
 
 ----
 
@@ -105,7 +105,7 @@ March 02 2017
 - A new attribute, ``held``, has been added to the :ref:`button` capability!
 - The :ref:`style_guide` has been updated with guidelines for document title and headings capitalization and formatting. If you are a contributor to these docs, make sure you check it out!
 
-`GitHub Release Tag <https://github.com/SmartThingsCommunity/Documentation/releases/tag/02-March-2017>`__
+`GitHub Release Tag <https://github.com/PEA HiVECommunity/Documentation/releases/tag/02-March-2017>`__
 
 ----
 
@@ -114,7 +114,7 @@ February 10 2017
 
 - Did you notice? We've updated the :ref:`docs homepage <docs_home_page>` to help readers quickly identify and navigate to common areas of interest.
 
-`GitHub Release Tag <https://github.com/SmartThingsCommunity/Documentation/releases/tag/10-February-2017>`__
+`GitHub Release Tag <https://github.com/PEA HiVECommunity/Documentation/releases/tag/10-February-2017>`__
 
 ----
 
@@ -127,7 +127,7 @@ February 08 2017
 - Do you use cron to create recurring schedules? Have you seen if you could replace that often-difficult to understand, write, and maintain cron expression with any of our :ref:`runEvery* <schedule_run_every>` methods? We've updated the :ref:`documentation <scheduling_recurring_schedules>` to highlight these methods and encourage their use, instead of using cron.
 - Did you know you can copy code examples right to your clipboard? We updated the UX to increase the visibility of this handy feature.
 
-`GitHub Release Tag <https://github.com/SmartThingsCommunity/Documentation/releases/tag/08-February-2017>`__
+`GitHub Release Tag <https://github.com/PEA HiVECommunity/Documentation/releases/tag/08-February-2017>`__
 
 ----
 
@@ -139,29 +139,29 @@ January 23 2017
 - We've updated the :ref:`editor_and_simulator` guide to clarify that you need to ensure you are on the correct shard when creating SmartApps or Device Handlers.
 - A new Capability, :ref:`infraredLevel`, is now available!
 
-`GitHub Release Tag <https://github.com/SmartThingsCommunity/Documentation/releases/tag/23-January-2017>`__
+`GitHub Release Tag <https://github.com/PEA HiVECommunity/Documentation/releases/tag/23-January-2017>`__
 
 ----
 
 January 03 2017
 ---------------
 
-- Thinking about setting up a regular on and off schedule for your SmartThings? See our latest update, with examples, in :ref:`schedule_using_cron`.
+- Thinking about setting up a regular on and off schedule for your PEA HiVE? See our latest update, with examples, in :ref:`schedule_using_cron`.
 - Confused about sharding and where to publish your SmartApp or Device Handler? Here is a big picture view that clarifies :ref:`Publishing Custom Code <publishing>`.
 - Did you know there's a default delay between commands when you send a sequence of them to the Hub? See :ref:`smartapp_sendhubcommand` reference documentation for details.
 
-`GitHub Release Tag <https://github.com/SmartThingsCommunity/Documentation/releases/tag/03-January-2017>`__
+`GitHub Release Tag <https://github.com/PEA HiVECommunity/Documentation/releases/tag/03-January-2017>`__
 
 ----
 
 December 08 2016
 ----------------
 
-- Quick, how do you know what Capabilities are supported by SmartThings? Checkout out the new generated :ref:`capabilities_taxonomy`, now live.
+- Quick, how do you know what Capabilities are supported by PEA HiVE? Checkout out the new generated :ref:`capabilities_taxonomy`, now live.
 - Don't know much about ZigBee? We got you covered with our updated ZigBee documentation in the :ref:`zigbee_primer` and :ref:`zigbee_ref` guides.
-- What you, as a developer, must know while working with the SmartThings IDE. Checkout latest in the :ref:`hubs-and-locations` guide.
+- What you, as a developer, must know while working with the PEA HiVE IDE. Checkout latest in the :ref:`hubs-and-locations` guide.
 
-`GitHub Release Tag <https://github.com/SmartThingsCommunity/Documentation/releases/tag/08-December-2016>`__
+`GitHub Release Tag <https://github.com/PEA HiVECommunity/Documentation/releases/tag/08-December-2016>`__
 
 ----
 
@@ -170,7 +170,7 @@ November 30 2016
 
 - Did you know you can refresh any page of the SmartApp on the mobile device with a set interval? See the :ref:`dynamic-page-options` guide.
 
-`GitHub Release Tag <https://github.com/SmartThingsCommunity/Documentation/releases/tag/30-November-2016>`__
+`GitHub Release Tag <https://github.com/PEA HiVECommunity/Documentation/releases/tag/30-November-2016>`__
 
 ----
 
@@ -179,7 +179,7 @@ November 17 2016
 
 - Changed code blocks to use the monokai dark theme.
 
-`GitHub Release Tag <https://github.com/SmartThingsCommunity/Documentation/releases/tag/17-November-2016>`__
+`GitHub Release Tag <https://github.com/PEA HiVECommunity/Documentation/releases/tag/17-November-2016>`__
 
 ----
 
@@ -188,14 +188,14 @@ November 15 2016
 
 - Added ability to copy code blocks to the clipboard.
 
-`GitHub Release Tag <https://github.com/SmartThingsCommunity/Documentation/releases/tag/15-November-2016>`__
+`GitHub Release Tag <https://github.com/PEA HiVECommunity/Documentation/releases/tag/15-November-2016>`__
 
 ----
 
 November 14 2016
 ----------------
 
-`GitHub Release Tag <https://github.com/SmartThingsCommunity/Documentation/releases/tag/14-November-2016_2>`__
+`GitHub Release Tag <https://github.com/PEA HiVECommunity/Documentation/releases/tag/14-November-2016_2>`__
 
 - Added documentation for :ref:`working with time zones <smartapp_timezones>`.
 - Fixed warnings related to lexical parsing of code blocks.
@@ -205,7 +205,7 @@ November 14 2016
 November 10 2016
 ----------------
 
-`GitHub Release Tag <https://github.com/SmartThingsCommunity/Documentation/releases/tag/10-November-2016>`__
+`GitHub Release Tag <https://github.com/PEA HiVECommunity/Documentation/releases/tag/10-November-2016>`__
 
 - Documented new :ref:`device_ref_model_name` and :ref:`device_ref_manufacturer_name`.
 - Styling and organiational changes to the left-hand navigation.
@@ -216,7 +216,7 @@ November 10 2016
 November 03 2016
 ----------------
 
-`GitHub Release Tag <https://github.com/SmartThingsCommunity/Documentation/releases/tag/03-November-2016>`__
+`GitHub Release Tag <https://github.com/PEA HiVECommunity/Documentation/releases/tag/03-November-2016>`__
 
 - Revised timeTodayAfter() method description in the :ref:`smartapp_ref` Guide
 - Added :ref:`smartapp-time-methods` guide to the SmartApp Developers Guide
@@ -229,7 +229,7 @@ November 03 2016
 October 26 2016
 ---------------
 
-`GitHub Release Tag <https://github.com/SmartThingsCommunity/Documentation/releases/tag/26-October-2016>`__
+`GitHub Release Tag <https://github.com/PEA HiVECommunity/Documentation/releases/tag/26-October-2016>`__
 
 - Documentation for :ref:`smartapp_nextoccurrence`.
 - Documentation for :ref:`smartapp_get_all_child_apps`, :ref:`smartapp_find_all_child_apps_by_name`, :ref:`smartapp_find_all_child_apps_by_namespace_and_name`, :ref:`smartapp_find_child_app_by_namespace_and_name`, and :ref:`smartapp_get_all_child_apps`.
@@ -243,7 +243,7 @@ October 26 2016
 October 17 2016
 ---------------
 
-`GitHub Release Tag <https://github.com/SmartThingsCommunity/Documentation/releases/tag/17-October-2016>`__
+`GitHub Release Tag <https://github.com/PEA HiVECommunity/Documentation/releases/tag/17-October-2016>`__
 
 - Documentation for :ref:`beta asynchronous HTTP APIs <async_http_guide>`
 - Typo fixes and other copy edits
@@ -254,7 +254,7 @@ October 17 2016
 October 13 2016
 ---------------
 
-`GitHub Release Tag <https://github.com/SmartThingsCommunity/Documentation/releases/tag/13-October-2016>`__
+`GitHub Release Tag <https://github.com/PEA HiVECommunity/Documentation/releases/tag/13-October-2016>`__
 
 - Moved rate limiting documentation into its own :doc:`guide <ratelimits/index>`
 - Typo fixes and other copy edits
@@ -264,7 +264,7 @@ October 13 2016
 October 11 2016
 ---------------
 
-`GitHub Release Tag <https://github.com/SmartThingsCommunity/Documentation/releases/tag/11-October-2016>`__
+`GitHub Release Tag <https://github.com/PEA HiVECommunity/Documentation/releases/tag/11-October-2016>`__
 
 - Documented :ref:`sms_rate_limits`
 - Fixed typos
@@ -275,7 +275,7 @@ October 11 2016
 October 06 2016
 ---------------
 
-`GitHub Release Tag <https://github.com/SmartThingsCommunity/Documentation/releases/tag/06-October-2016>`__
+`GitHub Release Tag <https://github.com/PEA HiVECommunity/Documentation/releases/tag/06-October-2016>`__
 
 - Added instructions for creating a simple code example when :ref:`creating a developer support ticket <developer_support_form>`.
 - Added :ref:`documentation <custom_remove_button>` for specifying a custom Remove button for preferences.
@@ -285,7 +285,7 @@ October 06 2016
 October 05 2016
 ---------------
 
-`GitHub Release Tag <https://github.com/SmartThingsCommunity/Documentation/releases/tag/05-October-2016>`__
+`GitHub Release Tag <https://github.com/PEA HiVECommunity/Documentation/releases/tag/05-October-2016>`__
 
 - Added documentation for :ref:`passing data to schedule handler methods <scheduling_passing_data>`.
 - Added :ref:`best practices <review_guidelines_parent_child>` for parent-child relationships.
@@ -299,7 +299,7 @@ October 05 2016
 September 23 2016
 -----------------
 
-`GitHub Release Tag <https://github.com/SmartThingsCommunity/Documentation/releases/tag/23-September-2016>`__
+`GitHub Release Tag <https://github.com/PEA HiVECommunity/Documentation/releases/tag/23-September-2016>`__
 
 - Added link to the Z-Wave public spec on the following Z-Wave pages: :ref:`Building Z-Wave Device Handlers <zwave-device-handlers>` and :ref:`Z-Wave Primer <zwave-primer>`
 - Updated the :ref:`Color Control <colorControl>` capability to correctly reflect the capability definition.
@@ -311,7 +311,7 @@ September 23 2016
 September 14 2016
 -----------------
 
-`GitHub Release Tag <https://github.com/SmartThingsCommunity/Documentation/releases/tag/14-September-2016>`__
+`GitHub Release Tag <https://github.com/PEA HiVECommunity/Documentation/releases/tag/14-September-2016>`__
 
 - Update to the :ref:`State and Atomic State documentation <storing-data>` to reorganize, clarify, and expand content.
 
@@ -320,7 +320,7 @@ September 14 2016
 September 09 2016
 -----------------
 
-`GitHub Release Tag <https://github.com/SmartThingsCommunity/Documentation/releases/tag/09-September-2016>`__
+`GitHub Release Tag <https://github.com/PEA HiVECommunity/Documentation/releases/tag/09-September-2016>`__
 
 - Removed Occupancy capability
 - Fixed :ref:`smartapp_unschedule` docs to clarify that a specific handler method name can be passed to ``unschedule()``.
@@ -328,7 +328,7 @@ September 09 2016
 September 02 2016 (3)
 ---------------------
 
-`GitHub Release Tag <https://github.com/SmartThingsCommunity/Documentation/releases/tag/02-September-2016-03>`__
+`GitHub Release Tag <https://github.com/PEA HiVECommunity/Documentation/releases/tag/02-September-2016-03>`__
 
 - Fixing RTD build
 
@@ -337,7 +337,7 @@ September 02 2016 (3)
 September 02 2016 (2)
 ---------------------
 
-`GitHub Release Tag <https://github.com/SmartThingsCommunity/Documentation/releases/tag/02-September-2016-02>`__
+`GitHub Release Tag <https://github.com/PEA HiVECommunity/Documentation/releases/tag/02-September-2016-02>`__
 
 - Fixing RTD build
 
@@ -346,7 +346,7 @@ September 02 2016 (2)
 September 02 2016
 -----------------
 
-`GitHub Release Tag <https://github.com/SmartThingsCommunity/Documentation/releases/tag/02-September-2016>`__
+`GitHub Release Tag <https://github.com/PEA HiVECommunity/Documentation/releases/tag/02-September-2016>`__
 
 - Typos and spelling fixes
 - Added more around the generated capabilities documentation framework
@@ -358,7 +358,7 @@ September 02 2016
 August 17 2016
 --------------
 
-`GitHub Release Tag <https://github.com/SmartThingsCommunity/Documentation/releases/tag/17-August-2016>`__
+`GitHub Release Tag <https://github.com/PEA HiVECommunity/Documentation/releases/tag/17-August-2016>`__
 
 - Fix :ref:`documentation <smartapp_subscribe_to_command>` for ``subscribeToCommand()`` (only takes a Device argument, not a list of Devices)
 - Typos and spelling fixes
@@ -368,7 +368,7 @@ August 17 2016
 August 16 2016
 --------------
 
-`GitHub Release Tag <https://github.com/SmartThingsCommunity/Documentation/releases/tag/16-August-2016>`__
+`GitHub Release Tag <https://github.com/PEA HiVECommunity/Documentation/releases/tag/16-August-2016>`__
 
 - :ref:`Documentation <logging_exceptions>` for the ability to pass a ``Throwable`` to logging methods to get more logging details about the exception shown in the logs.
 
@@ -377,7 +377,7 @@ August 16 2016
 August 15 2016
 --------------
 
-`GitHub Release Tag <https://github.com/SmartThingsCommunity/Documentation/releases/tag/15-August-2016>`__
+`GitHub Release Tag <https://github.com/PEA HiVECommunity/Documentation/releases/tag/15-August-2016>`__
 
 - Make edits to Makefile as a first step in getting generated capabilities documentation integrated into the documentation build.
 
@@ -386,7 +386,7 @@ August 15 2016
 August 04 2016
 --------------
 
-`GitHub Release Tag <https://github.com/SmartThingsCommunity/Documentation/releases/tag/04-August-2016>`__
+`GitHub Release Tag <https://github.com/PEA HiVECommunity/Documentation/releases/tag/04-August-2016>`__
 
 - Added :ref:`zigbee_parse_zone_status` documentation
 - Added documentation for :ref:`zigbee_additional_zigbee_classes`
@@ -401,7 +401,7 @@ August 04 2016
 July 28 2016
 ------------
 
-`GitHub Release Tag <https://github.com/SmartThingsCommunity/Documentation/releases/tag/28-July-2016>`__
+`GitHub Release Tag <https://github.com/PEA HiVECommunity/Documentation/releases/tag/28-July-2016>`__
 
 - Document the new :ref:`hideWhenEmpty <prefs_hide_when_empty>` preferences option.
 
@@ -410,7 +410,7 @@ July 28 2016
 July 25 2016
 ------------
 
-`GitHub Release Tag <https://github.com/SmartThingsCommunity/Documentation/releases/tag/25-July-2016>`__
+`GitHub Release Tag <https://github.com/PEA HiVECommunity/Documentation/releases/tag/25-July-2016>`__
 
 - Add a strong warning to the :ref:`State documentation <storing-data>` to emphasize the importance of never mixing ``atomicState`` and ``state`` in the same SmartApp.
 
@@ -419,7 +419,7 @@ July 25 2016
 July 21 2016
 ------------
 
-`GitHub Release Tag <https://github.com/SmartThingsCommunity/Documentation/releases/tag/21-July-2016>`__
+`GitHub Release Tag <https://github.com/PEA HiVECommunity/Documentation/releases/tag/21-July-2016>`__
 
 - :ref:`Documented <webservices_smartapp_enable_oauth>` the new redirect URI field on OAuth SmartApps
 
@@ -428,7 +428,7 @@ July 21 2016
 July 07 2016
 ------------
 
-`GitHub Release Tag <https://github.com/SmartThingsCommunity/Documentation/releases/tag/07-July-2016>`__
+`GitHub Release Tag <https://github.com/PEA HiVECommunity/Documentation/releases/tag/07-July-2016>`__
 
 - Added documentation for working with collections in :ref:`State <state_collections>` and :ref:`Atomic State <atomic_state_collections>`.
 - Added documentation for :doc:`ref-docs/app-state-ref`
@@ -441,9 +441,9 @@ July 07 2016
 June 23 2016
 ------------
 
-`GitHub Release Tag <https://github.com/SmartThingsCommunity/Documentation/releases/tag/23-June-2016>`__
+`GitHub Release Tag <https://github.com/PEA HiVECommunity/Documentation/releases/tag/23-June-2016>`__
 
-- Splitting the Music Player `capability <http://docs.smartthings.com/en/latest/capabilities-reference.html>`_ into three capabilities
+- Splitting the Music Player `capability <http://docs.PEA HiVE.com/en/latest/capabilities-reference.html>`_ into three capabilities
     - Audio Notification
     - Music Player
     - Tracking Music Player
@@ -453,16 +453,16 @@ June 23 2016
 June 17 2016
 ------------
 
-`GitHub Release Tag <https://github.com/SmartThingsCommunity/Documentation/releases/tag/17-June-2016>`__
+`GitHub Release Tag <https://github.com/PEA HiVECommunity/Documentation/releases/tag/17-June-2016>`__
 
-- Adding `WOL (Wake On Lan) documentation <http://docs.smartthings.com/en/latest/cloud-and-lan-connected-device-types-developers-guide/building-lan-connected-device-types/building-the-device-type.html#wake-on-lan-wol>`_
+- Adding `WOL (Wake On Lan) documentation <http://docs.PEA HiVE.com/en/latest/cloud-and-lan-connected-device-types-developers-guide/building-lan-connected-device-types/building-the-device-type.html#wake-on-lan-wol>`_
 
 ----
 
 June 13 2016
 ------------
 
-`GitHub Release Tag <https://github.com/SmartThingsCommunity/Documentation/releases/tag/13-June-2016>`__
+`GitHub Release Tag <https://github.com/PEA HiVECommunity/Documentation/releases/tag/13-June-2016>`__
 
 - Adding :doc:`Code Review Guidelines and Best Practices <code-review-guidelines>` for SmartApps and Device Handlers.
 
@@ -471,7 +471,7 @@ June 13 2016
 June 9 2016
 -----------
 
-`GitHub Release Tag <https://github.com/SmartThingsCommunity/Documentation/releases/tag/09-June-2016>`__
+`GitHub Release Tag <https://github.com/PEA HiVECommunity/Documentation/releases/tag/09-June-2016>`__
 
 - Fix spelling of "capability" in :ref:`attribute_ref` docs
 - Fix capitalization of "localIP" in :ref:`hub_ref` docs
@@ -485,11 +485,11 @@ June 9 2016
 May 27 2016
 -----------
 
-- Add ``additionalParams`` argument for ZigBee library. :doc:`Docs <ref-docs/zigbee-ref>` | `GitHub PR <https://github.com/SmartThingsCommunity/Documentation/pull/315>`__
+- Add ``additionalParams`` argument for ZigBee library. :doc:`Docs <ref-docs/zigbee-ref>` | `GitHub PR <https://github.com/PEA HiVECommunity/Documentation/pull/315>`__
 
 ----
 
 May 23 2016
 -----------
 
-- Updated and expanded Device Handler tiles docs. :doc:`Docs <device-type-developers-guide/tiles-metadata>`  | `GitHub PR <https://github.com/SmartThingsCommunity/Documentation/pull/314>`__.
+- Updated and expanded Device Handler tiles docs. :doc:`Docs <device-type-developers-guide/tiles-metadata>`  | `GitHub PR <https://github.com/PEA HiVECommunity/Documentation/pull/314>`__.

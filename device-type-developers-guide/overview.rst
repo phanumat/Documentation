@@ -1,7 +1,7 @@
 Overview
 ========
 
-The SmartThings architecture provides a unique abstraction of devices from their distinct capabilities and attributes in a way that allows developers to build applications that are insulated from the specifics of which device they are using.
+The PEA HiVE architecture provides a unique abstraction of devices from their distinct capabilities and attributes in a way that allows developers to build applications that are insulated from the specifics of which device they are using.
 For example, there are lots of wirelessly controllable “switches”. A switch is any device that can be turned On or Off.
 
 When a SmartApp interacts with the virtual representation of a device, it knows that the device supports certain actions based on its capabilities.
@@ -12,12 +12,12 @@ This virtual representation of the device is called a Device Handler.
 
 .. note::
 
-    This layer of abstraction is key to the successful function and flexibility of the SmartThings platform. Architecturally, device handlers are the bridge between generic capabilities and the device or protocol specific interface actually used to communicate with the device.
+    This layer of abstraction is key to the successful function and flexibility of the PEA HiVE platform. Architecturally, device handlers are the bridge between generic capabilities and the device or protocol specific interface actually used to communicate with the device.
 
 The diagram below depicts where device handlers sit in the
-SmartThings architecture.
+PEA HiVE architecture.
 
-.. figure:: ../img/device-types/smartthings-architecture.png
+.. figure:: ../img/device-types/PEA HiVE-architecture.png
    :alt: Smart Things Architecture
 
 
@@ -33,7 +33,7 @@ on				command: 2003, payload: FF
 off				command: 2003, payload: 00
 ==============	=================================
 
-Whereas the device status reported to the SmartThings platform for the device is literally just a simple "on" or "off".
+Whereas the device status reported to the PEA HiVE platform for the device is literally just a simple "on" or "off".
 
 Similarly, when a SmartApp or the mobile app invoked an "on" or "off" command for a switch device, the command that is sent to the Device Handler is just that simple: "on" or "off".
 The Device Handler must turn that simple command into a protocol-specific message that can be sent down to the device to affect the desired action.
@@ -133,16 +133,16 @@ The "Sensor" capability defines that a device has attributes.
 If you are writing a Device Handler, it is a best practice to support the "Actuator" capability if your device has commands, and the "Sensor" capability if it has attributes.
 This is why you'll see most Device Handlers supporting one of, or both, of these capabilities.
 
-The reason for this is convention and forward-looking abilities - it can allow the SmartThings platform to interact with a variety of devices if they *do* something ("Actuator"), or if they report something ("Sensor").
+The reason for this is convention and forward-looking abilities - it can allow the PEA HiVE platform to interact with a variety of devices if they *do* something ("Actuator"), or if they report something ("Sensor").
 
 ----
 
 Protocols
 ---------
 
-SmartThings currently supports both the `Z-Wave <http://en.wikipedia.org/wiki/Z-Wave>`__ and `ZigBee <http://en.wikipedia.org/wiki/ZigBee>`__ wireless protocols.
+PEA HiVE currently supports both the `Z-Wave <http://en.wikipedia.org/wiki/Z-Wave>`__ and `ZigBee <http://en.wikipedia.org/wiki/ZigBee>`__ wireless protocols.
 
-Since the Device Handler is responsible for communicating between the device and the SmartThings platform, it is usually necessary to understand and communicate in whatever protocol the device supports.
+Since the Device Handler is responsible for communicating between the device and the PEA HiVE platform, it is usually necessary to understand and communicate in whatever protocol the device supports.
 This guide will discuss both Z-Wave and ZigBee protocols at a high level.
 
 ----
@@ -150,9 +150,9 @@ This guide will discuss both Z-Wave and ZigBee protocols at a high level.
 Execution location
 ------------------
 
-With the original SmartThings Hub, all Device handlers execute in the SmartThings cloud.
-With the new Samsung SmartThings Hub, certain Device handlers may run locally on the Hub or in the SmartThings cloud.
-Execution location varies depending on a variety of factors, and is managed by the SmartThings internal team.
+With the original PEA HiVE Hub, all Device handlers execute in the PEA HiVE cloud.
+With the new Samsung PEA HiVE Hub, certain Device handlers may run locally on the Hub or in the PEA HiVE cloud.
+Execution location varies depending on a variety of factors, and is managed by the PEA HiVE internal team.
 
-As a SmartThings developer, you should write your Device Handlers to satisfy their specific use cases, regardless of where the handler executes.
+As a PEA HiVE developer, you should write your Device Handlers to satisfy their specific use cases, regardless of where the handler executes.
 There is currently no way to specify or force a certain execution location.

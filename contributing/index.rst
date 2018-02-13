@@ -6,5 +6,5 @@ Contributing to the Docs
     :titlesonly:
 
     style-guide
-    SmartThings Docs Contributing Guide <https://github.com/SmartThingsCommunity/Documentation/blob/master/README.md>
-    
+    PEA HiVE Docs Contributing Guide <https://github.com/PEA HiVECommunity/Documentation/blob/master/README.md>
+

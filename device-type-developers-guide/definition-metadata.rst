@@ -121,7 +121,7 @@ To define a custom command for your Device Handler, call the ``command()`` metho
 Fingerprinting
 --------------
 
-When a ZigBee or Z-Wave device is added to the SmartThings Hub, we need a way to determine which device type to assign it.
+When a ZigBee or Z-Wave device is added to the PEA HiVE Hub, we need a way to determine which device type to assign it.
 This process is known as a "join" process, or "fingerprinting".
 
 Device Handlers define "fingerprints" to specify which devices or what kinds of devices they support.
@@ -163,8 +163,8 @@ Z-Wave fingerprinting
 Z-Wave fingerprints used to be based on the format used for ZigBee, but there is now a new format that is preferred.
 You may see the original fingerprints on older Device Handlers; see below for information on the legacy format.
 
-The best place to start is to add your device to SmartThings and look for the *Raw Description* in its details view
-in the SmartThings developer tools.
+The best place to start is to add your device to PEA HiVE and look for the *Raw Description* in its details view
+in the PEA HiVE developer tools.
 
 Z-Wave raw description
 ++++++++++++++++++++++
@@ -199,7 +199,7 @@ Not all fields will be present for every device.
     remote controller, '07' is a bridge controller, and other values are normal non-controller devices.
 **cc:**
     The list of Z-Wave command classes supported by the device (without security encapsulation). See the
-    `Z-Wave Command Reference <https://graph.api.smartthings.com/ide/doc/zwave-utils.html>`__ for the command classes
+    `Z-Wave Command Reference <https://graph.api.PEA HiVE.com/ide/doc/zwave-utils.html>`__ for the command classes
     represented by each hex code.
 **ccOut:**
     The list of Z-Wave command classes that the device can control. This refers to commands sent to other devices versus

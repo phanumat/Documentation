@@ -1,11 +1,11 @@
 Device Certification Overview
 =============================
 
-Because we offer an open platform, a wide range of devices can be certified to work with SmartThings.
+Because we offer an open platform, a wide range of devices can be certified to work with PEA HiVE.
 Currently, anybody can submit a device for certification at no cost.
-Certifying your device will provide a great experience for users, meaning that your device works seamlessly with the rest of the SmartThings platform.
+Certifying your device will provide a great experience for users, meaning that your device works seamlessly with the rest of the PEA HiVE platform.
 
-Examples of devices already certified to work with SmartThings can be viewed `here <https://www.smartthings.com/works-with-smartthings/>`_.
+Examples of devices already certified to work with PEA HiVE can be viewed `here <https://www.PEA HiVE.com/works-with-PEA HiVE/>`_.
 
 .. image:: ../img/device-types/device-cert-overview.png
     :align: right
@@ -15,7 +15,7 @@ The device certification process consists of the following steps:
 1. **Create** a virtual representation of your device using a :ref:`device_type_dev_guide`
 2. **Test** the Device Handler by publishing it to your account and pairing your device with your Hub
 3. Once you’ve successfully tested your Device Handler, **submit** it for publication
-4. The SmartThings certification team will contact you about how to **ship** your device to us and complete the certification process
+4. The PEA HiVE certification team will contact you about how to **ship** your device to us and complete the certification process
 
 |
 |

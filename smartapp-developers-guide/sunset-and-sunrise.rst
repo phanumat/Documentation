@@ -3,7 +3,7 @@ Sunset and Sunrise
 ==================
 
 SmartApps often need to take some action at or around the local sunrise or sunset time.
-The SmartThings cloud provides access to this type of rich data, and even generates Events for the Location (if the geofence is set).
+The PEA HiVE cloud provides access to this type of rich data, and even generates Events for the Location (if the geofence is set).
 We can also get access to sunrise and sunset times using a ZIP code.
 
 ----
@@ -152,6 +152,6 @@ You can refer to these example SmartApps in the IDE to see how sunrise and sunse
 
 You can also refer to the following examples in Github:
 
-- `Sunset Event Example <https://github.com/SmartThingsCommunity/Code/blob/master/smartapps/sunrise-sunset/turn-on-at-sunset.groovy>`__
-- `Sunset Offset Example <https://github.com/SmartThingsCommunity/Code/blob/master/smartapps/sunrise-sunset/turn-on-before-sunset.groovy>`__
-- `Sunset by ZIP Code Example <https://github.com/SmartThingsCommunity/Code/blob/master/smartapps/sunrise-sunset/turn-on-by-zip-code.groovy>`__
+- `Sunset Event Example <https://github.com/PEA HiVECommunity/Code/blob/master/smartapps/sunrise-sunset/turn-on-at-sunset.groovy>`__
+- `Sunset Offset Example <https://github.com/PEA HiVECommunity/Code/blob/master/smartapps/sunrise-sunset/turn-on-before-sunset.groovy>`__
+- `Sunset by ZIP Code Example <https://github.com/PEA HiVECommunity/Code/blob/master/smartapps/sunrise-sunset/turn-on-by-zip-code.groovy>`__

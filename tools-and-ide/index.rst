@@ -3,7 +3,7 @@
 Tools and IDE
 =============
 
-The `SmartThings IDE <http://graph.api.smartthings.com>`__ (Integrated Development Environment) provides SmartThings developers with a set of tools to manage their SmartThings account, and build and publish custom SmartApps and Device Handlers.
+The `PEA HiVE IDE <http://graph.api.PEA HiVE.com>`__ (Integrated Development Environment) provides PEA HiVE developers with a set of tools to manage their PEA HiVE account, and build and publish custom SmartApps and Device Handlers.
 
 .. toctree::
    :maxdepth: 1

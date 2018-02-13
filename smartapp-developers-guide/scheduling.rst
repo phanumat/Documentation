@@ -18,7 +18,7 @@ Broadly speaking, there are a few different ways we might want to schedule somet
 - Do something once at a certain time in the future.
 - Do something on a recurring schedule.
 
-We'll look at each scenario in detail, and at the methods SmartThings makes available to address these requirements.
+We'll look at each scenario in detail, and at the methods PEA HiVE makes available to address these requirements.
 
 .. note::
     When using the scheduler APIs, the schedule will be created using the time zone of the SmartApp's Location.
@@ -82,7 +82,7 @@ So, if you do specify ``[overwrite: false]``, be sure to write your handler so t
 .. note::
 
     It is important to note that you should not rely on ``runIn()`` being called in *exactly* the specified number of seconds.
-    SmartThings will *attempt* to execute the method within a minute of the time specified, but cannot guarantee it.
+    PEA HiVE will *attempt* to execute the method within a minute of the time specified, but cannot guarantee it.
     See the :ref:`limitations_best_practices` topic below for more information.
 
 ----
@@ -131,7 +131,7 @@ Often, there is a need to schedule a job to run on a specific schedule.
 For example, maybe you want to turn the lights off at 11 PM every night.
 Or, you might need to execute a certain action every X minutes.
 
-SmartThings provides the :ref:`smartapp_schedule` and various ``runEvery*()`` methods to allow you to create recurring schedules.
+PEA HiVE provides the :ref:`smartapp_schedule` and various ``runEvery*()`` methods to allow you to create recurring schedules.
 
 The various ``schedule()`` methods follow a similar form - they take an argument representing the desired schedule, and the method to be called on this schedule.
 
@@ -187,12 +187,12 @@ Finally, you can pass a Long representing the desired time in milliseconds (usin
 Schedule every X minutes or hours
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-For common recurring schedules, SmartThings provides a few convenience APIs that we can use.
+For common recurring schedules, PEA HiVE provides a few convenience APIs that we can use.
 
 These methods work by creating a random start time in X minutes or hours, and then every X minutes or hours after that.
 For example, ``runEvery5Minutes(handlerMethod)`` will execute ``handlerMethod()`` at a random time in the next five minutes, and then run every five minutes from then.
 
-These methods have the advantage of randomizing the start time for schedules, which reduces the load on the SmartThings scheduler, and results in better performance for end users.
+These methods have the advantage of randomizing the start time for schedules, which reduces the load on the PEA HiVE scheduler, and results in better performance for end users.
 As such, these methods should be preferred over cron expressions when available.
 
 The currently available methods are:
@@ -231,7 +231,7 @@ Schedule using cron
     These methods are documented above in the :ref:`schedule_run_every` section.
 
 Scheduling jobs to execute at a particular time is useful, but what if, for example, we want a method to execute at fifteen minutes past the hour, every hour?
-SmartThings allows you to pass a cron expression to the ``schedule()`` method to accomplish this.
+PEA HiVE allows you to pass a cron expression to the ``schedule()`` method to accomplish this.
 
 .. code-block:: groovy
     :emphasize-lines: 3
@@ -246,7 +246,7 @@ SmartThings allows you to pass a cron expression to the ``schedule()`` method to
     }
 
 A cron expression is a way to specify a recurring schedule, based on the UNIX cron tool.
-The cron expression supported by SmartThings is a string of six or seven fields, separated by white space.
+The cron expression supported by PEA HiVE is a string of six or seven fields, separated by white space.
 The *seconds* field is the left most field.
 The below table describes these fields.
 
@@ -319,7 +319,7 @@ Expression Description                        Description
     Note the difference between ``*``, which means "every" and ``?``, which means "any".
 
     For example, ``* */5 * * * ?`` means every 5th minute, run 60 times within that minute.
-    That's almost surely not what you want, and SmartThings will not execute your schedule that frequently (see below).
+    That's almost surely not what you want, and PEA HiVE will not execute your schedule that frequently (see below).
 
     If you were trying to execute every X minutes, it would look like this: ``0 0/X * * * ?`` where X is the minute value.
 
@@ -481,7 +481,7 @@ Use any of the :ref:`runEvery*() <schedule_run_every>` methods instead of creati
 Execution time may not be in exact seconds
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-SmartThings will try to execute your scheduled job at the specified time, but cannot guarantee it will execute at that exact moment.
+PEA HiVE will try to execute your scheduled job at the specified time, but cannot guarantee it will execute at that exact moment.
 As a general rule of thumb, you should expect that your job will be called within the minute of scheduled execution.
 For example, if you schedule a job at 5:30:20 (20 seconds past 5:30) to execute in five minutes, we expect it to be executed at some point in the 5:35 minute.
 
@@ -514,7 +514,7 @@ A community post will be made in advance of any such change.
 Examples
 --------
 
-Here are some examples in the ``SmartThingsPublic`` repository that make use of schedules:
+Here are some examples in the ``PEA HiVEPublic`` repository that make use of schedules:
 
 - Once-A-Day_ uses ``schedule()`` turn switches on and off every day at a specified time.
 - Turn-It-On_ uses ``runIn()`` to turn a switch off after five minutes.
@@ -527,15 +527,15 @@ Here are some examples in the ``SmartThingsPublic`` repository that make use of 
     When using this value later to set up a schedule, the APIs need to be able to handle this type of argument.
     When simply using the input from preferences, you don't need to know the details of the specific date format being used.
     But, if you wish to use the APIs with string inputs directly, you will need to understand their expected format.
-    SmartThings uses the Java standard format of "yyyy-MM-dd'T'HH:mm:ss.SSSZ". More technical readers may recognize this format as ISO-8601 (Java does not fully conform to this format, but it is very similar).
+    PEA HiVE uses the Java standard format of "yyyy-MM-dd'T'HH:mm:ss.SSSZ". More technical readers may recognize this format as ISO-8601 (Java does not fully conform to this format, but it is very similar).
     Full discussion of this format is beyond the scope of this documentation, but a few examples may help:
     "January 09, 2015 3:50:32 GMT-6 (Central Standard Time)" converts to "2015-01-09T15:50:32.000-0600", and "February 09, 2015 3:50:32:254 GMT-6 (Central Standard Time)" converts to "2015-02-09T15:50:32.254-0600"
     For more information about date formatting, you can review the `SimpleDateFormat JavaDoc`_.
 
 
-.. _Once-a-Day: https://github.com/SmartThingsCommunity/SmartThingsPublic/blob/master/smartapps/smartthings/once-a-day.src/once-a-day.groovy
-.. _Turn-It-On: https://github.com/SmartThingsCommunity/SmartThingsPublic/blob/master/smartapps/smartthings/turn-it-on-for-5-minutes.src/turn-it-on-for-5-minutes.groovy
-.. _Left-It-Open: https://github.com/SmartThingsCommunity/SmartThingsPublic/blob/master/smartapps/smartthings/left-it-open.src/left-it-open.groovy
-.. _community post: https://community.smartthings.com/t/announcement-changes-coming-to-cron-jobs/41656
+.. _Once-a-Day: https://github.com/PEA HiVECommunity/PEA HiVEPublic/blob/master/smartapps/PEA HiVE/once-a-day.src/once-a-day.groovy
+.. _Turn-It-On: https://github.com/PEA HiVECommunity/PEA HiVEPublic/blob/master/smartapps/PEA HiVE/turn-it-on-for-5-minutes.src/turn-it-on-for-5-minutes.groovy
+.. _Left-It-Open: https://github.com/PEA HiVECommunity/PEA HiVEPublic/blob/master/smartapps/PEA HiVE/left-it-open.src/left-it-open.groovy
+.. _community post: https://community.PEA HiVE.com/t/announcement-changes-coming-to-cron-jobs/41656
 .. _Quartz Cron Trigger Tutorial: http://www.quartz-scheduler.org/documentation/quartz-2.x/tutorials/crontrigger.html
 .. _SimpleDateFormat JavaDoc: http://docs.oracle.com/javase/6/docs/api/java/text/SimpleDateFormat.html

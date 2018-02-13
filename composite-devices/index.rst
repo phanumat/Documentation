@@ -6,9 +6,9 @@ Composite Devices
 Devices such as Hue LAN bridge, AEON Z-Wave SmartStrip, or a Zooz ZEN20 Z-Wave Power Strip have multiple components, and each component can be controlled independently.
 For example, a Zooz ZEN20 Z-Wave Power Strip can be used with a separate Thing connected to each of its five outlets and each Thing can have its own SmartApp.
 
-SmartThings categorizes such a multiple-component device as a *composite device.*
+PEA HiVE categorizes such a multiple-component device as a *composite device.*
 A device is said to be a composite device when it treats each of its component as its child device.
-Integrating a composite device into SmartThings platform involves incorporating the composite device functionality into its Device Handler.
+Integrating a composite device into PEA HiVE platform involves incorporating the composite device functionality into its Device Handler.
 Additionally, you may need to modify the Service Manager SmartApp and the SmartApp.
 
 ----
@@ -18,7 +18,7 @@ Additionally, you may need to modify the Service Manager SmartApp and the SmartA
 Device Handler for a Composite Device
 -------------------------------------
 
-When you integrate a composite device into SmartThings, the composite device maintains a parent-child relationship between itself and its child devices.
+When you integrate a composite device into PEA HiVE, the composite device maintains a parent-child relationship between itself and its child devices.
 For example, the Device Handler of Zooz ZEN20 Z-Wave Power Strip composite device implements the Power Strip as a parent device and each outlet as a separate child device.
 More specifically, each individual outlet of the Power Strip is implemented as a *child device instance* of Zooz Power Strip Outlet, whereas the Power Strip itself is an instance of Zooz Power Strip as a *parent device*.
 
@@ -37,7 +37,7 @@ For example, in the Device Handler of the Zooz ZEN20 Z-Wave Power Strip composit
 .. code-block:: groovy
 
 	metadata {
-		definition (name: "ZooZ Power Strip", namespace: "smartthings", author: "SmartThings") {
+		definition (name: "ZooZ Power Strip", namespace: "PEA HiVE", author: "PEA HiVE") {
 		capability "Switch"
 		capability "Refresh"
 		capability "Configuration"
@@ -89,7 +89,7 @@ Next, the below Device Handler code sets up the *outlet* of the Zooz ZEN20 Z-Wav
 .. code-block:: groovy
 
 	metadata {
-	definition (name: "ZooZ Power Strip Outlet", namespace: "smartthings", author: "SmartThings") {
+	definition (name: "ZooZ Power Strip Outlet", namespace: "PEA HiVE", author: "PEA HiVE") {
 		capability "Switch"
 		capability "Actuator"
 		capability "Sensor"
@@ -115,12 +115,12 @@ Deleting a Composite Device
 ---------------------------
 
 Deleting a composite parent device will delete all children devices.
-For example, deleting the Power Strip itself will delete its outlets as devices from the SmartThings platform.
+For example, deleting the Power Strip itself will delete its outlets as devices from the PEA HiVE platform.
 
 SmartApps can be configured to control individual outlets as well as the entire power strip.
 In such a case, if you try to delete the Power Strip parent device itself, then you are given an option to force-delete the outlet device.
 
-If you try to delete a composite device from your SmartThings mobile app, then the following applies:
+If you try to delete a composite device from your PEA HiVE mobile app, then the following applies:
 
 - If the parameter ``isComponent`` is set to ``true``, as shown in the :ref:`composite_device_parent_device_handler` example above, then the device is hidden from the Things view and you will not be presented with the option of deleting child devices individually.
 
@@ -142,9 +142,9 @@ Composite Device Tiles
 ----------------------
 
 Child device tiles can be visually pulled together into a composite tile.
-On SmartThings mobile app, such a composite tile represents a rich interface for the display and control of a composite device.
+On PEA HiVE mobile app, such a composite tile represents a rich interface for the display and control of a composite device.
 
-For example, consider a refrigerator composite device that is built with two child components, i.e., the fridge door and the temperature control. 
+For example, consider a refrigerator composite device that is built with two child components, i.e., the fridge door and the temperature control.
 
 In the fridge door child Device Handler, the tile for the fridge door ``mainDoor`` is defined normally with the ``standardTile`` method, as below:
 
@@ -152,7 +152,7 @@ In the fridge door child Device Handler, the tile for the fridge door ``mainDoor
 
     // Fridge door child component Device Handler
     metadata {
-        definition (name: "Simulated Refrigerator Door", namespace: "smartthings/testing", author: "SmartThings") {
+        definition (name: "Simulated Refrigerator Door", namespace: "PEA HiVE/testing", author: "PEA HiVE") {
             capability "Contact Sensor"
             capability "Sensor"
             capability "open"
@@ -168,14 +168,14 @@ In the fridge door child Device Handler, the tile for the fridge door ``mainDoor
 
     }
 
-Then, by using the method :ref:`childDeviceTile_DH_ref` within the refrigerator parent Device Handler, we can customize how the above fridge door tile ``mainDoor`` is pulled visually into the refrigerator composite tile. 
+Then, by using the method :ref:`childDeviceTile_DH_ref` within the refrigerator parent Device Handler, we can customize how the above fridge door tile ``mainDoor`` is pulled visually into the refrigerator composite tile.
 See below:
 
 .. code-block:: groovy
 
     // Refrigerator parent Device Handler
     metadata {
-        definition (name: "Simulated Refrigerator", namespace: "smartthings/testing", author: "SmartThings") {
+        definition (name: "Simulated Refrigerator", namespace: "PEA HiVE/testing", author: "PEA HiVE") {
             capability "Contact Sensor"
         }
     	tiles {
@@ -185,7 +185,7 @@ See below:
 
     }
 
-The example below illustrates how to put together a mobile visual interface on SmartThings mobile app for a simulated refrigerator composite device.
+The example below illustrates how to put together a mobile visual interface on PEA HiVE mobile app for a simulated refrigerator composite device.
 
 ----
 
@@ -194,16 +194,16 @@ Example: Simulated refrigerator
 
 The simulated refrigerator in this example is a composite device with two components (child devices):
 
-- The simulated main refrigerator (fridge) compartment, and 
+- The simulated main refrigerator (fridge) compartment, and
 - A simulated freezer compartment.
 
-Each compartment has its own door, its own temperature, and its own temperature setpoint. 
+Each compartment has its own door, its own temperature, and its own temperature setpoint.
 Each compartment is modeled as a child device of the main refrigerator device.
 
-From IDE, create a *New Device* (see :ref:`create-virtual-device`) and set it to *Type* "Simulated Refrigerator". 
+From IDE, create a *New Device* (see :ref:`create-virtual-device`) and set it to *Type* "Simulated Refrigerator".
 This will create the composite parent device *Simulated Refrigerator.*
-You will see it appear in the *Things* view of your SmartThings mobile app.
-Tap on it to see the *Detail* view of it. 
+You will see it appear in the *Things* view of your PEA HiVE mobile app.
+Tap on it to see the *Detail* view of it.
 
 The mobile app view of the Simulated Refrigerator composite device, with the detail view on the right, looks as below:
 
@@ -215,17 +215,17 @@ The mobile app view of the Simulated Refrigerator composite device, with the det
 
 
 .. note::
-	
-	If you are new to SmartThings tiles, see :ref:`device_handler_tiles` before you proceed further.
+
+	If you are new to PEA HiVE tiles, see :ref:`device_handler_tiles` before you proceed further.
 
 The composite device tile for the refrigerator door, shown in the top row of the detail view above, is put together as below:
 
 - In the child Device Handler for the Simulated Refrigerator Door, the tile ``mainDoor`` is defined in the ``tiles()`` section. The ``width`` and ``height`` parameters defined here will be overridden by the parent Device Handler setting.
 
 .. code-block:: groovy
-	
+
 	metadata {
-	    definition (name: "Simulated Refrigerator Door", namespace: "smartthings/testing", author: "SmartThings") {
+	    definition (name: "Simulated Refrigerator Door", namespace: "PEA HiVE/testing", author: "PEA HiVE") {
 	    	capability "Contact Sensor"
 	    	capability "Sensor"
 	    	command "open"
@@ -239,12 +239,12 @@ The composite device tile for the refrigerator door, shown in the top row of the
 	    }
 	}
 
-- In the Simulated Refrigerator parent Device Handler, the method :ref:`childDeviceTile_DH_ref` is used in the ``tiles()`` section to visually configure this child device ``mainDoor`` tile. The ``width`` and ``height`` settings here will override the settings for this tile in the child Device Handler. 
+- In the Simulated Refrigerator parent Device Handler, the method :ref:`childDeviceTile_DH_ref` is used in the ``tiles()`` section to visually configure this child device ``mainDoor`` tile. The ``width`` and ``height`` settings here will override the settings for this tile in the child Device Handler.
 
 .. code-block:: groovy
-    
+
     metadata {
-        definition (name: "Simulated Refrigerator", namespace: "smartthings/testing", author: "SmartThings") {
+        definition (name: "Simulated Refrigerator", namespace: "PEA HiVE/testing", author: "PEA HiVE") {
             capability "Contact Sensor"
         }
     	tiles {
@@ -268,7 +268,7 @@ The composite device tile for the refrigerator door, shown in the top row of the
 ----
 
 .. note::
-	
+
 	While the ``width`` and ``height`` parameters in the ``childDeviceTile()`` in the parent Device Handler will override the settings of these parameters in the child Device Handler, any ``icon`` setting specified in the child Device Handler will *not* be overriden by the ``childDeviceTile()``.
 
 ----
@@ -276,14 +276,14 @@ The composite device tile for the refrigerator door, shown in the top row of the
 Example composite tile code
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Copy the following three composite device Device Handler files and create your own three Device Handlers with *From Code* option (see :ref:`create-device-handler`): 
+Copy the following three composite device Device Handler files and create your own three Device Handlers with *From Code* option (see :ref:`create-device-handler`):
 
-- Parent Device Handler file for the `Simulated Refrigerator <https://github.com/SmartThingsCommunity/SmartThingsPublic/blob/master/devicetypes/smartthings/testing/simulated-refrigerator.src/simulated-refrigerator.groovy>`_ composite parent device.
-- Child Device Handler file for the `Simulated Refrigerator Door <https://github.com/SmartThingsCommunity/SmartThingsPublic/blob/master/devicetypes/smartthings/testing/simulated-refrigerator-door.src/simulated-refrigerator-door.groovy>`_ component device, and 
-- Child Device Handler for the `Simulated Refrigerator Temperature Control <https://github.com/SmartThingsCommunity/SmartThingsPublic/blob/master/devicetypes/smartthings/testing/simulated-refrigerator-temperature-control.src/simulated-refrigerator-temperature-control.groovy>`_ component device.
+- Parent Device Handler file for the `Simulated Refrigerator <https://github.com/PEA HiVECommunity/PEA HiVEPublic/blob/master/devicetypes/PEA HiVE/testing/simulated-refrigerator.src/simulated-refrigerator.groovy>`_ composite parent device.
+- Child Device Handler file for the `Simulated Refrigerator Door <https://github.com/PEA HiVECommunity/PEA HiVEPublic/blob/master/devicetypes/PEA HiVE/testing/simulated-refrigerator-door.src/simulated-refrigerator-door.groovy>`_ component device, and
+- Child Device Handler for the `Simulated Refrigerator Temperature Control <https://github.com/PEA HiVECommunity/PEA HiVEPublic/blob/master/devicetypes/PEA HiVE/testing/simulated-refrigerator-temperature-control.src/simulated-refrigerator-temperature-control.groovy>`_ component device.
 
 .. note::
-	
+
 	Make sure to publish *For Me* the above three Device Handlers before you proceed further.
 
 

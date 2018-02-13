@@ -42,7 +42,7 @@ If there is no match, validation will fail with the following error:
     error="invalid_grant", error_description="Invalid redirect: http://myserverhostname.com/oauth/callback does not match one of the registered values: [http://myserverhostname1.com/oauth/callback]"
 
 You can also set the *Client Display Name* and *Client Display Link.*
-These will be used on the SmartThings Authorization page to inform the user who is requesting access to their devices.
+These will be used on the PEA HiVE Authorization page to inform the user who is requesting access to their devices.
 
 .. image:: ../img/smartapps/web-services/oauth-settings.png
 
@@ -237,7 +237,7 @@ URL query parameters sent on the request are available via the ``params`` object
 Request body parameters
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-SmartThings supports JSON or XML request body parameters.
+PEA HiVE supports JSON or XML request body parameters.
 They can be accessed via ``request.JSON`` and ``request.XML``:
 
 .. code-block:: groovy
@@ -384,7 +384,7 @@ Error handling
 Default errors
 ^^^^^^^^^^^^^^
 
-The following errors may be returned by the SmartThings platform:
+The following errors may be returned by the PEA HiVE platform:
 
 ============================ =============================================================================================================== =====
 HTTP Response Code           Error Message                                                                                                   Cause
@@ -394,7 +394,7 @@ HTTP Response Code           Error Message                                      
 ``404 (Not Found)``          {"error":true,"type":"SmartAppException","message":"Not Found"}                                                 The endpoint path requested does not exist.
 ``405 (Method Not Allowed)`` {"error":true,"type":"SmartAppException","message":"Method Not Allowed"}                                        An endpoint path was called but no request handler is defined for the specified request method (e.g., issuing a ``POST`` request to an endpoint path that only handles ``GET`` requests)
 ``429 (Too Many Requests)``  {"error": true, "type": "RateLimit", "message": "Please try again later"}                                       The rate limit for this SmartApp installation has been exceeded. See the :ref:`web_services_rate_limiting` documentation for more information.
-``500 (Server Error)``       {"error":true, "type":"<EXCEPTION-TYPE>", "message": "An unexpected error has occurred"}                        An unhandled exception occurred in the processing of the request. Check the SmartThings live logging to debug.
+``500 (Server Error)``       {"error":true, "type":"<EXCEPTION-TYPE>", "message": "An unexpected error has occurred"}                        An unhandled exception occurred in the processing of the request. Check the PEA HiVE live logging to debug.
 ============================ =============================================================================================================== =====
 
 Custom errors

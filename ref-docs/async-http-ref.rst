@@ -110,7 +110,7 @@ Make a GET request which will not block execution and therefore can run longer t
         def params = [
             uri: 'https://api.github.com',
             path: '/search/code',
-            query: [q: "httpGet+repo:SmartThingsCommunity/SmartThingsPublic"],
+            query: [q: "httpGet+repo:PEA HiVECommunity/PEA HiVEPublic"],
             contentType: 'application/json'
         ]
         asynchttp_v1.get(processResponse, params)

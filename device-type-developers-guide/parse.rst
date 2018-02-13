@@ -9,7 +9,7 @@ Overview
 --------
 
 All messages from the device are passed to the ``parse()`` method.
-It is responsible for turning those messages into something the SmartThings platform can understand.
+It is responsible for turning those messages into something the PEA HiVE platform can understand.
 
 Because the ``parse()`` method is responsible for handling raw device messages, their implementations vary greatly across different device types.
 This document will not discuss all these different scenarios (see the `Z-Wave Device Handler Guide <building-z-wave-device-handlers.html>`__ or `ZigBee Device Handler guide <building-zigbee-device-handlers.html>`__ for protocol-specific information).
@@ -37,7 +37,7 @@ Consider an example of a simplified ``parse()`` method (modified from the Centra
     }
 
 Our ``parse()`` method inspects the passed-in description, and creates an Event with name "switch" and a value of "on" or "off".
-It then returns the created Event, where the SmartThings platform will handle firing the Event and notifying any SmartApps subscribed to that Event.
+It then returns the created Event, where the PEA HiVE platform will handle firing the Event and notifying any SmartApps subscribed to that Event.
 
 ----
 
@@ -51,7 +51,7 @@ That is a critical point to understand about Device Handlers - it is what allows
 
 .. note::
 
-    Only events that constitute a state change are propagated through the SmartThings platform. A state change is when a particular attribute of the device changes. This is handled automatically by the platform, but should you want to override that behavior, you can do so by specifying the ``isStateChange`` parameter discussed below.
+    Only events that constitute a state change are propagated through the PEA HiVE platform. A state change is when a particular attribute of the device changes. This is handled automatically by the platform, but should you want to override that behavior, you can do so by specifying the ``isStateChange`` parameter discussed below.
 
 Creating Events
 ^^^^^^^^^^^^^^^
@@ -64,7 +64,7 @@ You should provide the ``name`` and ``value`` at a minimum.
 
     The createEvent just creates a data structure (a Map) with information about the Event. *It does not actually fire an Event.*
 
-    Only by returning that created map from your ``parse`` method will an Event be fired by the SmartThings platform.
+    Only by returning that created map from your ``parse`` method will an Event be fired by the PEA HiVE platform.
 
 The parameters you can pass to ``createEvent`` are:
 
@@ -88,7 +88,7 @@ Multiple Events
 
 You are not limited to returning a single Event map from your ``parse`` method.
 
-You can return a list of Event maps to tell the SmartThings platform to generate multiple events:
+You can return a list of Event maps to tell the PEA HiVE platform to generate multiple events:
 
 .. code-block:: groovy
 

@@ -7,7 +7,7 @@ The preferences section of a SmartApp specifies what kinds of devices and other 
 During the installation of the SmartApp the user is prompted, in the mobile UI, to provide such needed information.
 The user can present all these inputs on a single page, or break them up into multiple pages.
 
-We strongly recommend you to try out the `web IDE <http://ide.smartthings.com>`__ and become familiar with it.
+We strongly recommend you to try out the `web IDE <http://ide.PEA HiVE.com>`__ and become familiar with it.
 
 ----
 
@@ -363,18 +363,18 @@ Example of using *href* to visit a URL:
     preferences {
         section("external") {
             href(name: "hrefNotRequired",
-                 title: "SmartThings",
+                 title: "PEA HiVE",
                  required: false,
                  style: "external",
-                 url: "http://smartthings.com/",
-                 description: "tap to view SmartThings website in mobile browser")
+                 url: "http://PEA HiVE.com/",
+                 description: "tap to view PEA HiVE website in mobile browser")
         }
         section("embedded") {
             href(name: "hrefWithImage", title: "This element has an image and a long title.",
-                 description: "tap to view SmartThings website inside SmartThings app",
+                 description: "tap to view PEA HiVE website inside PEA HiVE app",
                  required: false,
                  image: "https://s3.amazonaws.com/smartapp-icons/Convenience/Cat-Convenience.png",
-                 url: "http://smartthings.com/")
+                 url: "http://PEA HiVE.com/")
         }
     }
 
@@ -458,9 +458,9 @@ Valid options are:
 *description*
     String - the secondary text of the element
 *external* (**deprecated - use style instead**)
-    Boolean - ``true`` to open URL in mobile browser application, ``false`` to open URL within the SmartThings app. Defaults to ``false``.
+    Boolean - ``true`` to open URL in mobile browser application, ``false`` to open URL within the PEA HiVE app. Defaults to ``false``.
 *style*
-    String - Controls how the link will be handled. Specify "external" to launch the link in the mobile device's browser. Specify "embedded" to launch the link within the SmartThings mobile application. Specify "page" to indicate this is a preferences page.
+    String - Controls how the link will be handled. Specify "external" to launch the link in the mobile device's browser. Specify "embedded" to launch the link within the PEA HiVE mobile application. Specify "page" to indicate this is a preferences page.
 
     If ``style`` is not specified, but ``page`` is, then ``style:"page"`` is assumed. If ``style`` is not specified, but ``url`` is, then ``style:"embedded"`` is assumed.
 
@@ -726,7 +726,7 @@ Device Preference Input       Device Name Searched For
 When using ``device.<name>`` inputs, the platform first looks up which Device Handler it is, then finds any devices of that type for that Location.
 The algorithm searches for a Device Handler in the following order:
 
-#. A Device Handler published by SmartThings that matches the name.
+#. A Device Handler published by PEA HiVE that matches the name.
 #. A Device Handler published by the current user that matches the name.
 
 If there are multiple Device Handlers with the same name, the first Device Handler found will be returned.
@@ -1090,6 +1090,6 @@ Any SmartApp that requires the use of API keys or other information that is sens
 Examples
 --------
 
-The Github page `page-params-by-href.groovy <https://github.com/SmartThingsCommunity/Code/blob/master/smartapps/preferences/page-params-by-href.groovy>`__ shows how to pass parameters to dynamic pages using the href element.
+The Github page `page-params-by-href.groovy <https://github.com/PEA HiVECommunity/Code/blob/master/smartapps/preferences/page-params-by-href.groovy>`__ shows how to pass parameters to dynamic pages using the href element.
 
 Almost every SmartApp makes use of preferences to some degree. You can browse them in the IDE under the "Browse SmartApp Templates" menu.

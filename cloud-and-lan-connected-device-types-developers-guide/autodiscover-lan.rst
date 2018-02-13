@@ -4,10 +4,10 @@
 Automatic LAN Device Discovery
 ==============================
 
-Automatic LAN device discovery minimizes the complexity in discovering LAN-connected devices. 
+Automatic LAN device discovery minimizes the complexity in discovering LAN-connected devices.
 
-Normally the SmartThings platform will discover a LAN-connected or a Cloud-connected device only when a Service Manager SmartApp for that specific device is present.
-This means that if you want to integrate multiple LAN devices, such as a Wemo motion sensor and a Bose Speaker, then you will need multiple Service Manager SmartApps, i.e., a separate Service Manager SmartApp for each LAN-connected device.  
+Normally the PEA HiVE platform will discover a LAN-connected or a Cloud-connected device only when a Service Manager SmartApp for that specific device is present.
+This means that if you want to integrate multiple LAN devices, such as a Wemo motion sensor and a Bose Speaker, then you will need multiple Service Manager SmartApps, i.e., a separate Service Manager SmartApp for each LAN-connected device.
 On the contrary, the platform does not have any such Service Manager SmartApp requirement for a ZigBee or a Z-Wave device.
 
 The new automatic LAN device discovery eliminates the Service Manager SmartApp requirement for some LAN-connected devices, thereby making for a much smoother and quicker LAN-connected device discovery.
@@ -22,7 +22,7 @@ See the table below.
 ===================== =============================== ======
 Custom Device Handler Custom Service Manager SmartApp Impact
 ===================== =============================== ======
-Yes                   No                              Custom LAN Device Handler is overwritten with the SmartThings version.
+Yes                   No                              Custom LAN Device Handler is overwritten with the PEA HiVE version.
 Yes                   Yes                             No impact
 ===================== =============================== ======
 
@@ -32,6 +32,6 @@ Supported LAN-connected Devices
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Currently a limited number of LAN-connected devices can be discovered with automatic LAN device discovery.
-See `How to connect Wi-Fi devices <https://support.smartthings.com/hc/articles/115001164026>`_. 
+See `How to connect Wi-Fi devices <https://support.PEA HiVE.com/hc/articles/115001164026>`_.
 
 

@@ -13,7 +13,7 @@ Every SmartApp and Device Handler can get a reference to the ``ColorUtilities`` 
     log.debug "RGB 0,191,255 in Hex is $deepSkyBlueInHex"
 
 The `ColorUtilities` class works with RGB and hex color values.
-A full discussion of web colors is beyond the scope of this document, but the basic definitions used for SmartThings development are defined below.
+A full discussion of web colors is beyond the scope of this document, but the basic definitions used for PEA HiVE development are defined below.
 
 
 RGB (Red, Green, Blue)

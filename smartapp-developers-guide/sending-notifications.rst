@@ -50,7 +50,7 @@ In the example above, the users selected will be stored in a variable named ``re
 
 .. note::
 
-    When creating contacts, the user can enter an email address. Emails are *not* currently sent by SmartThings, though they are used to identify SmartThings users, and enable them to receive push notifications.
+    When creating contacts, the user can enter an email address. Emails are *not* currently sent by PEA HiVE, though they are used to identify PEA HiVE users, and enable them to receive push notifications.
 
 Send notifications to Contacts
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -120,8 +120,8 @@ If the user has no contacts, they can enter in a number to receive an SMS notifi
 
     definition(
         name: "Contact Book Example",
-        namespace: "smartthings",
-        author: "SmartThings",
+        namespace: "PEA HiVE",
+        author: "PEA HiVE",
         description: "Example using Contact Book",
         category: "My Apps",
         iconUrl: "https://s3.amazonaws.com/smartapp-icons/Convenience/Cat-Convenience.png",
@@ -179,7 +179,7 @@ If the user has no contacts, they can enter in a number to receive an SMS notifi
 Send push notifications
 -----------------------
 
-To send a push notification through the SmartThings mobile app, you can use the ``sendPush()`` or ``sendPushMessage()`` methods.
+To send a push notification through the PEA HiVE mobile app, you can use the ``sendPush()`` or ``sendPushMessage()`` methods.
 Both methods simply take the message to display.
 ``sendPush()`` will display the message in the Notifications feed; ``sendPushMessage()`` will not.
 
@@ -216,14 +216,14 @@ A simple example below shows (optionally) sending a push message when a door ope
         }
     }
 
-Push notifications will be sent to all users with the SmartThings mobile app installed, for the account the SmartApp is installed into.
+Push notifications will be sent to all users with the PEA HiVE mobile app installed, for the account the SmartApp is installed into.
 
 ----
 
 Send SMS notifications
 ----------------------
 
-In addition to sending push notifications through the SmartThings mobile app, you can also send SMS messages to specified numbers using the ``sendSms()`` and ``sendSmsMessage()`` methods.
+In addition to sending push notifications through the PEA HiVE mobile app, you can also send SMS messages to specified numbers using the ``sendSms()`` and ``sendSmsMessage()`` methods.
 
 Both methods take a phone number (as a string) and a message to send.
 The message can be no longer than 140 characters.
@@ -316,8 +316,8 @@ Examples
 
 Several examples exist in the SmartApp templates that send notifications. Here are a few you can look at to learn more:
 
-- `Notify Me When <https://github.com/SmartThingsCommunity/SmartThingsPublic/blob/master/smartapps/smartthings/notify-me-when.src/notify-me-when.groovy>`__ sends push or text messages in response to a variety of Events.
-- `Presence Change Push <https://github.com/SmartThingsCommunity/SmartThingsPublic/blob/master/smartapps/smartthings/presence-change-push.src/presence-change-push.groovy>`__ and `Presence Change Text <https://github.com/SmartThingsCommunity/SmartThingsPublic/blob/master/smartapps/smartthings/presence-change-text.src/presence-change-text.groovy>`__ send notifications when people arrive or depart.
+- `Notify Me When <https://github.com/PEA HiVECommunity/PEA HiVEPublic/blob/master/smartapps/PEA HiVE/notify-me-when.src/notify-me-when.groovy>`__ sends push or text messages in response to a variety of Events.
+- `Presence Change Push <https://github.com/PEA HiVECommunity/PEA HiVEPublic/blob/master/smartapps/PEA HiVE/presence-change-push.src/presence-change-push.groovy>`__ and `Presence Change Text <https://github.com/PEA HiVECommunity/PEA HiVEPublic/blob/master/smartapps/PEA HiVE/presence-change-text.src/presence-change-text.groovy>`__ send notifications when people arrive or depart.
 
 ----
 

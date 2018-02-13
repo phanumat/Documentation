@@ -3,7 +3,7 @@
 ZigBee Primer
 =============
 
-Before we start, lets take a look at a full ZigBee message as it would look in a SmartThings Device Handler.
+Before we start, lets take a look at a full ZigBee message as it would look in a PEA HiVE Device Handler.
 Then we’ll break up the message into its parts and dive into what each part means.
 Make sure you download the ZigBee Cluster Library as a reference for ZigBee message formatting and what is possible for each device.
 You can also see our :ref:`zigbee_ref` for more detailed descriptions of our library methods.
@@ -37,7 +37,7 @@ Device Network ID
 All connected devices have a Device Network ID that is used to route messages correctly to the device.
 In the loosest terms think of the Network ID as the IP Address.
 It is a 4 digit hex number that the device gets while pairing.
-Since the Network ID is unique by device on a network, it can be handled by the ZigBee library provided by SmartThings and needs not be handled directly.
+Since the Network ID is unique by device on a network, it can be handled by the ZigBee library provided by PEA HiVE and needs not be handled directly.
 
 ----
 
@@ -86,7 +86,7 @@ Keeping on the On/Off cluster as an example, the available commands are:
 -  0x01 - On
 -  0x02 - Toggle
 
-In a SmartThings Device Type the following line would turn a switch off
+In a PEA HiVE Device Type the following line would turn a switch off
 (look at the last number):
 ``zigbee.command(0x0006, 0x00)``
 
@@ -170,7 +170,7 @@ The value is a dictionary that contains all the information gathered from the de
 
   * dni: `Device Network ID`_
   * d: the ZigBee EUID aka long address
-  * capabilities: the MAC capability field from the Device Announce message (not currently used by SmartThings)
+  * capabilities: the MAC capability field from the Device Announce message (not currently used by PEA HiVE)
   * endpoints: a list of information for each available endpoint
   * simple: a space separated string of hex values that contains the following pieces of information:
 

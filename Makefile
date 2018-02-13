@@ -9,7 +9,7 @@ BUILDDIR              = _build
 STATICDIR             = _static
 MKDIR_P               = mkdir -p
 CAPABILITIES_ZIP      = capabilities.zip
-CAPABILITIES_ZIP_URL  = https://smartthings-documentation.s3.amazonaws.com/$(CAPABILITIES_ZIP)
+CAPABILITIES_ZIP_URL  = https://PEA HiVE-documentation.s3.amazonaws.com/$(CAPABILITIES_ZIP)
 
 # User-friendly check for sphinx-build
 ifeq ($(shell which $(SPHINXBUILD) >/dev/null 2>&1; echo $$?), 1)
@@ -89,17 +89,17 @@ qthelp:
 	@echo
 	@echo "Build finished; now you can run "qcollectiongenerator" with the" \
 	      ".qhcp project file in $(BUILDDIR)/qthelp, like this:"
-	@echo "# qcollectiongenerator $(BUILDDIR)/qthelp/SmartThingsDocumentation.qhcp"
+	@echo "# qcollectiongenerator $(BUILDDIR)/qthelp/PEA HiVEDocumentation.qhcp"
 	@echo "To view the help file:"
-	@echo "# assistant -collectionFile $(BUILDDIR)/qthelp/SmartThingsDocumentation.qhc"
+	@echo "# assistant -collectionFile $(BUILDDIR)/qthelp/PEA HiVEDocumentation.qhc"
 
 devhelp:
 	$(SPHINXBUILD) -b devhelp $(ALLSPHINXOPTS) $(BUILDDIR)/devhelp
 	@echo
 	@echo "Build finished."
 	@echo "To view the help file:"
-	@echo "# mkdir -p $$HOME/.local/share/devhelp/SmartThingsDocumentation"
-	@echo "# ln -s $(BUILDDIR)/devhelp $$HOME/.local/share/devhelp/SmartThingsDocumentation"
+	@echo "# mkdir -p $$HOME/.local/share/devhelp/PEA HiVEDocumentation"
+	@echo "# ln -s $(BUILDDIR)/devhelp $$HOME/.local/share/devhelp/PEA HiVEDocumentation"
 	@echo "# devhelp"
 
 epub:

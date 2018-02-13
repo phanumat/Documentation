@@ -20,7 +20,7 @@ Device Handler responsibilities
 -------------------------------
 
 The Device Handler is responsible for creating and receiving device
-specific messages, and allowing them to work within the SmartThings
+specific messages, and allowing them to work within the PEA HiVE
 infrastructure. It takes in a SmartApp specific command and outputs
 device specific commands to be passed to the cloud. It also allows you
 to subscribe to responses from the device and trigger other commands as

@@ -7,7 +7,7 @@ Device Handlers are the virtual representation of a physical device.
 
 If you are new to writing Device Handlers, start with the :doc:`quick-start`.
 
-After that, read the :doc:`overview` for a broad discussion about Device Handlers and where they fit in the SmartThings architecture.
+After that, read the :doc:`overview` for a broad discussion about Device Handlers and where they fit in the PEA HiVE architecture.
 
 The rest of the guide discusses the various components of Device Handlers primarily targeted for Hub-connected (ZigBee or Z-Wave) devices (though the common Device Handler principles and patterns apply to other devices as well).
 

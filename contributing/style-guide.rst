@@ -4,7 +4,7 @@
 Writing Style Guide
 ===================
 
-When you write for SmartThings platform, your audience should find your documentation readable, interesting and informative.
+When you write for PEA HiVE platform, your audience should find your documentation readable, interesting and informative.
 To accomplish these goals, we encourage you to stick to our recommended writing style.
 
 ----
@@ -99,9 +99,9 @@ UI elements
 
 Always use italics emphasis when quoting a UI element label such as a button label or an icon label.
 
-**Example:** 
+**Example:**
 
-    Go to the *Simulator* menu, and click on *Browse SmartApp Templates* in the dropdown list. 
+    Go to the *Simulator* menu, and click on *Browse SmartApp Templates* in the dropdown list.
 
 Here it is in reStructuredText:
 
@@ -118,15 +118,15 @@ List elements
 Always start a list segment with a heading and a colon.
 
 **Example:**
-    
+
     To publish a SmartApp or a Device Handler for yourself, follow these steps:
 
     - Make sure that you are in the proper Location.
-    - From your SmartApp or Device Handler view, click on *Publish* button. Then click the *For Me* option. 
+    - From your SmartApp or Device Handler view, click on *Publish* button. Then click the *For Me* option.
 
 ----
 
-If it is a complete sentence, always end the list element, numbered or unordered, with a period. 
+If it is a complete sentence, always end the list element, numbered or unordered, with a period.
 
 .. note::
 
@@ -137,15 +137,15 @@ If it is a complete sentence, always end the list element, numbered or unordered
     To publish a SmartApp or a Device Handler for yourself, follow these steps:
 
     - Make sure that you are in the proper Location.
-    - From your SmartApp or Device Handler view, click on Publish button. Then click the For Me option. 
+    - From your SmartApp or Device Handler view, click on Publish button. Then click the For Me option.
 
 ----
 
 If it is an incomplete sentence, do not end the list element with a period.
 
-**Example:** 
+**Example:**
 
-    When you finish this tutorial, you will know: 
+    When you finish this tutorial, you will know:
 
     - Key components of a SmartApp
     - Features of IDE
@@ -155,7 +155,7 @@ If it is an incomplete sentence, do not end the list element with a period.
 
 Always write a list sentence in the sentence case.
 
-**Example:** 
+**Example:**
 
     - (YES) Make sure that you are in the proper Location.
     - (NO) Make Sure That You Are In the Proper Location.
@@ -164,9 +164,9 @@ Always write a list sentence in the sentence case.
 
 Avoid more than two levels of lists.
 
-**Example:** 
+**Example:**
 
-(YES) SmartThings platform supports various Hub scenarios such as: 
+(YES) PEA HiVE platform supports various Hub scenarios such as:
 
     - There may not be a hub at all
         - There may be a third-party Hub present
@@ -174,7 +174,7 @@ Avoid more than two levels of lists.
     - SmartApps may run across both cloud and Hub connected devices
     - There may be multiple Hubs
 
-(NO) SmartThings platform supports various Hub scenarios such as: 
+(NO) PEA HiVE platform supports various Hub scenarios such as:
 
     - There may not be a hub at all
         - There may be a third-party Hub present
@@ -277,7 +277,7 @@ Links to external targets look like this:
 
 .. code-block:: rst
 
-    `SmartThings <http://smartthings.com>`_
+    `PEA HiVE <http://PEA HiVE.com>`_
 
 Links to sections within the document can be included like this:
 
@@ -513,7 +513,7 @@ Consider the example of the Device API reference documentation:
     When a user installs a SmartApp, they typically will select the devices to be used by the SmartApp.
     SmartApps can then interact with these Device objects to get device information, or send commands to the Device.
 
-    Device objects cannot be instantiated, but are created by the SmartThings platform and available via the name given in the preferences definition of a SmartApp:
+    Device objects cannot be instantiated, but are created by the PEA HiVE platform and available via the name given in the preferences definition of a SmartApp:
 
     .. code-block:: groovy
 
@@ -584,7 +584,7 @@ Method parameters are documented according to the following rules:
 
 - Each parameter is listed, in order, with a link to the return type.
 - All external links are defined at the bottom of the document.
-- In cases of standard Java return types, a link to the Java 7 JavaDocs for the type is used. If the return type is a SmartThings object, a link to that SmartThings object reference document is used.
+- In cases of standard Java return types, a link to the Java 7 JavaDocs for the type is used. If the return type is a PEA HiVE object, a link to that PEA HiVE object reference document is used.
 - If the method does not accept parameters, the entire parameters block is omitted.
 - Optional parameters are placed inside square brackets.
 - Parameters that accept a map include a table listing all the supported key/value pairs:
@@ -647,13 +647,13 @@ Miscellaneous tips
 - Spell check before committing.
 - Show, don't tell - include example code.
 - Place each sentence on a new line to help with review and readability.
-- Not all documents currently follow these guidelines. See the `Contributing <https://github.com/SmartThingsCommunity/Documentation/blob/master/README.md>`_ guide to learn how you can contribute, and help address that. :)
+- Not all documents currently follow these guidelines. See the `Contributing <https://github.com/PEA HiVECommunity/Documentation/blob/master/README.md>`_ guide to learn how you can contribute, and help address that. :)
 
 ----
 
 .. _style_guide_glossary:
 
-SmartThings glossary
+PEA HiVE glossary
 --------------------
 
 =========================================== ===============
@@ -677,12 +677,12 @@ Marketplace                                 Market place, Market Place, MarketPl
 Mode                                        mode
 My Home                                     MyHome, myHome, My home
 Routines                                    routines, Hello Home actions
-Samsung SmartThings Hub                     SamsungSmartThings Hub, Samsung SmartThings hub
+Samsung PEA HiVE Hub                     SamsungPEA HiVE Hub, Samsung PEA HiVE hub
 Simulator                                   simulator
 smart home                                  SmartHome, Smart Home, smarthome
 Smart Home Monitor                          SMH, smarthome monitor, SmartHome monitor
 SmartApp                                    Smart app, Smart App, Smartapp, smartapp, smart app
-SmartThings                                 Smart Things, Smartthings, Smart things
+PEA HiVE                                 Smart Things, PEA HiVE, Smart things
 Welcome Code                                Welcome code, WelcomeCode, Claim code, ClaimCode
 Z-Wave                                      ZWave, Z-wave
 ZigBee                                      Zigbee, Zig Bee

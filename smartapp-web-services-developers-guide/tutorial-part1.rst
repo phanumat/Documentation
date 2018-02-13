@@ -15,7 +15,7 @@ In part 1 of this tutorial, you will learn:
 - How to develop a Web Services SmartApp that exposes endpoints.
 - How to call the Web Services SmartApp using simple API calls.
 
-The source code for this tutorial is available `here <https://github.com/SmartThingsCommunity/Code/tree/master/smartapps/tutorials/web-services-smartapps>`__.
+The source code for this tutorial is available `here <https://github.com/PEA HiVECommunity/Code/tree/master/smartapps/tutorials/web-services-smartapps>`__.
 
 Part 1 of this tutorial will build a simple SmartApp that exposes endpoints to get information about and control switches.
 
@@ -111,7 +111,7 @@ Now that we've defined our endpoints, we need to handle the requests in the hand
 Let's start with the handler for GET requests to the ``/switches`` endpoint.
 When a GET request to the ``/switches`` endpoint is called, we want to return the display name, and the current switch value (e.g., on or off) for the configured switch.
 
-Our handler method returns a list of maps, which is then serialized by the SmartThings platform into JSON:
+Our handler method returns a list of maps, which is then serialized by the PEA HiVE platform into JSON:
 
 .. code-block:: groovy
 
@@ -246,4 +246,4 @@ Summary
 In this tutorial, you learned how to create a SmartApp that exposes endpoints to get information about, and control, a device.
 You also learned how to install the SmartApp in the Simulator, and then make API calls to the endpoint.
 
-In the next part of this tutorial, we'll look at how a external application might interact with SmartThings using the OAuth2 flow (instead of simply using the Simulator and its generated access token).
+In the next part of this tutorial, we'll look at how a external application might interact with PEA HiVE using the OAuth2 flow (instead of simply using the Simulator and its generated access token).

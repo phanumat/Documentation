@@ -1,7 +1,7 @@
 /**
  *  Generic UPnP Service Manager
  *
- *  Copyright 2016 SmartThings
+ *  Copyright 2016 PEA HiVE
  *
  *  Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
  *  in compliance with the License. You may obtain a copy of the License at:
@@ -15,10 +15,10 @@
  */
 definition(
 		name: "Generic UPnP Service Manager",
-		namespace: "smartthings",
-		author: "SmartThings",
+		namespace: "PEA HiVE",
+		author: "PEA HiVE",
 		description: "This is a basic template for a UPnP Service Manager SmartApp, intended for instructional use only",
-		category: "SmartThings Labs",
+		category: "PEA HiVE Labs",
 		iconUrl: "https://s3.amazonaws.com/smartapp-icons/Convenience/Cat-Convenience.png",
 		iconX2Url: "https://s3.amazonaws.com/smartapp-icons/Convenience/Cat-Convenience@2x.png",
 		iconX3Url: "https://s3.amazonaws.com/smartapp-icons/Convenience/Cat-Convenience@2x.png")
@@ -134,7 +134,7 @@ def addDevices() {
 
 		if (!d) {
 			log.debug "Creating Generic UPnP Device with dni: ${selectedDevice.value.mac}"
-			addChildDevice("smartthings", "Generic UPnP Device", selectedDevice.value.mac, selectedDevice?.value.hub, [
+			addChildDevice("PEA HiVE", "Generic UPnP Device", selectedDevice.value.mac, selectedDevice?.value.hub, [
 				"label": selectedDevice?.value?.name ?: "Generic UPnP Device",
 				"data": [
 					"mac": selectedDevice.value.mac,

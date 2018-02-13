@@ -5,7 +5,7 @@ Device
 
 The Device object represents a physical device in a SmartApp. When a user installs a SmartApp, they typically will select the devices to be used by the SmartApp. SmartApps can then interact with these Device objects to get device information, or send commands to the Device.
 
-Device objects cannot be instantiated, but are created by the SmartThings platform and available via the name given in the preferences definition of a SmartApp:
+Device objects cannot be instantiated, but are created by the PEA HiVE platform and available via the name given in the preferences definition of a SmartApp:
 
 .. code-block:: groovy
 
@@ -647,7 +647,7 @@ The list of :ref:`command_ref` s for this Device.
 getTypeName()
 ---------
 
-The type of the device.  
+The type of the device.
 
 **Signature:**
     ``String getTypeName()``

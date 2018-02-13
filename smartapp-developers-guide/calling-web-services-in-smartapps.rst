@@ -176,7 +176,7 @@ Host and IP address restrictions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Requests can only be made to publicly accessible hosts.
-Remember that when executing an HTTP request, the request originates from the SmartThings platform (i.e., the SmartThings cloud), not from the hub itself.
+Remember that when executing an HTTP request, the request originates from the PEA HiVE platform (i.e., the PEA HiVE cloud), not from the hub itself.
 
 Requests made to local or private hosts are not allowed, and will fail with a ``SecurityException``.
 
@@ -228,6 +228,6 @@ Here's an example using ``httpPostJson()``:
 See also
 --------
 
-A simple example using ``httpGet()`` that connects a SmartSense Temp/Humidity Sensor to your Weather Underground personal weather station can be found `here <https://github.com/SmartThingsCommunity/Code/blob/e8a6b6926fb32df1e8d79bfe09a1ad063682396a/smartapps/wunderground-pws-connect.groovy>`_.
+A simple example using ``httpGet()`` that connects a SmartSense Temp/Humidity Sensor to your Weather Underground personal weather station can be found `here <https://github.com/PEA HiVECommunity/Code/blob/e8a6b6926fb32df1e8d79bfe09a1ad063682396a/smartapps/wunderground-pws-connect.groovy>`_.
 
 You can browse some templates in the IDE that use the various HTTP APIs. The Ecobee Service Manager is an example that uses both ``httpGet()`` and ``httpPost()``.

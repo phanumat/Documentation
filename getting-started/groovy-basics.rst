@@ -3,15 +3,15 @@
 Groovy Basics
 =============
 
-SmartThings uses the Groovy programming language. If you've programmed before, you can learn Groovy.
+PEA HiVE uses the Groovy programming language. If you've programmed before, you can learn Groovy.
 
-The Groovy programming language is documented at http://www.groovy-lang.org/documentation.html. This tutorial will familiarize you with Groovy and its use in SmartThings, but is not a complete reference for the language.
+The Groovy programming language is documented at http://www.groovy-lang.org/documentation.html. This tutorial will familiarize you with Groovy and its use in PEA HiVE, but is not a complete reference for the language.
 
 .. tip::
 
-    If you already know Groovy, or prefer to learn as you go, you can skip this tutorial and refer to this page as a mini-reference of sorts. It is important, however, that you understand how Groovy is used in SmartThings. That is discussed in the :ref:`groovy-for-smartthings` tutorial.
+    If you already know Groovy, or prefer to learn as you go, you can skip this tutorial and refer to this page as a mini-reference of sorts. It is important, however, that you understand how Groovy is used in PEA HiVE. That is discussed in the :ref:`groovy-for-PEA HiVE` tutorial.
 
-To develop with SmartThings, you do not need to be an expert in Groovy. The SmartThings development environment was created to be easy-to-use, so that it does not require someone to be proficient in Groovy (or any other language). That said, having a basic understanding of some of the core concepts of Groovy will help you be most productive in your development.
+To develop with PEA HiVE, you do not need to be an expert in Groovy. The PEA HiVE development environment was created to be easy-to-use, so that it does not require someone to be proficient in Groovy (or any other language). That said, having a basic understanding of some of the core concepts of Groovy will help you be most productive in your development.
 
 ----
 
@@ -22,7 +22,7 @@ Groovy is an object-oriented programming language for the Java platform. It is a
 
 If you are familiar with languages like Java, C/C++, Python, Ruby, or JavaScript, you will see many similarities in Groovy.
 
-Groovy code is compiled to byte code that is executed by the Java Virtual Machine (JVM). We choose Groovy as the SmartThings programming language for its simplicity and flexibility, as well as the performance and stability of the JVM.
+Groovy code is compiled to byte code that is executed by the Java Virtual Machine (JVM). We choose Groovy as the PEA HiVE programming language for its simplicity and flexibility, as well as the performance and stability of the JVM.
 
 Because Groovy is compiled to byte code that runs on the JVM Java Virtual Machine (JVM), 99% of Java code is valid Groovy. The standard Java libraries are available to Groovy programs. Groovy extends Java in many useful ways, which we'll learn about here.
 
@@ -31,7 +31,7 @@ Because Groovy is compiled to byte code that runs on the JVM Java Virtual Machin
 Installing Groovy
 -----------------
 
-The best way to get familiar with Groovy is by installing it and experimenting. SmartThings development does not require you to have a copy of Groovy installed, since SmartThings code is executed within SmartThings infrastructure, but having a local copy of Groovy is useful for learning.
+The best way to get familiar with Groovy is by installing it and experimenting. PEA HiVE development does not require you to have a copy of Groovy installed, since PEA HiVE code is executed within PEA HiVE infrastructure, but having a local copy of Groovy is useful for learning.
 
 Head over to the `Groovy Documentation <http://www.groovy-lang.org/documentation.html>`__ site and follow the Getting Started guides for downloading and installing Groovy (the rest of the Getting Started material is pretty awesome too, and definitely worth a read).
 
@@ -43,7 +43,7 @@ We make heavy use of the Groovy Console to test things out, and recommend you do
 
     For example, ``assert true`` is valid, and the program will continue. Anything that evaluates to false will cause the program to halt, so ``assert false`` will terminate with an informative message.
 
-    While useful for learning, it's important to note that ``assert()`` is **not available** for you to use in SmartThings code. Neither is the method ``println()``, for that matter. For security and performance reasons, SmartThings runs in a sandboxed environment that restricts access to certain features. The sandboxed environment is discussed further in the :ref:`groovy-for-smartthings` tutorial.
+    While useful for learning, it's important to note that ``assert()`` is **not available** for you to use in PEA HiVE code. Neither is the method ``println()``, for that matter. For security and performance reasons, PEA HiVE runs in a sandboxed environment that restricts access to certain features. The sandboxed environment is discussed further in the :ref:`groovy-for-PEA HiVE` tutorial.
 
 ----
 
@@ -115,7 +115,7 @@ Groovy is an **optionally typed** language. The following are both valid Groovy:
 
 In Groovy, we can use ``def`` in place of an explicit type. The exact type of object that will be assigned will vary when using ``def``.
 
-Why use ``def`` instead of explicit types? While not required, ``def`` is commonly used in Groovy (and in SmartThings) because it provides greater flexibility and readability.
+Why use ``def`` instead of explicit types? While not required, ``def`` is commonly used in Groovy (and in PEA HiVE) because it provides greater flexibility and readability.
 
 Consider this strongly typed example:
 
@@ -126,7 +126,7 @@ Consider this strongly typed example:
     }
 
     String added = addThem("Smart", "Things");
-    assert "SmartThings" == added
+    assert "PEA HiVE" == added
 
 In the example above, ``addThem()`` is defined to accept two ``String`` parameters. Groovy supports operator overloading, so using the ``+`` operator concatenates the two strings.
 
@@ -159,13 +159,13 @@ To illustrate this with an example, consider the above example refactored to use
     }
 
     def added = addThem("Smart", "Things")
-    assert added == "SmartThings"
+    assert added == "PEA HiVE"
 
     def added2 = addThem(4, 2)
     assert added2 == 6
 
 
-Omitting the explicit type information in favor of ``def`` allows us to build flexible programs without getting bogged down in ensuring we have all our typing information correct. This is particularly useful for smaller programs, which is what you will be writing with SmartThings.
+Omitting the explicit type information in favor of ``def`` allows us to build flexible programs without getting bogged down in ensuring we have all our typing information correct. This is particularly useful for smaller programs, which is what you will be writing with PEA HiVE.
 
 .. note::
 
@@ -275,7 +275,7 @@ You can also use the ``$`` without the ``{}`` for simple property substitutions 
 .. note::
     Dotted expressions are expressions of the form ``a.b`` or ``a.b.c``. Expressions that would contain parentheses like method calls, curly braces for closures, or arithmetic operators, are not dotted expressions and you should use ``${}``. We recommend always using the ``${}`` notation.
 
-You'll see String interpolations frequently in SmartThings.
+You'll see String interpolations frequently in PEA HiVE.
 
 There are some other handy Groovy String features, like the ability to remove part of a string using the ``-`` operator:
 
@@ -493,7 +493,7 @@ The ``return`` statement is optional in a Groovy method. The value of the last e
     }
     assert [key: "val"] == asMap("key", "val")
 
-Methods can also be defined to accept *named parameters*. This is frequently used in SmartThings, as it allows for flexible and easily-extendable methods. This is accomplished by accepting a ``Map`` parameter (the typing is optional, but used here for clarity):
+Methods can also be defined to accept *named parameters*. This is frequently used in PEA HiVE, as it allows for flexible and easily-extendable methods. This is accomplished by accepting a ``Map`` parameter (the typing is optional, but used here for clarity):
 
 .. code-block:: groovy
 
@@ -518,7 +518,7 @@ Methods can also define default values for parameters. If not passed when callin
     assert "Welcome, George Louis Costanza" == greetGeorge
     assert "Welcome, Cosmo  Kramer" == greetKramer
 
-Worth noting is that none of the above definitions include any type of explicit visibility modifier information. By default, when using ``def``, the method is public. Want to make your method private? It's syntactically allowed, but actually isn't respected by Groovy (gasp!). And in SmartThings, this really isn't necessary since we are not creating our own classes or object models. So, we typically just omit any visibility modifier for simplicity.
+Worth noting is that none of the above definitions include any type of explicit visibility modifier information. By default, when using ``def``, the method is public. Want to make your method private? It's syntactically allowed, but actually isn't respected by Groovy (gasp!). And in PEA HiVE, this really isn't necessary since we are not creating our own classes or object models. So, we typically just omit any visibility modifier for simplicity.
 
 ----
 
@@ -544,7 +544,7 @@ By not declaring the type of exception we can catch, any exception will be caugh
 Closures
 --------
 
-If you are most familiar with languages like C or Java, closures may be something you haven't heard of or used. You'll see a *lot* of closures being used in Groovy and SmartThings, so it's worth understanding the basics.
+If you are most familiar with languages like C or Java, closures may be something you haven't heard of or used. You'll see a *lot* of closures being used in Groovy and PEA HiVE, so it's worth understanding the basics.
 
 First, consider a simple example. Say we have a List of numbers, and want to do something with each item in the list. For our purposes, it doesn't matter what we want to do, only that we want to iterate over every item in the list and do something.
 
@@ -674,7 +674,7 @@ It is idiomatic Groovy to not surround closure arguments with parentheses. When 
         println it
     }
 
-There's much more to know about closures if you're curious, but if you understand the above concepts you will know enough to use them in your SmartThings development.
+There's much more to know about closures if you're curious, but if you understand the above concepts you will know enough to use them in your PEA HiVE development.
 
 ----
 
@@ -758,7 +758,7 @@ That's a lot of noise in the code just to check that the map is not empty. With 
         // here we know that the map is not null, and contains items.
     }
 
-The above should get you through 99% of the code you'll see and write with SmartThings, but see the Groovy documentation for `more on the Groovy Truth <http://docs.groovy-lang.org/latest/html/documentation/#Groovy-Truth>`__.
+The above should get you through 99% of the code you'll see and write with PEA HiVE, but see the Groovy documentation for `more on the Groovy Truth <http://docs.groovy-lang.org/latest/html/documentation/#Groovy-Truth>`__.
 
 ----
 
@@ -781,16 +781,16 @@ Groovy imports several Java and Groovy packages by default. The following packag
 What about classes?
 -------------------
 
-At the beginning of this tutorial, we said that Groovy is an object-oriented language. Yet, we haven't discussed creating classes in this tutorial. The reason for this is that in SmartThings, creating your own classes actually isn't possible. In SmartThings, each SmartApp or Device Handler is a relatively small, contained piece of code that runs in a sandboxed environment.
+At the beginning of this tutorial, we said that Groovy is an object-oriented language. Yet, we haven't discussed creating classes in this tutorial. The reason for this is that in PEA HiVE, creating your own classes actually isn't possible. In PEA HiVE, each SmartApp or Device Handler is a relatively small, contained piece of code that runs in a sandboxed environment.
 
-If you want to learn more about classes in Groovy in general or for usage outside of SmartThings, see the Groovy documentation.
+If you want to learn more about classes in Groovy in general or for usage outside of PEA HiVE, see the Groovy documentation.
 
 ----
 
 Further reading
 ---------------
 
-There are many resources available to learn more about Groovy. As we'll see in the :ref:`groovy-for-smartthings` tutorial, there are some things about the Groovy programming language that we simplify with SmartThings, so a full knowledge of Groovy and all its capabilities is not necessary to develop with SmartThings.
+There are many resources available to learn more about Groovy. As we'll see in the :ref:`groovy-for-PEA HiVE` tutorial, there are some things about the Groovy programming language that we simplify with PEA HiVE, so a full knowledge of Groovy and all its capabilities is not necessary to develop with PEA HiVE.
 
 If you want to learn more about Groovy, here are some good resources available online:
 
@@ -809,6 +809,6 @@ There are also several books on Groovy. Here are a couple we know and recommend:
 Next steps
 ----------
 
-Now that you know some of the basics of Groovy, head over to our :ref:`groovy-for-smartthings` tutorial to learn how SmartThings uses Groovy in some very specific ways for development.
+Now that you know some of the basics of Groovy, head over to our :ref:`groovy-for-PEA HiVE` tutorial to learn how PEA HiVE uses Groovy in some very specific ways for development.
 
 .. [1] This example is taken from the book `Programming Groovy: Dynamic Productivity for the Java Developer <http://www.amazon.com/Programming-Groovy-Productivity-Developer-Programmers/dp/1934356093/>`__ by Venkat Subramaniam.

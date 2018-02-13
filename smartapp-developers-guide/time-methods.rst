@@ -15,7 +15,7 @@ These time methods support a variety of time-related queries such as get the cur
 Taking action within a time window
 ----------------------------------
 
-A common automation with SmartThings is to turn on a room light when the door is opened between certain hours, and do not turn on the light during other times.
+A common automation with PEA HiVE is to turn on a room light when the door is opened between certain hours, and do not turn on the light during other times.
 The :ref:`smartapp_timeofdayisbetween` method comes in handy to set up a SmartApp that accomplishes such an automation.
 
 Refer to the SmartApp code below.
@@ -25,7 +25,7 @@ With the ``fromTime`` and ``toTime`` inputs the user will set up the preferred t
 .. code-block:: groovy
 
     preferences {
-        section("Select SmartThings") {
+        section("Select PEA HiVE") {
             input "openCloseSensor", "capability.contactSensor", title: "Which door?", required: true, multiple: false
             input "roomLight", "capability.switch", title: "Which room light?", required: true, multiple: false
         }
@@ -141,11 +141,11 @@ Working with time zones
 Often we may want to set or adjust the SmartApp automation settings while we are traveling, in which case the time zone of the hub may differ from the time zone of the mobile app (our current travel location).
 For this reason, the code defining the SmartApp should be aware of the time zone of the physical location of the hub.
 
-When working with time-related methods, SmartThings provides ways to handle time zone of both the physical location of the hub and of the mobile app (installed on mobile phone).
+When working with time-related methods, PEA HiVE provides ways to handle time zone of both the physical location of the hub and of the mobile app (installed on mobile phone).
 
 For example, ``location.getTimeZone()`` gives the time zone of the physical location of the hub, whereas invoking :ref:`smartapp_timezone` method will give the current time zone of the mobile app, i.e., the time zone where mobile phone is currently located.
 
-For a hub that is physically located in Eastern Time Zone in the U.S., and the mobile phone with SmartThings mobile app located in the Pacific Time Zone, the below SmartApp code fragment prints the results shown in the comments:
+For a hub that is physically located in Eastern Time Zone in the U.S., and the mobile phone with PEA HiVE mobile app located in the Pacific Time Zone, the below SmartApp code fragment prints the results shown in the comments:
 
 .. code-block:: groovy
 

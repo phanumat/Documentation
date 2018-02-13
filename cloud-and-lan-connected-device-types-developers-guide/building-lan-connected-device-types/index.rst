@@ -1,7 +1,7 @@
 Building LAN-connected Device Types
 ===================================
 
-LAN-connected devices communicate with the SmartThings Hub over the LAN.
+LAN-connected devices communicate with the PEA HiVE Hub over the LAN.
 An example of such a device is the Sonos system.
 
 When developing a Device Handler for a LAN device, you must create a service manager

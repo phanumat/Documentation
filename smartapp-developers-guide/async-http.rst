@@ -16,7 +16,7 @@ This synchronous execution blocks the current thread executing the SmartApp or D
 
 To address these issues, we're releasing new APIs so SmartApps and Device Handlers can make HTTP requests *asynchronously*.
 We specify the details of the request, along with the name of a method (that we must implement) to call with the response.
-SmartThings will then execute the request, and then call the specified request handler method when the response is received.
+PEA HiVE will then execute the request, and then call the specified request handler method when the response is received.
 
 With asynchronous HTTP requests, we're far less likely to encounter execution timeouts due to a slow third party service.
 
@@ -49,7 +49,7 @@ Don't worry about the details yet, the rest of this documentation will cover it.
     }
 
 The first thing you may notice is the ``include`` directive.
-This is a new feature in SmartThings that allows various APIs to be grouped together by their functionality.
+This is a new feature in PEA HiVE that allows various APIs to be grouped together by their functionality.
 Don't worry too much about it now, it is discussed in detail :ref:`below <include_statement>`.
 For now, just think of it as a way to import a set of APIs that exist in a specific namespace - in this case, "``asynchttp_v1"``.
 
@@ -80,7 +80,7 @@ The following diagrams illustrate the difference between making synchronous HTTP
 We can see from the above diagrams that a synchronous HTTP requests makes the requests, waits for the response, then processes the response, all in a single execution.
 
 Asynchronous HTTP requests, on the other hand, handle the response in a *separate execution*.
-The SmartThings platform makes the request, waits for the response, and then schedules a new SmartApp (or Device Handler) execution to call the specified response handler with the response.
+The PEA HiVE platform makes the request, waits for the response, and then schedules a new SmartApp (or Device Handler) execution to call the specified response handler with the response.
 
 It is important to note that these executions are not necessarily sequential.
 Other executions may occur between making the request and receiving the response, either as a result of a scheduled execution or event callbacks.
@@ -124,7 +124,7 @@ The ``include`` statement should be placed at the top of the file.
 
     The motivation for this feature is to allow a finer-grained control over the APIs available to SmartApps or Device Handlers, and avoid further polluting the global namespace.
 
-    When using ``include()``, the SmartThings platform will attempt to find an internally registered API that matches the name provided.
+    When using ``include()``, the PEA HiVE platform will attempt to find an internally registered API that matches the name provided.
     If one is found, an instance of the class representing that API will be injected into the SmartApp or Device Handler.
     If no API is found for the given name, an exception will be thrown and the SmartApp or Device Handler will fail to save.
 
@@ -180,7 +180,7 @@ If you need to set other request headers, specify them using the ``headers`` key
 
     def params = [
         uri: 'https://api.github.com',
-        path: '/repos/SmartThingsCommunity/SmartThingsPublic/events',
+        path: '/repos/PEA HiVECommunity/PEA HiVEPublic/events',
         headers: ['If-None-Match': 'c873e724d02caa124de0884535c32acb']
     ]
     asynchttp_v1.get('someHandlerMethod', params)
@@ -189,7 +189,7 @@ As configured above, the request would look like this:
 
 .. code-block:: http
 
-    GET /repos/SmartThingsCommunity/SmartThingsPublic/events HTTP/1.1
+    GET /repos/PEA HiVECommunity/PEA HiVEPublic/events HTTP/1.1
 
     Host: api.github.com
     Content-Type: application/json
@@ -206,11 +206,11 @@ URL query parameters can be added to the request by specifying a map as the valu
     include 'asynchttp_v1'
 
     def initialize() {
-        // search for occurences of httpGet in the SmartThingsPublic repo
+        // search for occurences of httpGet in the PEA HiVEPublic repo
         def params = [
             uri: 'https://api.github.com',
             path: '/search/code',
-            query: [q: "httpGet+repo:SmartThingsCommunity/SmartThingsPublic"],
+            query: [q: "httpGet+repo:PEA HiVECommunity/PEA HiVEPublic"],
             contentType: 'application/json'
         ]
         asynchttp_v1.get(processResponse, params)
@@ -223,7 +223,7 @@ The request made given the code above would look like this:
 
 .. code-block:: http
 
-    GET /search/code?q=httpGet+repo:SmartThingsCommunity/SmartThingsPublic HTTP/1.1
+    GET /search/code?q=httpGet+repo:PEA HiVECommunity/PEA HiVEPublic HTTP/1.1
 
     Host: api.github.com
     Content-Type: application/json
@@ -302,7 +302,7 @@ And here's the request made by the above example:
 Handling the response
 ---------------------
 
-Once SmartThings executes the request we specified and receives a response from the third party, the request handler method (if specified) will be called (in a new execution of the SmartApp or Device Handler).
+Once PEA HiVE executes the request we specified and receives a response from the third party, the request handler method (if specified) will be called (in a new execution of the SmartApp or Device Handler).
 It will be called with an instance of :ref:`AsyncResponse <async_http_response_ref>`, which allows us to get information about the response.
 
 The response handler method must also accept a map of data that may have been specified in the request.
@@ -399,7 +399,7 @@ JSON responses
 ^^^^^^^^^^^^^^
 
 If the response from a request is JSON, we can get a fully-formed JSONObject of the response using :ref:`async_response_ref_get_json`.
-The example below illustrates getting the JSON response from a GitHub API call to get the occurrences of "httpGet" in the SmartThingsPublic repository.
+The example below illustrates getting the JSON response from a GitHub API call to get the occurrences of "httpGet" in the PEA HiVEPublic repository.
 
 .. code-block:: groovy
 
@@ -409,7 +409,7 @@ The example below illustrates getting the JSON response from a GitHub API call t
         def params = [
             uri: 'https://api.github.com',
             path: '/search/code',
-            query: [q: "httpGet+repo:SmartThingsCommunity/SmartThingsPublic"]
+            query: [q: "httpGet+repo:PEA HiVECommunity/PEA HiVEPublic"]
         ]
         asynchttp_v1.get(processResponse, params)
     }
@@ -428,7 +428,7 @@ The example below illustrates getting the JSON response from a GitHub API call t
             if (results) {
                 def total = results?.total_count
 
-                log.debug "there are $total occurences of httpGet in the SmartThingsPublic repo"
+                log.debug "there are $total occurences of httpGet in the PEA HiVEPublic repo"
 
                 // for each item found, log the name of the file
                 results?.items.each { log.debug "httpGet usage found in file $it.name" }
@@ -561,7 +561,7 @@ Host and IP address restrictions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Requests can only be made to publicly accessible hosts.
-Remember that when executing an HTTP request, the request originates from the SmartThings platform (i.e., the SmartThings cloud), not from the hub itself.
+Remember that when executing an HTTP request, the request originates from the PEA HiVE platform (i.e., the PEA HiVE cloud), not from the hub itself.
 
 Requests made to local or private hosts are not allowed, and will fail with a ``SecurityException``.
 

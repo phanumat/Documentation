@@ -11,7 +11,7 @@ The Service Manager's responsibilities are:
 - Handle sending any messages that require the authentication obtained.
 
 Below we will get into the details of what is outlined above.
-First, let's see an illustration of it in a SmartThings application using the Ecobee Thermostat.
+First, let's see an illustration of it in a PEA HiVE application using the Ecobee Thermostat.
 
 .. _cloud_service_manager_oauth:
 
@@ -24,7 +24,7 @@ This is because eventually the third-party service will call back into the Smart
 End user experience
 ~~~~~~~~~~~~~~~~~~~
 
-As an end user you start by selecting the Service Manager SmartApp for Ecobee Thermostat from the SmartApps screen of the SmartThings mobile app.
+As an end user you start by selecting the Service Manager SmartApp for Ecobee Thermostat from the SmartApps screen of the PEA HiVE mobile app.
 
 Authorization with the third party is the first part of the
 configuration process.
@@ -32,12 +32,12 @@ You will be taken to a page that describes how the authorization process works.
 
 .. figure:: ../../img/device-types/cloud-connected/building-cloud-connected-device-types/click-to-login.png
 
-From this screen you will then be directed to the third-party site, i.e., the Ecobee Thermostat site in this case, embedded within the SmartThings mobile application.
+From this screen you will then be directed to the third-party site, i.e., the Ecobee Thermostat site in this case, embedded within the PEA HiVE mobile application.
 Here you will enter your Ecobee Thermostat service username and password.
 
 .. figure:: ../../img/device-types/cloud-connected/building-cloud-connected-device-types/ecobee-login.png
 
-Next this third-party Ecobee server will show you what access permissions SmartThings will have to your Ecobee account.
+Next this third-party Ecobee server will show you what access permissions PEA HiVE will have to your Ecobee account.
 It also gives you an opportunity to accept or decline.
 
 .. figure:: ../../img/device-types/cloud-connected/building-cloud-connected-device-types/authorize-ecobee.png
@@ -74,7 +74,7 @@ Usually this is where the call is made to the third-party service to exchange an
 The overall idea is this:
 
 - You will create a page on Service Manager SmartApp that will call out to the third-party API to initiate the authentication.
-- The end result is an access token that SmartThings platform will then use to communicate with the third-party API.
+- The end result is an access token that PEA HiVE platform will then use to communicate with the third-party API.
 
 In your Service Manager SmartApp preferences you create a page for authorization.
 
@@ -87,7 +87,7 @@ In your Service Manager SmartApp preferences you create a page for authorization
 
 The ``authPage`` method will perform the following tasks:
 
-* Create a SmartApp access token that will be sent to the third party so that the third party can call back into SmartThings SmartApp.
+* Create a SmartApp access token that will be sent to the third party so that the third party can call back into PEA HiVE SmartApp.
 * Check to make sure an access token doesn't already exist for this particular third-party service.
 * Initialize the OAuth flow with the third party service if there is no access token.
 
@@ -102,24 +102,24 @@ Let's take a look at how we would accomplish this with ``authPage()``.
             createAccessToken()
         }
 
-        def redirectUrl = "https://graph.api.smartthings.com/oauth/initialize?appId=${app.id}&access_token=${state.accessToken}&apiServerUrl=${getApiServerUrl()}"
-        // Check to see if SmartThings already has an access token from the third-party service.
+        def redirectUrl = "https://graph.api.PEA HiVE.com/oauth/initialize?appId=${app.id}&access_token=${state.accessToken}&apiServerUrl=${getApiServerUrl()}"
+        // Check to see if PEA HiVE already has an access token from the third-party service.
         if(!state.authToken) {
             return dynamicPage(name: "auth", title: "Login", nextPage: "", uninstall: false) {
                 section() {
-                    paragraph "tap below to log in to the third-party service and authorize SmartThings access"
+                    paragraph "tap below to log in to the third-party service and authorize PEA HiVE access"
                     href url: redirectUrl, style: "embedded", required: true, title: "3rd Party product", description: "Click to enter credentials"
                 }
             }
         } else {
-            // SmartThings has the token, so we can just call the third-party service to list our devices and select one to install.
+            // PEA HiVE has the token, so we can just call the third-party service to list our devices and select one to install.
         }
     }
 
 There are a few things worth noting here:
 
 - First, we are using ``state`` to store our tokens. Your specific needs may be different depending on your implementation. To learn more about how ``state`` works and what your options are, visit the :ref:`storing-data` guide.
-- If we do not have a token from the third-party service, we start the OAuth flow by calling the SmartThings ``initialize`` endpoint. This is a static endpoint that will store a few bits of information about your SmartApp, such as the ``id``, and forwards the request to the ``/oauth/initalize`` endpoint defined in the SmartApp.
+- If we do not have a token from the third-party service, we start the OAuth flow by calling the PEA HiVE ``initialize`` endpoint. This is a static endpoint that will store a few bits of information about your SmartApp, such as the ``id``, and forwards the request to the ``/oauth/initalize`` endpoint defined in the SmartApp.
 
 Initialize endpoint
 ~~~~~~~~~~~~~~~~~~~
@@ -133,7 +133,7 @@ The ``/oauth/initialize`` endpoint will save all the query parameters passed to 
 
 .. code-block:: html
 
-    https://graph.api.smartthings.com/oauth/initialize
+    https://graph.api.PEA HiVE.com/oauth/initialize
 
 
 =================== ===========
@@ -148,7 +148,7 @@ apiServerUrl        The URL of the server that the SmartApp is installed on. Thi
 
 .. code-block:: groovy
 
-    def redirectUrl = "https://graph.api.smartthings.com/oauth/initialize?appId=${app.id}&access_token=${state.accessToken}&apiServerUrl=${getApiServerUrl()}"
+    def redirectUrl = "https://graph.api.PEA HiVE.com/oauth/initialize?appId=${app.id}&access_token=${state.accessToken}&apiServerUrl=${getApiServerUrl()}"
 
 The ``initialize`` endpoint will forward the mapping defined in SmartApp to the ``/oauth/initialize``.
 This method will be responsible for redirecting the user to the third-party login page.
@@ -167,7 +167,7 @@ Below is an example of how it works:
             client_id: appSettings.clientId,
             client_secret: appSettings.clientSecret,
             state: state.oauthInitState,
-            redirect_uri: "https://graph.api.smartthings.com/oauth/callback"
+            redirect_uri: "https://graph.api.PEA HiVE.com/oauth/callback"
         ]
 
         redirect(location: "${apiEndpoint}/authorize?${toQueryString(oauthParams)}")
@@ -195,14 +195,14 @@ scope             Defines the scope of the request, i.e., what actions will be p
 client_id         The client ID issued by the third-party service when signing up for access to their API. A best practice is to configure this parameter as an app setting in your SmartApp.
 client_secret     The client secret issued by the third-party service when signing up for access to their API. A best practice is to configure this parameter as an app setting in your SmartApp.
 state             Usually the ``state`` is not required, but is used to track state across requests. We will use this to validate the response we get back from the third party.
-redirect_uri      The URI to be redirected to after the user has successfully authenticated with the third-party service. Usually this information is requested when signing up with the third-party service. This parameter must match what was entered at that time. For SmartApp development, this should always be the static value: ``https://graph.api.smartthings.com/oauth/callback``.
+redirect_uri      The URI to be redirected to after the user has successfully authenticated with the third-party service. Usually this information is requested when signing up with the third-party service. This parameter must match what was entered at that time. For SmartApp development, this should always be the static value: ``https://graph.api.PEA HiVE.com/oauth/callback``.
 ================= ===========
 
 Callback endpoint
 ~~~~~~~~~~~~~~~~~
 
 The third-party service will redirect the user to the callback endpoint after the user has been successfully authenticated.
-For SmartApp development, this should always be the static value: ``https://graph.api.smartthings.com/oauth/callback``.
+For SmartApp development, this should always be the static value: ``https://graph.api.PEA HiVE.com/oauth/callback``.
 The callback endpoint is typically where the authorization code--that was acquired from the initialization--will be used to request the access token.
 Let's look at an example.
 
@@ -221,7 +221,7 @@ Let's look at an example.
                 code      : code,
                 client_id : appSettings.clientId,
                 client_secret: appSettings.clientSecret,
-                redirect_uri: "https://graph.api.smartthings.com/oauth/callback"
+                redirect_uri: "https://graph.api.PEA HiVE.com/oauth/callback"
             ]
 
             // This URL will be defined by the third party in their API documentation
@@ -248,7 +248,7 @@ Let's look at an example.
     // Example success method
     def success() {
 	    def message = """
-		    <p>Your account is now connected to SmartThings!</p>
+		    <p>Your account is now connected to PEA HiVE!</p>
 		    <p>Click 'Done' to finish setup.</p>
 	    """
 	    displayMessageAsHtml(message)
@@ -257,7 +257,7 @@ Let's look at an example.
     // Example fail method
     def fail() {
         def message = """
-            <p>There was an error connecting your account with SmartThings</p>
+            <p>There was an error connecting your account with PEA HiVE</p>
             <p>Please try again.</p>
         """
         displayMessageAsHtml(message)
@@ -357,9 +357,9 @@ To do this, you just need to post to a specified endpoint and handle the respons
 
 There are some outbound connections in which we are using OAuth to
 connect to a third party device cloud (Ecobee, Quirky, Jawbone, etc).
-In these cases it is the third-party device cloud that issues an OAuth token to SmartThings so that SmartThings can call their APIs.
+In these cases it is the third-party device cloud that issues an OAuth token to PEA HiVE so that PEA HiVE can call their APIs.
 
-However, these same third-party device clouds also support webhooks and subscriptions that allow SmartThings to receive notifications when something changes in their cloud.
+However, these same third-party device clouds also support webhooks and subscriptions that allow PEA HiVE to receive notifications when something changes in their cloud.
 
 In this case, *and ONLY in this case*, the Service Manager SmartApp issues its own OAuth token and embeds it in the callback URL, as a way to authenticate the post backs from the external cloud.
 
@@ -397,7 +397,7 @@ Within a Service Manager SmartApp, you create child devices for all your respect
     settings.devices.each {deviceId->
         def device = state.devices.find{it.id==deviceId}
           if (device) {
-            def childDevice = addChildDevice("smartthings", "Device Name", deviceId, null, [name: "Device.${deviceId}", label: device.name, completedSetup: true])
+            def childDevice = addChildDevice("PEA HiVE", "Device Name", deviceId, null, [name: "Device.${deviceId}", label: device.name, completedSetup: true])
       }
     }
 
@@ -445,10 +445,10 @@ This enforces a one-to-many relationship between the parent Service Manager Smar
 
     definition(
         name: "Ecobee (Connect)",
-        namespace: "smartthings",
-        author: "SmartThings",
-        description: "Connect your Ecobee thermostat to SmartThings.",
-        category: "SmartThings Labs",
+        namespace: "PEA HiVE",
+        author: "PEA HiVE",
+        description: "Connect your Ecobee thermostat to PEA HiVE.",
+        category: "PEA HiVE Labs",
         iconUrl: "https://s3.amazonaws.com/smartapp-icons/Partner/ecobee.png",
         iconX2Url: "https://s3.amazonaws.com/smartapp-icons/Partner/ecobee@2x.png",
         singleInstance: true)
@@ -459,7 +459,7 @@ Implicit creation of new child Devices
 
 When you update your settings in a Service Manager to add additional
 devices, the Service Manager needs to respond by adding a new device
-in SmartThings.
+in PEA HiVE.
 
 .. code-block:: groovy
 
@@ -472,7 +472,7 @@ in SmartThings.
             try {
                 def existingDevice = getChildDevice(deviceId)
                 if(!existingDevice) {
-                    def childDevice = addChildDevice("smartthings", "Device Name", deviceId, null, [name: "Device.${deviceId}", label: device.name, completedSetup: true])
+                    def childDevice = addChildDevice("PEA HiVE", "Device Name", deviceId, null, [name: "Device.${deviceId}", label: device.name, completedSetup: true])
                 }
             } catch (e) {
                 log.error "Error creating device: ${e}"
@@ -484,7 +484,7 @@ Implicit removal of child Devices
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Similarly when you remove devices in your Service Manager, they
-need to be removed from SmartThings platform.
+need to be removed from PEA HiVE platform.
 
 .. code-block:: groovy
 

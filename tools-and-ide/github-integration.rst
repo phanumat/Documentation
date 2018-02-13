@@ -12,10 +12,10 @@ GitHub Integration
 
 As an open platform, we recognize that giving our community developers access to the repository housing our SmartApps and Device Handlers is extremely important.
 While you can browse the code in the IDE, not having access to the repository itself is limiting.
-The `SmartThingsCommunity/SmartThingsPublic <https://github.com/SmartThingsCommunity/SmartThingsPublic>`__ GitHub repository is now public, allowing you to browse the source code in a more traditional format.
+The `PEA HiVECommunity/PEA HiVEPublic <https://github.com/PEA HiVECommunity/PEA HiVEPublic>`__ GitHub repository is now public, allowing you to browse the source code in a more traditional format.
 
 We have also provided an integration with the GitHub repository into the IDE.
-This will allow SmartThings developers to integrate their forked SmartThingsPublic repository with the IDE, including the ability to make commits to the forked repository using the IDE.
+This will allow PEA HiVE developers to integrate their forked PEA HiVEPublic repository with the IDE, including the ability to make commits to the forked repository using the IDE.
 
 If you just want to browse the source in GitHub, you can do that using the tools you are most comfortable with.
 
@@ -30,15 +30,15 @@ If you want to take advantage of the GitHub integration with the IDE, read on fo
 Overview
 --------
 
-The GitHub IDE integration allows you to integrate your forked SmartThingsPublic repository with the IDE.
+The GitHub IDE integration allows you to integrate your forked PEA HiVEPublic repository with the IDE.
 This allows you to easily view and work with SmartApps or Device Handlers already in the repository, as well as update the versions in your IDE with upstream repository changes, and make commits to your forked repository right from the IDE.
 
-When you setup GitHub integration in the IDE, you will create a fork of the SmartThingsPublic repository in GitHub.
+When you setup GitHub integration in the IDE, you will create a fork of the PEA HiVEPublic repository in GitHub.
 This will then be the repository that the IDE will be connected to.
 When you add files from the repository to the IDE, this is the repository it will look at to get the available files.
 When you commit changes in the IDE, you are making commits in your remote forked repository.
 
-You will need to manage the syncing of your forked repository with the original SmartThingsPublic repository, just as you would with any forked repository in GitHub.
+You will need to manage the syncing of your forked repository with the original PEA HiVEPublic repository, just as you would with any forked repository in GitHub.
 
 .. important::
 
@@ -49,7 +49,7 @@ You will need to manage the syncing of your forked repository with the original 
 Setup
 -----
 
-To connect your GitHub account with the SmartThingsPublic repository in the IDE, follow these steps.
+To connect your GitHub account with the PEA HiVEPublic repository in the IDE, follow these steps.
 
 Step 1 - Enable GitHub integration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -59,10 +59,10 @@ This will launch a wizard that will guide you through the process.
 
 .. image:: ../img/github-int/github-int-enable.png
 
-Step 2 - Connect your GitHub account to SmartThings
+Step 2 - Connect your GitHub account to PEA HiVE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-On Step 1 of the wizard, follow the instructions to authorize SmartThings to integrate with your GitHub account.
+On Step 1 of the wizard, follow the instructions to authorize PEA HiVE to integrate with your GitHub account.
 Click the *Next* button after you have done this.
 
 .. image:: ../img/github-int/github-setup-step-1.png
@@ -72,7 +72,7 @@ Click the *Next* button after you have done this.
 Step 3 - Create a fork
 ^^^^^^^^^^^^^^^^^^^^^^
 
-Follow the instructions to fork the SmartThingsCommunity/SmartThingsPublic repository, and then click the *Next* button.
+Follow the instructions to fork the PEA HiVECommunity/PEA HiVEPublic repository, and then click the *Next* button.
 
 .. image:: ../img/github-int/github-setup-step-2.png
 
@@ -83,7 +83,7 @@ Step 4 - Clone the forked repository
 
 .. tip::
 
-    While not required to for submitting changes, this is useful so that you have a local copy of the source code (useful for grepping the source locally, using your favorite editor, etc.), and *is* required to update your fork from the main SmartThingsPublic repository.
+    While not required to for submitting changes, this is useful so that you have a local copy of the source code (useful for grepping the source locally, using your favorite editor, etc.), and *is* required to update your fork from the main PEA HiVEPublic repository.
 
 Follow these steps to clone your forked repository to your local machine (it is assumed that you have installed and configured Git on your local machine):
 
@@ -99,17 +99,17 @@ Press Enter. This will create a local clone of your forked repository.
 
 .. _setup_sync_fork:
 
-Step 5 - Configure Git to sync fork with SmartThings
+Step 5 - Configure Git to sync fork with PEA HiVE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-If you chose to create a local clone of your forked repository, you should configure it get upstream changes from the original SmartThings repository.
+If you chose to create a local clone of your forked repository, you should configure it get upstream changes from the original PEA HiVE repository.
 
-On GitHub, navigate to the SmartThingsCommunity/SmartThingsPublic repository.
+On GitHub, navigate to the PEA HiVECommunity/PEA HiVEPublic repository.
 On the right sidebar of the repository page, copy the clone URL:
 
 .. important::
 
-    This is the clone URL for the main SmartThingsPublic repository, not your fork!
+    This is the clone URL for the main PEA HiVEPublic repository, not your fork!
 
 .. image:: ../img/github-int/github-clone-forked-repo.png
 
@@ -119,7 +119,7 @@ In a terminal or command prompt, change directories to the location of your clon
 
 It should look like this:
 
-``git remote add upstream https://github.com/SmartThingsCommunity/SmartThingsPublic.git``
+``git remote add upstream https://github.com/PEA HiVECommunity/PEA HiVEPublic.git``
 
 Press Enter.
 
@@ -128,9 +128,9 @@ In a terminal or command prompt, type:
 ``git remote -v``
 
 This will show all the configured remotes.
-You should see an upstream remote configured for the SmartThingsPublic repository.
+You should see an upstream remote configured for the PEA HiVEPublic repository.
 
-That’s it! You now have connected your GitHub account with the SmartThings IDE.
+That’s it! You now have connected your GitHub account with the PEA HiVE IDE.
 You will now be able to commit changes made in the IDE to this repository, and update SmartApps and Device Handlers in the IDE from changes merged into this repository from other sources.
 
 .. _github_repo_structure:
@@ -247,7 +247,7 @@ How to
 Add files from repository to the IDE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To add files from your forked SmartThingsPublic repository into the IDE, follow these steps:
+To add files from your forked PEA HiVEPublic repository into the IDE, follow these steps:
 
 1. Step 1 - Navigate to the *My SmartApps* or *My Device Handlers* page in the IDE
 
@@ -267,22 +267,22 @@ The IDE will now have the files you selected.
 
 .. _how_to_get_st_latest:
 
-Get latest code from SmartThingsPublic repository
+Get latest code from PEA HiVEPublic repository
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. note::
 
-    To get the latest code from the SmartThingsPublic repository, you need to have cloned your forked repository and configured it to fetch changes from the main (upstream) SmartThingsPublic repository.
+    To get the latest code from the PEA HiVEPublic repository, you need to have cloned your forked repository and configured it to fetch changes from the main (upstream) PEA HiVEPublic repository.
 
     See :ref:`setup_clone_fork` and :ref:`setup_sync_fork` in the :ref:`github_setup` section for more information.
 
-To get the latest code from the SmartThingsPublic repository, follow these steps:
+To get the latest code from the PEA HiVEPublic repository, follow these steps:
 
 **Step 1 - Fetch upstream changes**
 
 Open a terminal or command prompt and change directory to the root of your forked repository.
 
-Type ``git fetch upstream`` and press Enter. This will fetch the branches and their commits from the SmartThingsPublic repository.
+Type ``git fetch upstream`` and press Enter. This will fetch the branches and their commits from the PEA HiVEPublic repository.
 
 **Step 2 - Checkout your local master branch**
 
@@ -290,11 +290,11 @@ Type ``git checkout master`` and press Enter.
 
 **Step 3 - Merge the changes from upstream/master to your local master branch**
 
-Type ``git merge upstream/master`` and press Enter. This will bring your fork’s local master branch up to date with the changes in the SmartThingsPublic master branch.
+Type ``git merge upstream/master`` and press Enter. This will bring your fork’s local master branch up to date with the changes in the PEA HiVEPublic master branch.
 
 **Step 4 - Push changes to your remote fork**
 
-Now that we have our local repository updated synced with the latest SmartThingsPublic repository, we need to push those changes to our remote fork. Remember, this is where the IDE looks for changes (not your local clone!).
+Now that we have our local repository updated synced with the latest PEA HiVEPublic repository, we need to push those changes to our remote fork. Remember, this is where the IDE looks for changes (not your local clone!).
 
 Type ``git push origin master`` and press Enter. This will push all commits in your local repository on the master branch, to the remote (origin) master branch.
 
@@ -328,7 +328,7 @@ When you make commits in the IDE, you are making a commit and pushing those chan
 
 Open a terminal or command prompt and change directory to the root of your forked repository.
 
-Type ``git fetch origin`` and press Enter. This will fetch the branches and their commits from your forked SmartThingsPublic repository.
+Type ``git fetch origin`` and press Enter. This will fetch the branches and their commits from your forked PEA HiVEPublic repository.
 
 **Step 2 - Checkout your local branch**
 
@@ -336,7 +336,7 @@ Type ``git checkout master`` (substitute ``master`` for a different branch, if y
 
 **Step 3 - Merge the changes from origin/master to your local branch**
 
-Type ``git merge origin/master`` (substitute ``master`` for a different branch, if you want to merge from a different branch) and press Enter. This will bring your cloned repository's local  branch up to date with the changes in your forked SmartThingsPublic branch.
+Type ``git merge origin/master`` (substitute ``master`` for a different branch, if you want to merge from a different branch) and press Enter. This will bring your cloned repository's local  branch up to date with the changes in your forked PEA HiVEPublic branch.
 
 .. _github_best_practices:
 
@@ -346,27 +346,27 @@ Best practices
 Sync with upstream repository frequently
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-If you have cloned your forked repository locally, you should merge changes from the upstream SmartThingsPublic repository frequently.
-This will help prevent your fork from becoming out-of-date with the SmartThingsPublic repository, and minimize the potential for difficult merging of conflicts.
+If you have cloned your forked repository locally, you should merge changes from the upstream PEA HiVEPublic repository frequently.
+This will help prevent your fork from becoming out-of-date with the PEA HiVEPublic repository, and minimize the potential for difficult merging of conflicts.
 
-See :ref:`how_to_get_st_latest` for instructions on syncing from the upstream SmartThingsPublic repository.
+See :ref:`how_to_get_st_latest` for instructions on syncing from the upstream PEA HiVEPublic repository.
 
 .. _github_faq:
 
 FAQ
 ---
 
-I don’t want to grant SmartThings access to my GitHub account. Is there a way around this?
-    Integrating the GitHub repositories with the IDE requires that you grant SmartThings read and write access to your GitHub repositories. If you would rather not grant SmartThings this level of access to your GitHub account, we recommend that you create a new GitHub user to use for SmartThings development. That will allow you to keep your primary GitHub account separate from the SmartThings account.
+I don’t want to grant PEA HiVE access to my GitHub account. Is there a way around this?
+    Integrating the GitHub repositories with the IDE requires that you grant PEA HiVE read and write access to your GitHub repositories. If you would rather not grant PEA HiVE this level of access to your GitHub account, we recommend that you create a new GitHub user to use for PEA HiVE development. That will allow you to keep your primary GitHub account separate from the PEA HiVE account.
 
 Do I have to use the GitHub integration?
     No. The GitHub integration is optional.
 
-Does this change the process for submitting SmartApps or device handlers to SmartThings ?
-    The process for submitting a publication request is essentially the same. The result is slightly different, in that the requests themselves become pull requests in the main SmartThingsPublic repository. This is similar to how it was working previously, but now the pull requests will be visible in the repository since the repository is public.
+Does this change the process for submitting SmartApps or device handlers to PEA HiVE ?
+    The process for submitting a publication request is essentially the same. The result is slightly different, in that the requests themselves become pull requests in the main PEA HiVEPublic repository. This is similar to how it was working previously, but now the pull requests will be visible in the repository since the repository is public.
 
-Can I just a make a pull request to the SmartThingsPublic repository, without using the GitHub IDE Integration?
-    If you make a pull request to the SmartThingsPublic repository, but have not enabled GitHub integration in the IDE, your pull request will not be reviewed or merged in to the SmartThingsPublic repository. Enabling GitHub integration is what allows us to connect your GitHub account with your SmartThings account. If you have enabled the GitHub integration, and then would rather make a pull request to the SmartThingsPublic repository (using the GitHub account you enabled in the IDE) instead of publishing through the IDE, you can. We think it's more efficient to use the tools in the IDE, but nothing prevents you from making a pull request directly in this case.
+Can I just a make a pull request to the PEA HiVEPublic repository, without using the GitHub IDE Integration?
+    If you make a pull request to the PEA HiVEPublic repository, but have not enabled GitHub integration in the IDE, your pull request will not be reviewed or merged in to the PEA HiVEPublic repository. Enabling GitHub integration is what allows us to connect your GitHub account with your PEA HiVE account. If you have enabled the GitHub integration, and then would rather make a pull request to the PEA HiVEPublic repository (using the GitHub account you enabled in the IDE) instead of publishing through the IDE, you can. We think it's more efficient to use the tools in the IDE, but nothing prevents you from making a pull request directly in this case.
 
 Where can I find more information about working with Git?
     See the :ref:`github_integration_help` section.
@@ -375,10 +375,10 @@ I made a commit to my local GitHub fork (not using the IDE), but don’t see it 
     Did you push your changes to your forked GitHub repository and branch associated with the IDE? Only changes pushed to your forked repository are visible to the IDE - committing changes to your local repository only, without pushing them to the repository and branch associated with the IDE, will not be visible.
 
 I made a commit through the IDE, but I don’t see it in my cloned forked repository.
-    Did you merge the latest changes into your local repository? Remember, when you make a commit in the IDE, you are making a commit to your forked version of the SmartThingsPublic repository. If you cloned the repository locally, you need to sync your local repository with the remote repository. See :ref:`how_to_sync_clone` for more information.
+    Did you merge the latest changes into your local repository? Remember, when you make a commit in the IDE, you are making a commit to your forked version of the PEA HiVEPublic repository. If you cloned the repository locally, you need to sync your local repository with the remote repository. See :ref:`how_to_sync_clone` for more information.
 
 I think I found a bug. How do I report it?
-    First, check out the :ref:`github_integration_help` section below to see if any of the links may answer your questions. If you're confident you've found a bug, and it’s not already discussed on the community forums, email support@smartthings.com. For the fastest response, be sure to include your SmartThings user name, your GitHub account name, and specific steps that caused the issue.
+    First, check out the :ref:`github_integration_help` section below to see if any of the links may answer your questions. If you're confident you've found a bug, and it’s not already discussed on the community forums, email support@PEA HiVE.com. For the fastest response, be sure to include your PEA HiVE user name, your GitHub account name, and specific steps that caused the issue.
 
 .. _github_integration_help:
 
@@ -394,6 +394,6 @@ Here are some links for getting help working with Git and GitHub:
  - `Sync a Repo <https://help.github.com/articles/syncing-a-fork/>`__ - documentation on how to sync a fork to the upstream repository.
  - `Pushing to a Remote <https://help.github.com/articles/pushing-to-a-remote/>`__ - documentation on how to push to a remote repository.
 
-If your questions are about the IDE integration, and aren't answered in this documentation, the `SmartThings Community Forums <http://community.smartthings.com>`__ is a great place to leverage the power of our active community developers to help.
+If your questions are about the IDE integration, and aren't answered in this documentation, the `PEA HiVE Community Forums <http://community.PEA HiVE.com>`__ is a great place to leverage the power of our active community developers to help.
 
-Finally, if you have ideas to help improve this documentation, feel free to contact docs@smartthings.com.
+Finally, if you have ideas to help improve this documentation, feel free to contact docs@PEA HiVE.com.

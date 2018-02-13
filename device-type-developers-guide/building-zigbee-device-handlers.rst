@@ -3,21 +3,21 @@ Building ZigBee Device Handlers
 
 .. note::
 
-    If you are integrating a new ZigBee switch or bulb with SmartThings, see the :ref:`zigbee_device_form` section below to learn how you can integrate these devices without the need to write code.
+    If you are integrating a new ZigBee switch or bulb with PEA HiVE, see the :ref:`zigbee_device_form` section below to learn how you can integrate these devices without the need to write code.
 
 ----
 
 Commands
 --------
 
-SmartThings provides a library to make working with ZigBee easier.
+PEA HiVE provides a library to make working with ZigBee easier.
 Every Device Handler has a reference to this library injected into it, with the name ``zigbee``.
 
 This library will be used in the examples below.
 You can see the :ref:`zigbee_ref` for more detailed documentation.
 
 There are four common ZigBee commands that you will use to integrate
-SmartThings with your ZigBee Devices.
+PEA HiVE with your ZigBee Devices.
 
 Read
 ^^^^
@@ -159,7 +159,7 @@ Best practices
 Using the ZigBee Device Form
 ----------------------------
 
-To integrate a new ZigBee switch or bulb with SmartThings, you can use the *From ZigBee Device Form*.
+To integrate a new ZigBee switch or bulb with PEA HiVE, you can use the *From ZigBee Device Form*.
 
 .. image:: ../img/device-types/zigbee-form.png
 
@@ -186,4 +186,4 @@ How to use
 Simply fill out the required fields in the form with the information for the device, and click *Create.*
 
 You will then see the updated Device Handler code in the IDE editor.
-You can then test that your device pairs with SmartThings and functions as expected, and then make an update as a Publication Request.
+You can then test that your device pairs with PEA HiVE and functions as expected, and then make an update as a Publication Request.

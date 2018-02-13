@@ -4,7 +4,7 @@
 Tiles
 =====
 
-Tiles define how devices are visually represented in the SmartThings mobile application.
+Tiles define how devices are visually represented in the PEA HiVE mobile application.
 Every Device Handler specifies how the device will appear in the mobile application by specifying one or more tiles.
 
 ----
@@ -71,7 +71,7 @@ Tiles definition and layout is specified using the ``tiles()`` builder in the De
     }
 
 It's important to understand that tiles configuration is part of the device's static metadata.
-When the SmartThings platform executes the ``tiles()`` builder you have defined, it doesn't yet know anything about the actual device or the current device state.
+When the PEA HiVE platform executes the ``tiles()`` builder you have defined, it doesn't yet know anything about the actual device or the current device state.
 Only later, when the device details screen is rendered in the mobile client, does the platform know information about the specific device.
 For this reason, trying to conditionally configure tiles based on device state will not work.
 
@@ -132,8 +132,8 @@ A value of ``1`` (the default) enables the *3 x Unlimited* grid; a value of ``2`
     // 6 x Unlimited grid
     tiles(scale: 2) {...}
 
-SmartThings recommends using the *6 x Unlimited* layout, as it offers a more attractive user experience.
-Older versions of the SmartThings mobile application that do not support the *6 x Unlimited* layout will be scaled back.
+PEA HiVE recommends using the *6 x Unlimited* layout, as it offers a more attractive user experience.
+Older versions of the PEA HiVE mobile application that do not support the *6 x Unlimited* layout will be scaled back.
 
 Here you can see how the tiles defined above are laid out using the *6 x Unlimited* grid (using the ``scale: 2`` option):
 
@@ -374,11 +374,11 @@ A tile's state may specify an icon to render using the ``icon`` option:
         attributeState "power", label:'${currentValue}W', icon: "st.Appliances.appliances17"
     }
 
-We can use an icon provided by SmartThings as above, or an accessible URL to an icon.
+We can use an icon provided by PEA HiVE as above, or an accessible URL to an icon.
 
 .. note::
 
-    Using icons is `discussed frequenly <https://community.smartthings.com/t/where-are-the-tile-icons/40086>`__ in the SmartThings developer community forums.
+    Using icons is `discussed frequenly <https://community.PEA HiVE.com/t/where-are-the-tile-icons/40086>`__ in the PEA HiVE developer community forums.
 
 ----
 
@@ -1018,8 +1018,8 @@ Key                    Description
 Color standards
 ---------------
 
-SmartThings has defined a set of common colors for use in device tiles.
-Follow these standards when developing device tiles to ensure consistency within the SmartThings mobile app.
+PEA HiVE has defined a set of common colors for use in device tiles.
+Follow these standards when developing device tiles to ensure consistency within the PEA HiVE mobile app.
 
 Colors
 ^^^^^^
@@ -1057,7 +1057,7 @@ Temperature value (Fahrenheit) Hex code    Color example
 .. tip::
 
     If your Device Handler needs to accomodate Celsius temperature values, you can convert the values above to Celsius, and expand the background colors out to include the range of both Celsius and Fahrenheit values.
-    You can see an example of this `here <https://github.com/SmartThingsCommunity/SmartThingsPublic/blob/f054cb4de1fb41d15a2725cddcc521b5f659572b/devicetypes/smartthings/ecobee-thermostat.src/ecobee-thermostat.groovy#L45>`__.
+    You can see an example of this `here <https://github.com/PEA HiVECommunity/PEA HiVEPublic/blob/f054cb4de1fb41d15a2725cddcc521b5f659572b/devicetypes/PEA HiVE/ecobee-thermostat.src/ecobee-thermostat.groovy#L45>`__.
 
 Examples
 ^^^^^^^^
@@ -1115,5 +1115,5 @@ Examples
 We've created several Device Handlers for all the tiles discussed in this documentation.
 These are a great reference for seeing various tiles in action.
 
-They are located in the  `tiles-ux <https://github.com/SmartThingsCommunity/SmartThingsPublic/tree/master/devicetypes/smartthings/tile-ux>`__ package in the SmartThingsPublic GitHub Repository.
+They are located in the  `tiles-ux <https://github.com/PEA HiVECommunity/PEA HiVEPublic/tree/master/devicetypes/PEA HiVE/tile-ux>`__ package in the PEA HiVEPublic GitHub Repository.
 Refer to the README in the package for information on installing and using the example devices.

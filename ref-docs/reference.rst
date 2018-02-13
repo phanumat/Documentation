@@ -11,7 +11,7 @@ How to read the docs
 Objects
 ^^^^^^^
 
-SmartThings objects are rarely created directly by SmartApp or Device Handler developers. Instead, various objects are already created and available in your applications.
+PEA HiVE objects are rarely created directly by SmartApp or Device Handler developers. Instead, various objects are already created and available in your applications.
 
 You will rarely see constructor documentation for this reason. Each object will contain a summary at the top of the document that discusses some of the common ways to get a reference to the object.
 
@@ -31,7 +31,7 @@ Dynamic methods
 
 The Groovy programming language offers a powerful feature called `Metaprogramming <http://www.groovy-lang.org/metaprogramming.html>`__ that (among other things) allows for Groovy programs to be written in a way that *methods can be created dynamically at run time.*
 
-SmartThings makes use of this powerful feature in a few ways. For example, you can get a reference to a Device configured in a SmartApp preference by simply referencing the name of the device configured in the preference. Another example is getting various Attribute values for a Device by invoking a method in the form <someDevice>.current<AttributeName>.
+PEA HiVE makes use of this powerful feature in a few ways. For example, you can get a reference to a Device configured in a SmartApp preference by simply referencing the name of the device configured in the preference. Another example is getting various Attribute values for a Device by invoking a method in the form <someDevice>.current<AttributeName>.
 
 This powerful feature can make documenting all available methods difficult, since methods may not exist until runtime. For any dynamic methods, the method or property will be enclosed in ``<>``, and a description and example will be given.
 
@@ -44,7 +44,7 @@ All methods are listed in alphabetical order, with the exception of SmartApp and
 
     Groovy follows the JavaBean convention, and adds some syntactic sugar on top. Any zero-arg getter can be retrieved via property access directly.
     For example, ``getName()`` could be invoked as ``name``.
-    You'll see this shortcut syntax often in Groovy and SmartThings.
+    You'll see this shortcut syntax often in Groovy and PEA HiVE.
 
 Some methods may have many signatures. For example, the ``schedule`` method available to SmartApps can be called with a variety of arguments. We have documented all forms in one location (``schedule()``). All supported signatures will be listed, as well as all parameters for the various signatures.
 
