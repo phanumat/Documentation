@@ -70,6 +70,20 @@ PEA HiVE Developer Documentation
 
     </div>
 
+.. toctree::
+   :hidden:
+   :caption: Literature Review
+   :maxdepth: 2
+
+   literature-review/smart-home
+   literature-review/standards
+   literature-review/iot-platform
+   literature-review/smart-building
+   literature-review/transconnext
+   literature-review/thailand-smart-city
+   literature-review/solar-energy-training
+
+
 
 .. toctree::
    :hidden:
