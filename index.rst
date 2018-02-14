@@ -90,27 +90,31 @@ PEA HiVE Developer Documentation
 
    progress-report/index
 
-
-
-
 .. toctree::
    :hidden:
-   :caption: What's New
+   :caption: PEA HiVE Software Architecture
    :maxdepth: 2
 
-   latest-updates
+   pea-hive-software-architecture/index
 
 .. toctree::
-   :hidden:
-   :caption: Getting Started
-   :maxdepth: 2
+    :hidden:
+    :caption: What's New
+    :maxdepth: 2
 
-   getting-started/overview
-   getting-started/up-and-running
-   getting-started/groovy-basics
-   getting-started/groovy-for-PEA HiVE
-   getting-started/first-smartapp
-   getting-started/getting-help
+    latest-updates
+
+.. toctree::
+    :hidden:
+    :caption: Getting Started
+    :maxdepth: 2
+
+    getting-started/overview
+    getting-started/up-and-running
+    getting-started/groovy-basics
+    getting-started/groovy-for-PEA HiVE
+    getting-started/first-smartapp
+    getting-started/getting-help
 
 .. toctree::
    :hidden:
