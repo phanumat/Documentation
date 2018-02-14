@@ -82,16 +82,13 @@ PEA HiVE Developer Documentation
    literature-review/transconnext
    literature-review/thailand-smart-city
    literature-review/solar-energy-training
-
+   
 .. toctree::
    :hidden:
    :caption: Progress Report
    :maxdepth: 2
 
    progress-report/index
-
-
-
 
 .. toctree::
    :hidden:
